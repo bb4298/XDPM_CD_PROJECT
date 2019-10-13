@@ -1,0 +1,7 @@
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\DAL\bin\Debug\DAL.dll.config
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\DAL\bin\Debug\DAL.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\DAL\bin\Debug\DAL.pdb
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\DAL\obj\Debug\DAL.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\DAL\obj\Debug\DAL.pdb

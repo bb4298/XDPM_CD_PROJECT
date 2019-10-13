@@ -1,0 +1,142 @@
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.csprojAssemblyReference.cache
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.Properties.Resources.resources
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.csproj.GenerateResource.cache
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.exe.licenses
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\UI.exe
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\UI.pdb
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\BLL.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\DevExpress.BonusSkins.v17.1.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\DevExpress.Data.v17.1.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\DevExpress.Printing.v17.1.Core.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\DevExpress.Sparkline.v17.1.Core.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\DevExpress.Utils.v17.1.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\DevExpress.XtraBars.v17.1.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\DevExpress.XtraEditors.v17.1.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\Entities.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\DevExpress.Pdf.v17.1.Core.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\BLL.pdb
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\Entities.pdb
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\DevExpress.Data.v17.1.xml
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\DevExpress.Printing.v17.1.Core.xml
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\DevExpress.Utils.v17.1.xml
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\DevExpress.XtraBars.v17.1.xml
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\DevExpress.Sparkline.v17.1.Core.xml
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\DevExpress.XtraEditors.v17.1.xml
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\DevExpress.Pdf.v17.1.Core.xml
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\de\DevExpress.Data.v17.1.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\es\DevExpress.Data.v17.1.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\ja\DevExpress.Data.v17.1.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\ru\DevExpress.Data.v17.1.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\de\DevExpress.Printing.v17.1.Core.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\es\DevExpress.Printing.v17.1.Core.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\ja\DevExpress.Printing.v17.1.Core.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\ru\DevExpress.Printing.v17.1.Core.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\de\DevExpress.Utils.v17.1.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\es\DevExpress.Utils.v17.1.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\ja\DevExpress.Utils.v17.1.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\ru\DevExpress.Utils.v17.1.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\de\DevExpress.XtraBars.v17.1.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\es\DevExpress.XtraBars.v17.1.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\ja\DevExpress.XtraBars.v17.1.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\ru\DevExpress.XtraBars.v17.1.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\de\DevExpress.Sparkline.v17.1.Core.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\es\DevExpress.Sparkline.v17.1.Core.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\ja\DevExpress.Sparkline.v17.1.Core.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\ru\DevExpress.Sparkline.v17.1.Core.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\de\DevExpress.XtraEditors.v17.1.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\es\DevExpress.XtraEditors.v17.1.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\ja\DevExpress.XtraEditors.v17.1.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\ru\DevExpress.XtraEditors.v17.1.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\de\DevExpress.Pdf.v17.1.Core.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\es\DevExpress.Pdf.v17.1.Core.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\ja\DevExpress.Pdf.v17.1.Core.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.csproj.CopyComplete
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.exe
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.pdb
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.Form_ChucNang.Form_QuanLyThueDia.resources
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.Form_ChucNang.Form_QuanLyTieuDe.resources
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.Form_ChucNang.Form_QuanLyDanhMuc.resources
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.Form_ChucNang.Form_QuanLyKhoDia.resources
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.Form_ChucNang.Form_QuanLyKhachHang.resources
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.Form_Main.resources
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.Form_QuanLy.Form_DangNhap.resources
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.Form_QuanLy.Form_DoiMatKhau.resources
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.Form_QuanLy.Form_ThongTinCaNhan.resources
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\DAL.dll
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\DAL.pdb
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\bin\Debug\DAL.dll.config
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.Form_ChucNang.Form_QuanLyDatDia.resources
+G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\UI\obj\Debug\UI.Form_ChucNang.Form_QuanLyPhiTre.resources
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\UI.exe
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\UI.pdb
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\BLL.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\DAL.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\DevExpress.BonusSkins.v17.1.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\DevExpress.Data.v17.1.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\DevExpress.Printing.v17.1.Core.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\DevExpress.Sparkline.v17.1.Core.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\DevExpress.Utils.v17.1.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\DevExpress.XtraBars.v17.1.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\DevExpress.XtraEditors.v17.1.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\Entities.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\DevExpress.Pdf.v17.1.Core.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\BLL.pdb
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\DAL.pdb
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\DAL.dll.config
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\Entities.pdb
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\DevExpress.Data.v17.1.xml
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\DevExpress.Printing.v17.1.Core.xml
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\DevExpress.Utils.v17.1.xml
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\DevExpress.XtraBars.v17.1.xml
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\DevExpress.Sparkline.v17.1.Core.xml
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\DevExpress.XtraEditors.v17.1.xml
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\DevExpress.Pdf.v17.1.Core.xml
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\de\DevExpress.Data.v17.1.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\es\DevExpress.Data.v17.1.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\ja\DevExpress.Data.v17.1.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\ru\DevExpress.Data.v17.1.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\de\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\es\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\ja\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\ru\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\de\DevExpress.Utils.v17.1.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\es\DevExpress.Utils.v17.1.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\ja\DevExpress.Utils.v17.1.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\ru\DevExpress.Utils.v17.1.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\de\DevExpress.XtraBars.v17.1.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\es\DevExpress.XtraBars.v17.1.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\ja\DevExpress.XtraBars.v17.1.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\ru\DevExpress.XtraBars.v17.1.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\de\DevExpress.Sparkline.v17.1.Core.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\es\DevExpress.Sparkline.v17.1.Core.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\ja\DevExpress.Sparkline.v17.1.Core.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\ru\DevExpress.Sparkline.v17.1.Core.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\de\DevExpress.XtraEditors.v17.1.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\es\DevExpress.XtraEditors.v17.1.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\ja\DevExpress.XtraEditors.v17.1.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\ru\DevExpress.XtraEditors.v17.1.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\de\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\es\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\ja\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.Form_ChucNang.Form_QuanLyDatDia.resources
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.Form_ChucNang.Form_QuanLyKhachHang.resources
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.Form_ChucNang.Form_QuanLyPhiTre.resources
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.Form_ChucNang.Form_QuanLyThueDia.resources
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.Form_ChucNang.Form_QuanLyTieuDe.resources
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.Form_ChucNang.Form_QuanLyDanhMuc.resources
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.Form_ChucNang.Form_QuanLyKhoDia.resources
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.Form_Main.resources
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.Form_QuanLy.Form_DangNhap.resources
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.Form_QuanLy.Form_DoiMatKhau.resources
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.Form_QuanLy.Form_ThongTinCaNhan.resources
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.csproj.GenerateResource.cache
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.exe.licenses
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.csproj.CopyComplete
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.exe
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.pdb
