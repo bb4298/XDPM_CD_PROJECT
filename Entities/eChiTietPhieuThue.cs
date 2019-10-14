@@ -30,7 +30,6 @@ namespace Entities
             IdPhieuThue = idPhieuThue;
         }
 
-
         public eChiTietPhieuThue()
         {
 

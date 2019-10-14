@@ -42,7 +42,7 @@ namespace BLL
             nv1.SoDienThoai = nv.SoDienThoai;
             return nv1;
         }
-        
+       
 
         public bool SuaNhanVien(eNhanVien env)
         {

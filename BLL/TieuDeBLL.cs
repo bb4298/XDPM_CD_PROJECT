@@ -16,7 +16,6 @@ namespace BLL
         {
             db = new QLCDDataContext();
         }
-
         public List<eTieuDe> LayDanhSachTieuDe_QuanLyKhoDia()
         {
             List<eTieuDe> list = new List<eTieuDe>();

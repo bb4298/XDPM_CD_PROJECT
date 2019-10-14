@@ -15,7 +15,6 @@ namespace BLL
         {
             db = new QLCDDataContext();
         }
-
  
         public eTaiKhoan LayTaiKhoan(string tenDN)
         {

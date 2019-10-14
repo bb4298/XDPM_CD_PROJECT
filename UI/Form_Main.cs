@@ -77,8 +77,6 @@ namespace UI
             form.Show();
         }
 
-     
-
         private void btn_DangNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Form_DangNhap form = new Form_DangNhap();            
@@ -119,7 +117,6 @@ namespace UI
 
         }
        
-
         private void btn_QuanLyPhiTre_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Form_QuanLyPhiTre form = new Form_QuanLyPhiTre();
@@ -145,7 +142,6 @@ namespace UI
             }
 
         }
-
         private void btn_QuanLyDatDia_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Form_QuanLyDatDia form = new Form_QuanLyDatDia();

@@ -18,10 +18,6 @@ namespace BLL
         public List<KhachHang> LayDanhSachKhachHang()
         {
             List<KhachHang> list = db.KhachHangs.Where(x => x.TrangThaiXoa == false).ToList();
-            //foreach(var item in list)
-            //{
-            //    item.
-            //}
             return list;
 
 
