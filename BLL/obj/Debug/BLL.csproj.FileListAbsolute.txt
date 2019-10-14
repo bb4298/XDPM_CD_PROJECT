@@ -10,3 +10,15 @@ G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\BLL\obj\Debug\BLL.csproj.CoreCompileInp
 G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\BLL\obj\Debug\BLL.csproj.CopyComplete
 G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\BLL\obj\Debug\BLL.dll
 G:\HK7\Xây Dựng Phần Mềm\QuanLyCD\BLL\obj\Debug\BLL.pdb
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\BLL\bin\Debug\BLL.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\BLL\bin\Debug\BLL.pdb
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\BLL\bin\Debug\DAL.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\BLL\bin\Debug\Entities.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\BLL\bin\Debug\DAL.pdb
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\BLL\bin\Debug\DAL.dll.config
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\BLL\bin\Debug\Entities.pdb
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\BLL\obj\Debug\BLL.dll
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\BLL\obj\Debug\BLL.pdb

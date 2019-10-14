@@ -40,6 +40,7 @@
             this.Name = "Form_QuanLyPhiTre";
             this.Text = "Quản Lý Phí Trễ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_QuanLyPhiTre_FormClosed);
+            this.Load += new System.EventHandler(this.Form_QuanLyPhiTre_Load);
             this.ResumeLayout(false);
 
         }

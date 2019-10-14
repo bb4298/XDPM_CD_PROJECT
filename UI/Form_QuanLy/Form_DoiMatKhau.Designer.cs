@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_DoiMatKhau));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbMatKhauMoi = new DevExpress.XtraEditors.TextEdit();
             this.tbNhapLaiMK = new DevExpress.XtraEditors.TextEdit();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbMatKhauCu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbMatKhauMoi.Properties)).BeginInit();
@@ -78,6 +80,7 @@
             this.btnDoiMK.Size = new System.Drawing.Size(232, 90);
             this.btnDoiMK.TabIndex = 16;
             this.btnDoiMK.Text = "Xác Nhận";
+            this.btnDoiMK.Click += new System.EventHandler(this.btnDoiMK_Click);
             // 
             // label7
             // 
@@ -132,6 +135,10 @@
             this.tbNhapLaiMK.Size = new System.Drawing.Size(242, 23);
             this.tbNhapLaiMK.TabIndex = 12;
             // 
+            // defaultLookAndFeel1
+            // 
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Blue";
+            // 
             // Form_DoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -141,6 +148,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_DoiMatKhau";
             this.Text = "Đổi Mật Khẩu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_DoiMatKhau_FormClosed);
             this.Load += new System.EventHandler(this.Form_DoiMatKhau_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -162,5 +170,6 @@
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.TextEdit tbMatKhauMoi;
         private DevExpress.XtraEditors.TextEdit tbNhapLaiMK;
+        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
     }
 }

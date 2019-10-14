@@ -14,6 +14,7 @@ namespace Entities
         public int SoLuongDia { get; set; }
         public bool TrangThaiXoa { get; set; }
         public int IdDanhMuc { get; set; }
+        public string TenDanhMuc{ get; set; }
 
         public eTieuDe(string idTieuDe, string tenTieuDe, decimal phiThue, int soLuongDia, bool trangThaiXoa, int idDanhMuc)
         {
@@ -23,12 +24,37 @@ namespace Entities
             SoLuongDia = soLuongDia;
             TrangThaiXoa = trangThaiXoa;
             IdDanhMuc = idDanhMuc;
+           
         }
 
+        //Dùng để hiển thị dtgv form quản lý danh mục
+        public eTieuDe(string idTieuDe, string tenTieuDe, int soLuongDia, string tenDanhMuc,decimal phiThue)
+        {
+            IdTieuDe = idTieuDe;
+            TenTieuDe = tenTieuDe;
+            SoLuongDia = soLuongDia;
+            TenDanhMuc = tenDanhMuc;
+            PhiThue = phiThue;
+        }
+        //Dùng để hiển thị dtgv form quản lý kho đĩa
+        public eTieuDe(string idTieuDe, string tenTieuDe, string tenDanhMuc, int soLuongDia)
+        {
+            IdTieuDe = idTieuDe;
+            TenTieuDe = tenTieuDe;
+            TenDanhMuc = tenDanhMuc;
+            SoLuongDia = soLuongDia;
+        }
+
+        public eTieuDe(string tenTieuDe)
+        {    
+            TenTieuDe = tenTieuDe;
+        }
 
         public eTieuDe()
         {
                 
         }
+      
+   
     }
 }

@@ -140,3 +140,4 @@ C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.csproj.CoreCompileInputs.
 C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.csproj.CopyComplete
 C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.exe
 C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.pdb
+C:\Users\Quang\Desktop\XDPM_CD_PROJECT\UI\obj\Debug\UI.Form_About.resources

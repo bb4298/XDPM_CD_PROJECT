@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,72 @@ namespace BLL
             db = new QLCDDataContext();
         }
 
+        public List<eTieuDe> LayDanhSachTieuDe_QuanLyKhoDia()
+        {
+            List<eTieuDe> list = new List<eTieuDe>();
+            var query = (from a in db.TieuDes
+                         join b in db.DanhMucs on a.IdDanhMuc equals b.IdDanhMuc
+                         where a.TrangThaiXoa == false
+                         select new
+                         {
+                             a.IdTieuDe,
+                             a.TenTieuDe,
+                             b.TenDanhMuc,
+                             a.SoLuongDia
+                         }).ToList();
+
+            foreach (var item in query)
+            {
+                eTieuDe etd = new eTieuDe(item.IdTieuDe, item.TenTieuDe, item.TenDanhMuc, Convert.ToInt32(item.SoLuongDia));
+                list.Add(etd);
+            }
+            return list;
+
+        }
+
+        public List<eTieuDe> LayDanhSachTieuDe()
+        {
+            List<eTieuDe> list = new List<eTieuDe>();
+            var query = (from a in db.TieuDes
+                        join b in db.DanhMucs on a.IdDanhMuc equals b.IdDanhMuc
+                        where a.TrangThaiXoa == false
+                        select new
+                        {
+                            a.IdTieuDe,
+                            a.TenTieuDe,
+                            a.SoLuongDia,
+                            b.TenDanhMuc,
+                            a.PhiThue
+                        }).ToList();
+
+            foreach (var item in query)
+            {
+                eTieuDe etd = new eTieuDe (item.IdTieuDe, item.TenTieuDe, Convert.ToInt32(item.SoLuongDia), item.TenDanhMuc,Convert.ToDecimal( item.PhiThue));          
+                list.Add(etd);
+            }
+            return list;
+
+        }
+
+        public List<eTieuDe> LayDanhSachTenTieuDe()
+        {
+            List<eTieuDe> list = new List<eTieuDe>();
+            var query = (from a in db.TieuDes
+                         where a.TrangThaiXoa == false
+                         select new
+                         {
+                            a.TenTieuDe
+                         }).ToList();
+
+            foreach (var item in query)
+            {
+                eTieuDe etd = new eTieuDe(item.TenTieuDe);
+                list.Add(etd);
+            }
+            return list;
+
+        }
+
         public string LayMaTieuDeCaoNhat()
         {
             string td = (from a in db.TieuDes
@@ -25,8 +92,15 @@ namespace BLL
             return td;
         }
    
-        public bool ThemTieuDe(TieuDe td)
+        public bool ThemTieuDe(eTieuDe etd)
         {
+            TieuDe td = new TieuDe();
+            td.IdTieuDe = etd.IdTieuDe;
+            td.TenTieuDe = etd.TenTieuDe;
+            td.SoLuongDia = etd.SoLuongDia;
+            td.IdDanhMuc = etd.IdDanhMuc;
+            td.PhiThue = etd.PhiThue;
+            td.TrangThaiXoa = etd.TrangThaiXoa;
             if (!db.TieuDes.Contains(td))
             {
                 db.TieuDes.InsertOnSubmit(td);
@@ -36,7 +110,7 @@ namespace BLL
             return false;
         }
 
-        public bool SuaTieuDe(TieuDe etd)
+        public bool SuaTieuDe(eTieuDe etd)
         {
             TieuDe td = new TieuDe();
             td = db.TieuDes.Where(a => a.IdTieuDe== etd.IdTieuDe).SingleOrDefault();
@@ -52,7 +126,7 @@ namespace BLL
             return false;
         }
 
-        public bool XoaTieuDe(TieuDe etd)
+        public bool XoaTieuDe(eTieuDe etd)
         {
             TieuDe td = new TieuDe();
             td = db.TieuDes.Where(a => a.IdTieuDe== etd.IdTieuDe).SingleOrDefault();

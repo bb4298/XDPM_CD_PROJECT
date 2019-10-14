@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_QuanLyKhoDia));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.panelQuanLyTD = new System.Windows.Forms.Panel();
+            this.panelThemDia = new System.Windows.Forms.Panel();
+            this.cbbThem_TenTieuDe = new System.Windows.Forms.ComboBox();
+            this.tbThem_IdTieuDe = new DevExpress.XtraEditors.TextEdit();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbThem_IdDia = new DevExpress.XtraEditors.TextEdit();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.tbDanhMuc = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.tbTrangThai = new DevExpress.XtraEditors.TextEdit();
@@ -61,16 +70,12 @@
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.panelThemDia = new System.Windows.Forms.Panel();
-            this.tbThem_IdDia = new DevExpress.XtraEditors.TextEdit();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tbThem_IdTieuDe = new DevExpress.XtraEditors.TextEdit();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbbThem_TenTieuDe = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.panelQuanLyTD.SuspendLayout();
+            this.panelThemDia.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbThem_IdTieuDe.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbThem_IdDia.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDanhMuc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTrangThai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbNguoiMuon.Properties)).BeginInit();
@@ -85,9 +90,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
-            this.panelThemDia.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbThem_IdDia.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbThem_IdTieuDe.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -122,6 +124,80 @@
             this.panelQuanLyTD.Name = "panelQuanLyTD";
             this.panelQuanLyTD.Size = new System.Drawing.Size(442, 229);
             this.panelQuanLyTD.TabIndex = 53;
+            // 
+            // panelThemDia
+            // 
+            this.panelThemDia.Controls.Add(this.cbbThem_TenTieuDe);
+            this.panelThemDia.Controls.Add(this.tbThem_IdTieuDe);
+            this.panelThemDia.Controls.Add(this.label5);
+            this.panelThemDia.Controls.Add(this.tbThem_IdDia);
+            this.panelThemDia.Controls.Add(this.label7);
+            this.panelThemDia.Controls.Add(this.label9);
+            this.panelThemDia.Location = new System.Drawing.Point(0, 0);
+            this.panelThemDia.Name = "panelThemDia";
+            this.panelThemDia.Size = new System.Drawing.Size(442, 229);
+            this.panelThemDia.TabIndex = 63;
+            // 
+            // cbbThem_TenTieuDe
+            // 
+            this.cbbThem_TenTieuDe.FormattingEnabled = true;
+            this.cbbThem_TenTieuDe.Items.AddRange(new object[] {
+            "Theo Tên NV",
+            "Theo Mã NV",
+            "Theo SDT"});
+            this.cbbThem_TenTieuDe.Location = new System.Drawing.Point(108, 151);
+            this.cbbThem_TenTieuDe.Name = "cbbThem_TenTieuDe";
+            this.cbbThem_TenTieuDe.Size = new System.Drawing.Size(322, 24);
+            this.cbbThem_TenTieuDe.TabIndex = 40;
+            this.cbbThem_TenTieuDe.SelectedIndexChanged += new System.EventHandler(this.cbbThem_TenTieuDe_SelectedIndexChanged);
+            // 
+            // tbThem_IdTieuDe
+            // 
+            this.tbThem_IdTieuDe.Location = new System.Drawing.Point(108, 102);
+            this.tbThem_IdTieuDe.Name = "tbThem_IdTieuDe";
+            this.tbThem_IdTieuDe.Size = new System.Drawing.Size(322, 22);
+            this.tbThem_IdTieuDe.TabIndex = 55;
+            this.tbThem_IdTieuDe.EditValueChanged += new System.EventHandler(this.tbThem_IdTieuDe_EditValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(7, 154);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(95, 17);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "Tên Tiêu Đề:";
+            // 
+            // tbThem_IdDia
+            // 
+            this.tbThem_IdDia.Location = new System.Drawing.Point(108, 59);
+            this.tbThem_IdDia.Name = "tbThem_IdDia";
+            this.tbThem_IdDia.Size = new System.Drawing.Size(322, 22);
+            this.tbThem_IdDia.TabIndex = 53;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(7, 105);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 17);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "ID Tiêu Đề:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(46, 64);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 17);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "ID Đĩa:";
             // 
             // tbDanhMuc
             // 
@@ -284,6 +360,14 @@
             this.dataGridViewD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdDia,
             this.TrangThai});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewD.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewD.Location = new System.Drawing.Point(1066, 115);
             this.dataGridViewD.MultiSelect = false;
             this.dataGridViewD.Name = "dataGridViewD";
@@ -374,6 +458,14 @@
             this.tenTieuDe,
             this.TenDanhMuc,
             this.SoLuongDia});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTD.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTD.Location = new System.Drawing.Point(476, 115);
             this.dataGridViewTD.MultiSelect = false;
             this.dataGridViewTD.Name = "dataGridViewTD";
@@ -398,7 +490,7 @@
             // tenTieuDe
             // 
             this.tenTieuDe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tenTieuDe.DataPropertyName = "tenTieuDe";
+            this.tenTieuDe.DataPropertyName = "TenTieuDe";
             this.tenTieuDe.HeaderText = "Tên Tiêu Đề";
             this.tenTieuDe.Name = "tenTieuDe";
             this.tenTieuDe.ReadOnly = true;
@@ -452,82 +544,6 @@
             this.comboBox3.Size = new System.Drawing.Size(507, 24);
             this.comboBox3.TabIndex = 39;
             // 
-            // panelThemDia
-            // 
-            this.panelThemDia.Controls.Add(this.cbbThem_TenTieuDe);
-            this.panelThemDia.Controls.Add(this.tbThem_IdTieuDe);
-            this.panelThemDia.Controls.Add(this.label5);
-            this.panelThemDia.Controls.Add(this.tbThem_IdDia);
-            this.panelThemDia.Controls.Add(this.label7);
-            this.panelThemDia.Controls.Add(this.label9);
-            this.panelThemDia.Location = new System.Drawing.Point(0, 0);
-            this.panelThemDia.Name = "panelThemDia";
-            this.panelThemDia.Size = new System.Drawing.Size(442, 229);
-            this.panelThemDia.TabIndex = 63;
-            // 
-            // tbThem_IdDia
-            // 
-            this.tbThem_IdDia.Location = new System.Drawing.Point(108, 59);
-            this.tbThem_IdDia.Name = "tbThem_IdDia";
-            this.tbThem_IdDia.Size = new System.Drawing.Size(322, 22);
-            this.tbThem_IdDia.TabIndex = 53;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(7, 105);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 17);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "ID Tiêu Đề:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(46, 64);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 17);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "ID Đĩa:";
-            // 
-            // tbThem_IdTieuDe
-            // 
-            this.tbThem_IdTieuDe.Enabled = false;
-            this.tbThem_IdTieuDe.Location = new System.Drawing.Point(108, 102);
-            this.tbThem_IdTieuDe.Name = "tbThem_IdTieuDe";
-            this.tbThem_IdTieuDe.Size = new System.Drawing.Size(322, 22);
-            this.tbThem_IdTieuDe.TabIndex = 55;
-            this.tbThem_IdTieuDe.EditValueChanged += new System.EventHandler(this.tbThem_IdTieuDe_EditValueChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(7, 154);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 17);
-            this.label5.TabIndex = 54;
-            this.label5.Text = "Tên Tiêu Đề:";
-            // 
-            // cbbThem_TenTieuDe
-            // 
-            this.cbbThem_TenTieuDe.Enabled = false;
-            this.cbbThem_TenTieuDe.FormattingEnabled = true;
-            this.cbbThem_TenTieuDe.Items.AddRange(new object[] {
-            "Theo Tên NV",
-            "Theo Mã NV",
-            "Theo SDT"});
-            this.cbbThem_TenTieuDe.Location = new System.Drawing.Point(108, 151);
-            this.cbbThem_TenTieuDe.Name = "cbbThem_TenTieuDe";
-            this.cbbThem_TenTieuDe.Size = new System.Drawing.Size(322, 24);
-            this.cbbThem_TenTieuDe.TabIndex = 40;
-            this.cbbThem_TenTieuDe.SelectedIndexChanged += new System.EventHandler(this.cbbThem_TenTieuDe_SelectedIndexChanged);
-            // 
             // Form_QuanLyKhoDia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -548,6 +564,10 @@
             this.groupControl1.ResumeLayout(false);
             this.panelQuanLyTD.ResumeLayout(false);
             this.panelQuanLyTD.PerformLayout();
+            this.panelThemDia.ResumeLayout(false);
+            this.panelThemDia.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbThem_IdTieuDe.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbThem_IdDia.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDanhMuc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTrangThai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbNguoiMuon.Properties)).EndInit();
@@ -564,10 +584,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
-            this.panelThemDia.ResumeLayout(false);
-            this.panelThemDia.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbThem_IdDia.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbThem_IdTieuDe.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -600,10 +616,6 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdDia;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdTieuDe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenTieuDe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenDanhMuc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongDia;
         private DevExpress.XtraEditors.TextEdit tbDanhMuc;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelThemDia;
@@ -613,5 +625,9 @@
         private System.Windows.Forms.ComboBox cbbThem_TenTieuDe;
         private DevExpress.XtraEditors.TextEdit tbThem_IdTieuDe;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdTieuDe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenTieuDe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDanhMuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongDia;
     }
 }

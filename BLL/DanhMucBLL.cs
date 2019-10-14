@@ -15,6 +15,11 @@ namespace BLL
         {
             db = new QLCDDataContext();
         }
+
+        public List<DanhMuc> LayDanhSachDanhMuc()
+        {
+            return db.DanhMucs.Where(x => x.TrangThaiXoa == false).ToList();
+        }
         public int layIdDanhMuc(string tenDanhMuc)
         {
             int maTD = (from a in db.DanhMucs
@@ -33,8 +38,31 @@ namespace BLL
             return Convert.ToInt32(td);
         }
 
-        public bool ThemDanhMuc(DanhMuc dm)
+        public List<eDanhMuc> LayDanhSachTenDanhMuc()
         {
+            List<eDanhMuc> list = new List<eDanhMuc>();
+            var query = (from a in db.DanhMucs
+                         where a.TrangThaiXoa == false
+                         select new
+                         {
+                             a.TenDanhMuc
+                         }).ToList();
+
+            foreach (var item in query)
+            {
+                eDanhMuc etd = new eDanhMuc(item.TenDanhMuc);
+                list.Add(etd);
+            }
+            return list;
+
+        }
+
+        public bool ThemDanhMuc(eDanhMuc edm)
+        {
+            DanhMuc dm = new DanhMuc();
+            dm.IdDanhMuc = edm.IdDanhMuc;
+            dm.TenDanhMuc = edm.TenDanhMuc;
+            dm.TrangThaiXoa = false;
             if (!db.DanhMucs.Contains(dm))
             {
                 db.DanhMucs.InsertOnSubmit(dm);
@@ -44,13 +72,13 @@ namespace BLL
             return false;
         }
 
-        public bool SuaDanhMuc(DanhMuc edm)
+        public bool SuaDanhMuc(eDanhMuc edm)
         {
-            DanhMuc td = new DanhMuc();
-            td = db.DanhMucs.Where(a => a.IdDanhMuc== edm.IdDanhMuc).SingleOrDefault();
-            if (td != null)
+            DanhMuc dm = new DanhMuc();
+            dm = db.DanhMucs.Where(a => a.IdDanhMuc== edm.IdDanhMuc).SingleOrDefault();
+            if (dm != null)
             {
-                td.TenDanhMuc = edm.TenDanhMuc;
+                dm.TenDanhMuc = edm.TenDanhMuc;
 
                 db.SubmitChanges();
                 return true;
@@ -58,19 +86,19 @@ namespace BLL
             return false;
         }
 
-        public bool XoaDanhMuc(TieuDe etd)
-        {
-            TieuDe td = new TieuDe();
-            td = db.TieuDes.Where(a => a.IdTieuDe== etd.IdTieuDe).SingleOrDefault();
-            if (td != null)
-            {
-                td.TrangThaiXoa = etd.TrangThaiXoa;
+        //public bool XoaDanhMuc(TieuDe etd)
+        //{
+        //    TieuDe td = new TieuDe();
+        //    td = db.TieuDes.Where(a => a.IdTieuDe== etd.IdTieuDe).SingleOrDefault();
+        //    if (td != null)
+        //    {
+        //        td.TrangThaiXoa = etd.TrangThaiXoa;
 
-                db.SubmitChanges();
-                return true;
-            }
-            return false;
-        }
+        //        db.SubmitChanges();
+        //        return true;
+        //    }
+        //    return false;
+        //}
 
         //Kiểm tra khi thêm danh mục, chống trùng danh mục
         public bool kiemTraTrungDanhMuc(string tenDanhMuc)

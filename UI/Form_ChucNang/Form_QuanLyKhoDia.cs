@@ -8,7 +8,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using DAL;
 using BLL;
 using Entities;
 using System.Text.RegularExpressions;
@@ -21,43 +20,35 @@ namespace UI.Form_ChucNang
         public int KEY = 0;
         TieuDeBLL tdbll;
         DiaBLL diabll;
-        QLCDDataContext db;
         public Form_QuanLyKhoDia()
         {
             InitializeComponent();
             tdbll = new TieuDeBLL();
-            diabll = new DiaBLL();
-            db = new QLCDDataContext();
+            diabll = new DiaBLL(); 
+            dataGridViewD.AutoGenerateColumns = false;
+            dataGridViewTD.AutoGenerateColumns = false;
         }
 
 
         #region Hàm viết riêng
         //Load Data Tiêu Đề
         public void LoadDataTieuDe()
-        {
-            dataGridViewTD.DataSource = (from a in db.TieuDes
-                                         join b in db.DanhMucs on a.IdDanhMuc equals b.IdDanhMuc
-                                         where a.TrangThaiXoa == false
-                                         select new
-                                         {
-                                             a.IdTieuDe,
-                                             a.TenTieuDe,
-                                             b.TenDanhMuc,
-                                             a.SoLuongDia
-                                         });
+        {            
+            dataGridViewTD.DataSource = tdbll.LayDanhSachTieuDe_QuanLyKhoDia();
         }
 
         public void LoadDataDia(string IdTieuDe)
         {
-            dataGridViewD.DataSource = (from a in db.TieuDes
-                                        join b in db.Dias on a.IdTieuDe equals b.IdTieuDe
-                                        where b.TrangThaiXoa == false && a.IdTieuDe == IdTieuDe
-                                        select new
-                                        {
-                                            b.IdDia,
-                                            b.TrangThai
+            //dataGridViewD.DataSource = (from a in db.TieuDes
+            //                            join b in db.Dias on a.IdTieuDe equals b.IdTieuDe
+            //                            where b.TrangThaiXoa == false && a.IdTieuDe == IdTieuDe
+            //                            select new
+            //                            {
+            //                                b.IdDia,
+            //                                b.TrangThai
 
-                                        });
+            //                            });
+            dataGridViewD.DataSource = diabll.LayDanhSachDia(IdTieuDe);
         }
         private void LoadCell()
         {
@@ -123,14 +114,23 @@ namespace UI.Form_ChucNang
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            KEY = 1;
-            //panelQuanLyTD.Visible = false;
+            KEY = 1;            
             
             panelThemDia.Visible = true;
-            cbbThem_TenTieuDe.DataSource = (from a in db.TieuDes
-                                            where a.TrangThaiXoa == false
-                                            select a.TenTieuDe
-                );
+
+            //Code cũ
+            //cbbThem_TenTieuDe.DataSource = (from a in db.TieuDes
+            //                                where a.TrangThaiXoa == false
+            //                                select a.TenTieuDe
+            //);
+            
+            // Binding dữ liệu từ List danh mục vào combobox
+            BindingSource binding = new BindingSource();
+            binding.DataSource = tdbll.LayDanhSachTenTieuDe();
+            cbbThem_TenTieuDe.DataSource = binding.DataSource;
+            cbbThem_TenTieuDe.DisplayMember = "TenTieuDe";
+            cbbThem_TenTieuDe.ValueMember = "TenTieuDe";
+
             cbbThem_TenTieuDe.Text = dataGridViewTD.CurrentRow.Cells[1].Value.ToString().Trim();
             XoaPanel();
             tbThem_IdDia.Text = NextID(diabll.LayMaDiaCaoNhat(), "CD");
@@ -179,7 +179,7 @@ namespace UI.Form_ChucNang
                             else
                             {
                                
-                                Dia dia = new Dia();
+                                eDia dia = new eDia();
                                 dia.IdDia = tbThem_IdDia.Text;
                                 dia.TrangThai = false;
                                 dia.TrangThaiXoa = false;                      
@@ -256,7 +256,7 @@ namespace UI.Form_ChucNang
                 {
                     try
                     {
-                        Dia dia = new Dia();
+                        eDia dia = new eDia();
                         dia.IdDia = tbThem_IdDia.Text;
                         dia.TrangThaiXoa = true;
 

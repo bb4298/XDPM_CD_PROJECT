@@ -20,7 +20,10 @@ namespace Entities
             TrangThaiXoa = trangThaiXoa;
         }
 
-
+        public eDanhMuc(string tenDanhMuc)
+        {
+            TenDanhMuc = tenDanhMuc;
+        }
         public eDanhMuc()
         {
 

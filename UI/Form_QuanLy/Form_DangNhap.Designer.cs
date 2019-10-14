@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_DangNhap));
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.btnDangNhap = new DevExpress.XtraEditors.SimpleButton();
@@ -36,6 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tbMatKhau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTaiKhoan.Properties)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +69,7 @@
             this.tbMatKhau.EditValue = "quang_123";
             this.tbMatKhau.Location = new System.Drawing.Point(239, 224);
             this.tbMatKhau.Name = "tbMatKhau";
-            this.tbMatKhau.Size = new System.Drawing.Size(305, 22);
+            this.tbMatKhau.Size = new System.Drawing.Size(305, 23);
             this.tbMatKhau.TabIndex = 28;
             // 
             // tbTaiKhoan
@@ -75,7 +77,7 @@
             this.tbTaiKhoan.EditValue = "quang_123";
             this.tbTaiKhoan.Location = new System.Drawing.Point(239, 167);
             this.tbTaiKhoan.Name = "tbTaiKhoan";
-            this.tbTaiKhoan.Size = new System.Drawing.Size(305, 22);
+            this.tbTaiKhoan.Size = new System.Drawing.Size(305, 23);
             this.tbTaiKhoan.TabIndex = 27;
             // 
             // label3
@@ -107,6 +109,10 @@
             this.label1.Size = new System.Drawing.Size(402, 38);
             this.label1.TabIndex = 24;
             this.label1.Text = "PHẦN MỀM QUẢN LÝ CD";
+            // 
+            // defaultLookAndFeel1
+            // 
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Blue";
             // 
             // Form_DangNhap
             // 
@@ -140,5 +146,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
     }
 }

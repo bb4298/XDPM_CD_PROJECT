@@ -8,7 +8,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using DAL;
 using BLL;
 using Entities;
 using System.Text.RegularExpressions;
@@ -21,12 +20,10 @@ namespace UI.Form_ChucNang
         //Biến điều khiển chức năng.
         public int KEY = 0;
 
-        QLCDDataContext db;
         KhachHangBLL khbll;
         public Form_QuanLyKhachHang()
         {
-            InitializeComponent();
-            db = new QLCDDataContext();
+            InitializeComponent();         
             khbll = new KhachHangBLL();
         }
 
@@ -75,15 +72,8 @@ namespace UI.Form_ChucNang
 
         public void loadData()
         {
-            dataGridView1.DataSource = (from a in db.KhachHangs
-                                        where a.TrangThaiXoa == false
-                                        select new
-                                        {
-                                            a.IdKhachHang,
-                                            a.HoTen,
-                                            a.DiaChi,
-                                            a.SoDienThoai
-                                        });
+           
+            dataGridView1.DataSource = khbll.LayDanhSachKhachHang();
         }
         #endregion
 
@@ -183,14 +173,14 @@ namespace UI.Form_ChucNang
                             }
                             else
                             {
-                                KhachHang kh = new KhachHang();
-                                kh.IdKhachHang = tbIdKhachHang.Text;
-                                kh.HoTen = tbTenKhachHang.Text;
-                                kh.DiaChi = tbDiaChi.Text;
-                                kh.SoDienThoai = tbSDT.Text;
-                                kh.TrangThaiXoa = false;
+                                eKhachHang ekh = new eKhachHang();
+                                ekh.IdKhachHang = tbIdKhachHang.Text;
+                                ekh.HoTen = tbTenKhachHang.Text;
+                                ekh.DiaChi = tbDiaChi.Text;
+                                ekh.SoDienThoai = tbSDT.Text;
+                                ekh.TrangThaiXoa = false;
 
-                                if (khbll.ThemKhachHang(kh))
+                                if (khbll.ThemKhachHang(ekh))
                                 {
                                     XtraMessageBox.Show("Thêm thành công !");
                                     XoaPanel();
@@ -254,13 +244,13 @@ namespace UI.Form_ChucNang
                             }
                             else
                             {
-                                KhachHang kh = new KhachHang();
-                                kh.IdKhachHang = tbIdKhachHang.Text;
-                                kh.HoTen = tbTenKhachHang.Text;
-                                kh.DiaChi = tbDiaChi.Text;
-                                kh.SoDienThoai = tbSDT.Text;
+                                eKhachHang ekh = new eKhachHang();
+                                ekh.IdKhachHang = tbIdKhachHang.Text;
+                                ekh.HoTen = tbTenKhachHang.Text;
+                                ekh.DiaChi = tbDiaChi.Text;
+                                ekh.SoDienThoai = tbSDT.Text;
 
-                                if (khbll.SuaKhachHang(kh))
+                                if (khbll.SuaKhachHang(ekh))
                                 {
                                     XtraMessageBox.Show("Sửa thành công !");
                                     XoaPanel();
@@ -311,11 +301,11 @@ namespace UI.Form_ChucNang
                 {
                     try
                     {
-                        KhachHang kh = new KhachHang();
-                        kh.IdKhachHang = tbIdKhachHang.Text;
-                        kh.TrangThaiXoa = true;
+                        eKhachHang ekh = new eKhachHang();
+                        ekh.IdKhachHang = tbIdKhachHang.Text;
+                        ekh.TrangThaiXoa = true;
 
-                        if (khbll.XoaKhachHang(kh))
+                        if (khbll.XoaKhachHang(ekh))
                         {
                             XtraMessageBox.Show("Xóa thành công !");
                             XoaPanel();

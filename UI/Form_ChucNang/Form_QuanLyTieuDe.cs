@@ -8,7 +8,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using DAL;
 using BLL;
 using Entities;
 using System.Text.RegularExpressions;
@@ -18,33 +17,32 @@ namespace UI.Form_ChucNang
     public partial class Form_QuanLyTieuDe : DevExpress.XtraEditors.XtraForm
     {
         //Biến điều khiển chức năng.
-        public int KEY = 0;
-
-        QLCDDataContext db;
+        public int KEY = 0;     
         TieuDeBLL tdbll;
         DanhMucBLL dmbll;
         public Form_QuanLyTieuDe()
         {
-            InitializeComponent();
-            db = new QLCDDataContext();
+            InitializeComponent();        
             tdbll = new TieuDeBLL();
             dmbll = new DanhMucBLL();
+            dataGridView1.AutoGenerateColumns = false;
         }
 
         #region Hàm tự viết
         public void LoadData()
         {
-            dataGridView1.DataSource = (from a in db.TieuDes
-                                        join b in db.DanhMucs on a.IdDanhMuc equals b.IdDanhMuc
-                                        where a.TrangThaiXoa == false
-                                        select new
-                                        {
-                                            a.IdTieuDe,
-                                            a.TenTieuDe,                                         
-                                            a.SoLuongDia,
-                                            b.TenDanhMuc,
-                                            a.PhiThue
-                                        });
+            //dataGridView1.DataSource = (from a in db.TieuDes
+            //                            join b in db.DanhMucs on a.IdDanhMuc equals b.IdDanhMuc
+            //                            where a.TrangThaiXoa == false
+            //                            select new
+            //                            {
+            //                                a.IdTieuDe,
+            //                                a.TenTieuDe,                                         
+            //                                a.SoLuongDia,
+            //                                b.TenDanhMuc,
+            //                                a.PhiThue
+            //                            });
+            dataGridView1.DataSource = tdbll.LayDanhSachTieuDe();
         }
 
         private void LoadCell()
@@ -88,16 +86,23 @@ namespace UI.Form_ChucNang
             tbIdTieuDe.Text = "";
             tbTenTieuDe.Text = "";
             tbSoLuongDia.Text = "";
-            tbPhiThue.Text = "";
+            tbPhiThue.Text = "";            
         }
         #endregion
 
         private void Form_QuanLyTieuDe_Load(object sender, EventArgs e)
         {
             LoadData();
-            cbbDanhMuc.DataSource = (from a in db.DanhMucs
-                                     select a.TenDanhMuc
-                                         );
+            //cbbDanhMuc.DataSource = (from a in db.DanhMucs
+            //                         select a.TenDanhMuc
+            //                             );
+            //cbbDanhMuc.DataSource = dmbll.LayDanhSachDanhMuc();
+
+            BindingSource binding = new BindingSource();
+            binding.DataSource = dmbll.LayDanhSachDanhMuc();
+            cbbDanhMuc.DataSource = binding.DataSource;
+            cbbDanhMuc.DisplayMember = "TenDanhMuc";
+            cbbDanhMuc.ValueMember = "TenDanhMuc";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -177,7 +182,7 @@ namespace UI.Form_ChucNang
                             else
                             {
                                 int idDM = dmbll.layIdDanhMuc(cbbDanhMuc.Text);
-                                TieuDe td = new TieuDe();
+                                eTieuDe td = new eTieuDe();
                                 td.IdTieuDe = tbIdTieuDe.Text;
                                 td.TenTieuDe = tbTenTieuDe.Text;
                                 td.SoLuongDia = 0;
@@ -247,7 +252,7 @@ namespace UI.Form_ChucNang
                             else
                             {
                                 int idDM = dmbll.layIdDanhMuc(cbbDanhMuc.Text);
-                                TieuDe td = new TieuDe();
+                                eTieuDe td = new eTieuDe();
                                 td.IdTieuDe = tbIdTieuDe.Text;
                                 td.TenTieuDe = tbTenTieuDe.Text;
                                 td.SoLuongDia = 0;
@@ -314,7 +319,7 @@ namespace UI.Form_ChucNang
                 {
                     try
                     {
-                        TieuDe kh = new TieuDe();
+                        eTieuDe kh = new eTieuDe();
                         kh.IdTieuDe = tbIdTieuDe.Text;
                         kh.TrangThaiXoa = true;
 

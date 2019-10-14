@@ -36,11 +36,16 @@ namespace UI
         public static bool f_QuanLyPhiTre = true;
         public static bool f_QuanLyDatDia = true;
 
-
+        //Thông tin tài khoản admin
+        public static string TENTAIKHOAN_ADMIN;
+        public static string MATKHAU_ADMIN;
         #endregion
+
+
         public Form_Main()
         {
             InitializeComponent();
+            
         }
 
         private void Form_Main_Load(object sender, EventArgs e)

@@ -8,7 +8,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using DAL;
 using BLL;
 using Entities;
 using System.Text.RegularExpressions;
@@ -20,26 +19,18 @@ namespace UI.Form_ChucNang
         //Biến điều khiển chức năng.
         public int KEY = 0;
 
-        DanhMucBLL dmbll;
-        QLCDDataContext db;
+        DanhMucBLL dmbll;  
         public Form_QuanLyDanhMuc()
         {
             InitializeComponent();
             dmbll = new DanhMucBLL();
-            db = new QLCDDataContext();
         }
 
         #region Hàm viết riêng
         public void LoadData()
         {
-            dataGridView1.DataSource = (from a in db.DanhMucs                                 
-                                        where a.TrangThaiXoa == false
-                                        select new
-                                        {
-                                            a.IdDanhMuc,
-                                            a.TenDanhMuc
-                                           
-                                        });
+            
+            dataGridView1.DataSource = dmbll.LayDanhSachDanhMuc();
         }
 
         private void LoadCell()
@@ -147,13 +138,13 @@ namespace UI.Form_ChucNang
                             else
                             {
                               
-                                DanhMuc dm = new DanhMuc();
-                                dm.IdDanhMuc =Convert.ToInt32(tbIdDanhMuc.Text);
-                                dm.TenDanhMuc = tbTenDanhMuc.Text;
+                                eDanhMuc edm = new eDanhMuc();
+                                edm.IdDanhMuc =Convert.ToInt32(tbIdDanhMuc.Text);
+                                edm.TenDanhMuc = tbTenDanhMuc.Text;
                                
-                                dm.TrangThaiXoa = false;
+                                edm.TrangThaiXoa = false;
 
-                                if (dmbll.ThemDanhMuc(dm))
+                                if (dmbll.ThemDanhMuc(edm))
                                 {
                                     XtraMessageBox.Show("Thêm thành công !");
                                     XoaPanel();
@@ -217,13 +208,13 @@ namespace UI.Form_ChucNang
                             else
                             {
 
-                                DanhMuc dm = new DanhMuc();
-                                dm.IdDanhMuc = Convert.ToInt32(tbIdDanhMuc.Text);
-                                dm.TenDanhMuc = tbTenDanhMuc.Text;
+                                eDanhMuc edm = new eDanhMuc();
+                                edm.IdDanhMuc = Convert.ToInt32(tbIdDanhMuc.Text);
+                                edm.TenDanhMuc = tbTenDanhMuc.Text;
 
-                                dm.TrangThaiXoa = false;
+                                edm.TrangThaiXoa = false;
 
-                                if (dmbll.SuaDanhMuc(dm))
+                                if (dmbll.SuaDanhMuc(edm))
                                 {
                                     XtraMessageBox.Show("Sửa thành công !");
                                     XoaPanel();

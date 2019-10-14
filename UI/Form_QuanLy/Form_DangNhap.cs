@@ -15,13 +15,15 @@ namespace UI.Form_QuanLy
 {
     public partial class Form_DangNhap : DevExpress.XtraEditors.XtraForm
     {
-        NhanVienBLL nvbll;
+        TaiKhoanBLL tkbll;
+        NhanVienBLL nvbll;       
+        
         public Form_DangNhap()
         {
             
             InitializeComponent();
-            nvbll = new NhanVienBLL();
-            
+            tkbll = new TaiKhoanBLL();
+            nvbll = new NhanVienBLL();           
         }
 
       
@@ -42,7 +44,11 @@ namespace UI.Form_QuanLy
                     if (nv != null)
                     {
                         XtraMessageBox.Show("Login thành công !");
+                        Form_Main.TENTAIKHOAN_ADMIN = tkbll.LayTaiKhoan(tbTaiKhoan.Text).TenTaiKhoan;
+                        Form_Main.MATKHAU_ADMIN = tkbll.LayTaiKhoan(tbTaiKhoan.Text).MatKhau;
+                        
                         Form_Main.trangThaiLogin = true;
+                        
                         this.Close();
                     }
                     else

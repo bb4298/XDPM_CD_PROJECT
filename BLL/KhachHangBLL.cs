@@ -15,37 +15,17 @@ namespace BLL
         {
             db = new QLCDDataContext();
         }
-        #region Code mẫu ko xài
-        //Lấy danh sách khách hàng
-        public List<eKhachHang> LayDanhSachKhachHang()
+        public List<KhachHang> LayDanhSachKhachHang()
         {
-            var dskh = (from a in db.KhachHangs
-                        select a
-                        );
-            List<eKhachHang> ekhs = new List<eKhachHang>();
+            List<KhachHang> list = db.KhachHangs.Where(x => x.TrangThaiXoa == false).ToList();
+            //foreach(var item in list)
+            //{
+            //    item.
+            //}
+            return list;
 
-            ekhs = DataToEntity(dskh.ToList());
-            return ekhs;    
+
         }
-
-        //Chuyển List Data thành Entity.
-        public List<eKhachHang> DataToEntity(List<KhachHang> khs)
-        {
-            List<eKhachHang> ekhs = new List<eKhachHang>();
-
-            foreach (eKhachHang ekh in ekhs)
-            {
-                foreach(KhachHang kh in khs)
-                {
-                    ekh.IdKhachHang = kh.IdKhachHang;
-                    ekh.HoTen = kh.HoTen;
-                    ekh.DiaChi = kh.DiaChi;
-                    ekh.SoDienThoai = kh.SoDienThoai;
-                }
-            }
-            return ekhs;
-        }
-        #endregion
 
         public string LayMaKhachHangCaoNhat()
         {
@@ -56,8 +36,14 @@ namespace BLL
             return kh;
         }
 
-        public bool ThemKhachHang(KhachHang kh)
+        public bool ThemKhachHang(eKhachHang ekh)
         {
+            KhachHang kh = new KhachHang();
+            kh.IdKhachHang = ekh.IdKhachHang;
+            kh.HoTen = ekh.HoTen;
+            kh.DiaChi = ekh.DiaChi;
+            kh.SoDienThoai = ekh.SoDienThoai;
+            kh.TrangThaiXoa = false;
             if (!db.KhachHangs.Contains(kh))
             {
                 db.KhachHangs.InsertOnSubmit(kh);
@@ -67,7 +53,7 @@ namespace BLL
             return false;
         }
 
-        public bool SuaKhachHang(KhachHang ekh)
+        public bool SuaKhachHang(eKhachHang ekh)
         {
             KhachHang kh = new KhachHang();
             kh = db.KhachHangs.Where(a => a.IdKhachHang == ekh.IdKhachHang).SingleOrDefault();
@@ -83,7 +69,7 @@ namespace BLL
             return false;
         }
 
-        public bool XoaKhachHang(KhachHang ekh)
+        public bool XoaKhachHang(eKhachHang ekh)
         {
             KhachHang kh = new KhachHang();
             kh = db.KhachHangs.Where(a => a.IdKhachHang == ekh.IdKhachHang).SingleOrDefault();

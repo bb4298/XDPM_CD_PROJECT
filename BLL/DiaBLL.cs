@@ -15,7 +15,25 @@ namespace BLL
         {
             db = new QLCDDataContext();
         }
+        public List<eDia> LayDanhSachDia(string IdTieuDe)
+        {
+            List<eDia> list = new List<eDia>();
+            var query = (from a in db.TieuDes
+                                        join b in db.Dias on a.IdTieuDe equals b.IdTieuDe
+                                        where b.TrangThaiXoa == false && a.IdTieuDe == IdTieuDe
+                                        select new
+                                        {
+                                            b.IdDia,
+                                            b.TrangThai
 
+                                        });
+            foreach (var item in query)
+            {
+                eDia etd = new eDia(item.IdDia,Convert.ToBoolean(item.TrangThai));
+                list.Add(etd);
+            }
+            return list;
+        }
         public string LayMaDiaCaoNhat()
         {
             string td = (from a in db.Dias
@@ -65,8 +83,13 @@ namespace BLL
             }
             return true;
         }
-        public bool ThemDia(Dia d)
+        public bool ThemDia(eDia ed)
         {
+            Dia d = new Dia();
+            d.IdDia = ed.IdDia;
+            d.TrangThai = ed.TrangThai;
+            d.TrangThaiXoa = ed.TrangThaiXoa;
+            d.IdTieuDe = ed.IdTieuDe;
             if (!db.Dias.Contains(d))
             {
                 db.Dias.InsertOnSubmit(d);
@@ -77,7 +100,7 @@ namespace BLL
         }
 
 
-        public bool XoaDia(Dia ed)
+        public bool XoaDia(eDia ed)
         {
             Dia d = new Dia();
             d = db.Dias.Where(a => a.IdDia == ed.IdDia).SingleOrDefault();

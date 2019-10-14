@@ -22,5 +22,10 @@ namespace UI.Form_ChucNang
         {
             Form_Main.f_QuanLyPhiTre = true;
         }
+
+        private void Form_QuanLyPhiTre_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
