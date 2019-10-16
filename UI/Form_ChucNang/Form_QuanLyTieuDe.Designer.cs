@@ -34,20 +34,13 @@
             this.panelQuanLyTD = new System.Windows.Forms.Panel();
             this.tbSoLuongDia = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbPhiThue = new DevExpress.XtraEditors.TextEdit();
             this.cbbDanhMuc = new System.Windows.Forms.ComboBox();
             this.tbIdTieuDe = new DevExpress.XtraEditors.TextEdit();
             this.tbTenTieuDe = new DevExpress.XtraEditors.TextEdit();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.IdTieuDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenTieuDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhiThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.panelThaoTac = new System.Windows.Forms.Panel();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
@@ -58,11 +51,14 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.tbTimKiemNV = new System.Windows.Forms.TextBox();
             this.cbbTK_NV = new System.Windows.Forms.ComboBox();
+            this.IdTieuDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenTieuDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.panelQuanLyTD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbSoLuongDia.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbPhiThue.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbIdTieuDe.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTenTieuDe.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -91,14 +87,12 @@
             // 
             this.panelQuanLyTD.Controls.Add(this.tbSoLuongDia);
             this.panelQuanLyTD.Controls.Add(this.label1);
-            this.panelQuanLyTD.Controls.Add(this.tbPhiThue);
             this.panelQuanLyTD.Controls.Add(this.cbbDanhMuc);
             this.panelQuanLyTD.Controls.Add(this.tbIdTieuDe);
             this.panelQuanLyTD.Controls.Add(this.tbTenTieuDe);
             this.panelQuanLyTD.Controls.Add(this.label4);
             this.panelQuanLyTD.Controls.Add(this.label3);
             this.panelQuanLyTD.Controls.Add(this.label2);
-            this.panelQuanLyTD.Controls.Add(this.label8);
             this.panelQuanLyTD.Enabled = false;
             this.panelQuanLyTD.Location = new System.Drawing.Point(11, 29);
             this.panelQuanLyTD.Name = "panelQuanLyTD";
@@ -108,7 +102,7 @@
             // tbSoLuongDia
             // 
             this.tbSoLuongDia.Enabled = false;
-            this.tbSoLuongDia.Location = new System.Drawing.Point(124, 187);
+            this.tbSoLuongDia.Location = new System.Drawing.Point(124, 145);
             this.tbSoLuongDia.Name = "tbSoLuongDia";
             this.tbSoLuongDia.Size = new System.Drawing.Size(364, 22);
             this.tbSoLuongDia.TabIndex = 61;
@@ -118,18 +112,11 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(8, 190);
+            this.label1.Location = new System.Drawing.Point(8, 148);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 17);
             this.label1.TabIndex = 60;
             this.label1.Text = "Số Lượng Đĩa:";
-            // 
-            // tbPhiThue
-            // 
-            this.tbPhiThue.Location = new System.Drawing.Point(124, 143);
-            this.tbPhiThue.Name = "tbPhiThue";
-            this.tbPhiThue.Size = new System.Drawing.Size(364, 22);
-            this.tbPhiThue.TabIndex = 59;
             // 
             // cbbDanhMuc
             // 
@@ -188,17 +175,6 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Mã tiêu đề:";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(41, 147);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 17);
-            this.label8.TabIndex = 43;
-            this.label8.Text = "Phí Thuê:";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -210,8 +186,7 @@
             this.IdTieuDe,
             this.tenTieuDe,
             this.SoLuongDia,
-            this.TenDanhMuc,
-            this.PhiThue});
+            this.TenDanhMuc});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
@@ -231,50 +206,6 @@
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // IdTieuDe
-            // 
-            this.IdTieuDe.DataPropertyName = "IdTieuDe";
-            this.IdTieuDe.FillWeight = 253.6585F;
-            this.IdTieuDe.HeaderText = "Mã Tiêu Đề";
-            this.IdTieuDe.Name = "IdTieuDe";
-            this.IdTieuDe.ReadOnly = true;
-            this.IdTieuDe.Width = 118;
-            // 
-            // tenTieuDe
-            // 
-            this.tenTieuDe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tenTieuDe.DataPropertyName = "tenTieuDe";
-            this.tenTieuDe.FillWeight = 48.78049F;
-            this.tenTieuDe.HeaderText = "Tên Tiêu Đề";
-            this.tenTieuDe.Name = "tenTieuDe";
-            this.tenTieuDe.ReadOnly = true;
-            // 
-            // SoLuongDia
-            // 
-            this.SoLuongDia.DataPropertyName = "SoLuongDia";
-            this.SoLuongDia.HeaderText = "Số Lượng";
-            this.SoLuongDia.Name = "SoLuongDia";
-            this.SoLuongDia.ReadOnly = true;
-            this.SoLuongDia.Width = 110;
-            // 
-            // TenDanhMuc
-            // 
-            this.TenDanhMuc.DataPropertyName = "TenDanhMuc";
-            this.TenDanhMuc.FillWeight = 48.78049F;
-            this.TenDanhMuc.HeaderText = "Danh Mục";
-            this.TenDanhMuc.Name = "TenDanhMuc";
-            this.TenDanhMuc.ReadOnly = true;
-            this.TenDanhMuc.Width = 140;
-            // 
-            // PhiThue
-            // 
-            this.PhiThue.DataPropertyName = "PhiThue";
-            this.PhiThue.FillWeight = 48.78049F;
-            this.PhiThue.HeaderText = "Phí Thuê";
-            this.PhiThue.Name = "PhiThue";
-            this.PhiThue.ReadOnly = true;
-            this.PhiThue.Width = 180;
             // 
             // groupControl3
             // 
@@ -396,6 +327,41 @@
             this.cbbTK_NV.Size = new System.Drawing.Size(723, 24);
             this.cbbTK_NV.TabIndex = 39;
             // 
+            // IdTieuDe
+            // 
+            this.IdTieuDe.DataPropertyName = "IdTieuDe";
+            this.IdTieuDe.FillWeight = 253.6585F;
+            this.IdTieuDe.HeaderText = "Mã Tiêu Đề";
+            this.IdTieuDe.Name = "IdTieuDe";
+            this.IdTieuDe.ReadOnly = true;
+            this.IdTieuDe.Width = 118;
+            // 
+            // tenTieuDe
+            // 
+            this.tenTieuDe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenTieuDe.DataPropertyName = "tenTieuDe";
+            this.tenTieuDe.FillWeight = 48.78049F;
+            this.tenTieuDe.HeaderText = "Tên Tiêu Đề";
+            this.tenTieuDe.Name = "tenTieuDe";
+            this.tenTieuDe.ReadOnly = true;
+            // 
+            // SoLuongDia
+            // 
+            this.SoLuongDia.DataPropertyName = "SoLuongDia";
+            this.SoLuongDia.HeaderText = "Số Lượng";
+            this.SoLuongDia.Name = "SoLuongDia";
+            this.SoLuongDia.ReadOnly = true;
+            this.SoLuongDia.Width = 110;
+            // 
+            // TenDanhMuc
+            // 
+            this.TenDanhMuc.DataPropertyName = "TenDanhMuc";
+            this.TenDanhMuc.FillWeight = 48.78049F;
+            this.TenDanhMuc.HeaderText = "Danh Mục";
+            this.TenDanhMuc.Name = "TenDanhMuc";
+            this.TenDanhMuc.ReadOnly = true;
+            this.TenDanhMuc.Width = 140;
+            // 
             // Form_QuanLyTieuDe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -415,7 +381,6 @@
             this.panelQuanLyTD.ResumeLayout(false);
             this.panelQuanLyTD.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbSoLuongDia.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbPhiThue.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbIdTieuDe.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTenTieuDe.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -433,14 +398,12 @@
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.Panel panelQuanLyTD;
-        private DevExpress.XtraEditors.TextEdit tbPhiThue;
         private System.Windows.Forms.ComboBox cbbDanhMuc;
         private DevExpress.XtraEditors.TextEdit tbIdTieuDe;
         private DevExpress.XtraEditors.TextEdit tbTenTieuDe;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DevExpress.XtraEditors.TextEdit tbSoLuongDia;
         private System.Windows.Forms.Label label1;
@@ -458,6 +421,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tenTieuDe;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongDia;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDanhMuc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PhiThue;
     }
 }

@@ -57,11 +57,50 @@ namespace BLL
 
         }
 
+        public string LayTenDanhMucBangIdDia(string idDia)
+        {
+
+            var tenDanhMuc = (from a in db.Dias
+                             join b in db.TieuDes on a.IdTieuDe equals b.IdTieuDe
+                             join c in db.DanhMucs on b.IdDanhMuc equals c.IdDanhMuc
+                             where b.TrangThaiXoa == false && a.IdDia == idDia
+                             select c.TenDanhMuc).SingleOrDefault();
+            return tenDanhMuc;
+
+        }
+
+        public decimal LayPhiThueBangIdDia(string idDia)
+        {
+       
+
+            decimal phiThue = (from a in db.Dias
+                              join b in db.TieuDes on a.IdTieuDe equals b.IdTieuDe
+                              join c in db.DanhMucs on b.IdDanhMuc equals c.IdDanhMuc
+                              where b.TrangThaiXoa == false && a.IdDia == idDia
+                              select (decimal)c.PhiThue).Single();
+            return phiThue;
+
+        }
+
+        public decimal LayPhiTreHanBangIdDia(string idDia)
+        {
+
+            decimal phiThue = (from a in db.Dias
+                           join b in db.TieuDes on a.IdTieuDe equals b.IdTieuDe
+                           join c in db.DanhMucs on b.IdDanhMuc equals c.IdDanhMuc
+                           where b.TrangThaiXoa == false && a.IdDia == idDia
+                           select (decimal)c.PhiTreHan).Single();
+            return phiThue;
+
+        }
+
         public bool ThemDanhMuc(eDanhMuc edm)
         {
             DanhMuc dm = new DanhMuc();
             dm.IdDanhMuc = edm.IdDanhMuc;
             dm.TenDanhMuc = edm.TenDanhMuc;
+            dm.PhiThue = edm.PhiThue;
+            dm.PhiTreHan = edm.PhiTreHan;
             dm.TrangThaiXoa = false;
             if (!db.DanhMucs.Contains(dm))
             {
@@ -79,7 +118,8 @@ namespace BLL
             if (dm != null)
             {
                 dm.TenDanhMuc = edm.TenDanhMuc;
-
+                dm.PhiThue = edm.PhiThue;
+                dm.PhiTreHan = edm.PhiTreHan;
                 db.SubmitChanges();
                 return true;
             }

@@ -32,6 +32,27 @@ namespace BLL
             return kh;
         }
 
+        //Láy thông tin kh cho form quản lý thuê dĩa.
+        public eKhachHang LayThongTinKhachHang(string idKhachHang)
+        {
+            eKhachHang ekh = new eKhachHang();
+            KhachHang kh = db.KhachHangs.Where(x => x.IdKhachHang == idKhachHang).SingleOrDefault();
+            if(kh== null)
+            {
+                ekh = null;
+            }
+            else if(kh!= null)
+            {
+                ekh.IdKhachHang = kh.IdKhachHang;
+                ekh.HoTen = kh.HoTen;
+                ekh.DiaChi = kh.DiaChi;
+                ekh.SoDienThoai = kh.SoDienThoai;
+
+                return ekh;
+            }
+            return ekh;
+        }
+
         public bool ThemKhachHang(eKhachHang ekh)
         {
             KhachHang kh = new KhachHang();

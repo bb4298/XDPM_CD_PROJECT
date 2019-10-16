@@ -38,7 +38,6 @@
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.button1 = new System.Windows.Forms.Button();
             this.tbTimKiemNV = new System.Windows.Forms.TextBox();
             this.cbbTK_NV = new System.Windows.Forms.ComboBox();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -161,7 +160,6 @@
             this.groupControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.groupControl2.Appearance.Options.UseBackColor = true;
             this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.groupControl2.Controls.Add(this.button1);
             this.groupControl2.Controls.Add(this.tbTimKiemNV);
             this.groupControl2.Controls.Add(this.cbbTK_NV);
             this.groupControl2.Location = new System.Drawing.Point(565, 12);
@@ -171,16 +169,6 @@
             this.groupControl2.Size = new System.Drawing.Size(773, 111);
             this.groupControl2.TabIndex = 58;
             this.groupControl2.Text = "                       Tìm Kiếm";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(644, 44);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tbTimKiemNV
             // 
@@ -199,7 +187,7 @@
             "Theo SDT"});
             this.cbbTK_NV.Location = new System.Drawing.Point(26, 44);
             this.cbbTK_NV.Name = "cbbTK_NV";
-            this.cbbTK_NV.Size = new System.Drawing.Size(549, 24);
+            this.cbbTK_NV.Size = new System.Drawing.Size(723, 24);
             this.cbbTK_NV.TabIndex = 10;
             // 
             // groupControl1
@@ -429,6 +417,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoDienThoai;
-        private System.Windows.Forms.Button button1;
     }
 }

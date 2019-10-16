@@ -9,15 +9,15 @@ namespace Entities
     public class eDia
     {
         public String IdDia { get; set; }
-        public bool TrangThai { get; set; }
+        public bool TrangThaiThue { get; set; }
         public bool TrangThaiXoa { get; set; }
         public String IdTieuDe { get; set; }
 
 
-        public eDia(String idDia, bool trangThai, bool trangThaiXoa, String idTieuDe)
+        public eDia(String idDia, bool trangThaiThue, bool trangThaiXoa, String idTieuDe)
         {
             IdDia = idDia;
-            TrangThai = trangThai;
+            TrangThaiThue = trangThaiThue;
             TrangThaiXoa = trangThaiXoa;
             IdTieuDe = idTieuDe;
 
@@ -25,10 +25,10 @@ namespace Entities
 
 
         //Dùng cho dtgv đĩa bên form quản lý kho đĩa
-        public eDia(String idDia, bool trangThai)
+        public eDia(String idDia, bool trangThaiThue)
         {
             IdDia = idDia;
-            TrangThai = trangThai;           
+            TrangThaiThue = trangThaiThue;           
 
         }
 

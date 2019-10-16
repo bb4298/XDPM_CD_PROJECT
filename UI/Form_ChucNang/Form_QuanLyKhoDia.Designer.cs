@@ -102,7 +102,7 @@
             this.groupControl1.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(465, 269);
+            this.groupControl1.Size = new System.Drawing.Size(456, 269);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "Thông Tin Đĩa";
             // 
@@ -300,7 +300,7 @@
             this.panelThaoTac.Controls.Add(this.btnLuu);
             this.panelThaoTac.Location = new System.Drawing.Point(14, 29);
             this.panelThaoTac.Name = "panelThaoTac";
-            this.panelThaoTac.Size = new System.Drawing.Size(442, 224);
+            this.panelThaoTac.Size = new System.Drawing.Size(435, 224);
             this.panelThaoTac.TabIndex = 3;
             // 
             // btnThem
@@ -368,14 +368,14 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewD.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewD.Location = new System.Drawing.Point(1066, 115);
+            this.dataGridViewD.Location = new System.Drawing.Point(947, 115);
             this.dataGridViewD.MultiSelect = false;
             this.dataGridViewD.Name = "dataGridViewD";
             this.dataGridViewD.ReadOnly = true;
             this.dataGridViewD.RowHeadersVisible = false;
             this.dataGridViewD.RowTemplate.Height = 24;
             this.dataGridViewD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewD.Size = new System.Drawing.Size(278, 427);
+            this.dataGridViewD.Size = new System.Drawing.Size(406, 427);
             this.dataGridViewD.TabIndex = 8;
             this.dataGridViewD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewD_CellClick);
             this.dataGridViewD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewD_CellContentClick);
@@ -428,7 +428,7 @@
             this.groupControl2.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(278, 103);
+            this.groupControl2.Size = new System.Drawing.Size(287, 103);
             this.groupControl2.TabIndex = 54;
             this.groupControl2.Text = "                       Tìm Kiếm Đĩa";
             // 
@@ -442,7 +442,7 @@
             this.groupControl3.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(465, 261);
+            this.groupControl3.Size = new System.Drawing.Size(456, 261);
             this.groupControl3.TabIndex = 54;
             this.groupControl3.Text = "Thao Tác";
             // 
@@ -466,14 +466,14 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTD.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTD.Location = new System.Drawing.Point(476, 115);
+            this.dataGridViewTD.Location = new System.Drawing.Point(467, 115);
             this.dataGridViewTD.MultiSelect = false;
             this.dataGridViewTD.Name = "dataGridViewTD";
             this.dataGridViewTD.ReadOnly = true;
             this.dataGridViewTD.RowHeadersVisible = false;
             this.dataGridViewTD.RowTemplate.Height = 24;
             this.dataGridViewTD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewTD.Size = new System.Drawing.Size(584, 427);
+            this.dataGridViewTD.Size = new System.Drawing.Size(474, 427);
             this.dataGridViewTD.TabIndex = 55;
             this.dataGridViewTD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTD_CellClick);
             this.dataGridViewTD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTD_CellContentClick);
@@ -516,19 +516,19 @@
             this.groupControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.groupControl4.Controls.Add(this.textBox1);
             this.groupControl4.Controls.Add(this.comboBox3);
-            this.groupControl4.Location = new System.Drawing.Point(476, 6);
+            this.groupControl4.Location = new System.Drawing.Point(467, 6);
             this.groupControl4.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(584, 103);
+            this.groupControl4.Size = new System.Drawing.Size(593, 103);
             this.groupControl4.TabIndex = 55;
             this.groupControl4.Text = "                       Tìm Kiếm Tiêu Đề";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 65);
+            this.textBox1.Location = new System.Drawing.Point(17, 65);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(507, 23);
+            this.textBox1.Size = new System.Drawing.Size(550, 23);
             this.textBox1.TabIndex = 38;
             // 
             // comboBox3
@@ -539,9 +539,9 @@
             "Theo Tên NV",
             "Theo Mã NV",
             "Theo SDT"});
-            this.comboBox3.Location = new System.Drawing.Point(26, 35);
+            this.comboBox3.Location = new System.Drawing.Point(17, 35);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(507, 24);
+            this.comboBox3.Size = new System.Drawing.Size(550, 24);
             this.comboBox3.TabIndex = 39;
             // 
             // Form_QuanLyKhoDia

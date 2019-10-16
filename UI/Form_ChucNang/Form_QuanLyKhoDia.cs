@@ -181,7 +181,7 @@ namespace UI.Form_ChucNang
                                
                                 eDia dia = new eDia();
                                 dia.IdDia = tbThem_IdDia.Text;
-                                dia.TrangThai = false;
+                                dia.TrangThaiThue = false;
                                 dia.TrangThaiXoa = false;                      
                                 dia.IdTieuDe = tbThem_IdTieuDe.Text;
 

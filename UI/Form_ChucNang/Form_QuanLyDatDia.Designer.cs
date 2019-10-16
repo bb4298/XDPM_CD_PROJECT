@@ -57,13 +57,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridViewD = new System.Windows.Forms.DataGridView();
-            this.IdDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTD = new System.Windows.Forms.DataGridView();
             this.IdTieuDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenTieuDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuongDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThaiThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
@@ -153,6 +153,7 @@
             this.btnThem.Size = new System.Drawing.Size(168, 48);
             this.btnThem.TabIndex = 11;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnHuy
             // 
@@ -365,7 +366,7 @@
             this.dataGridViewD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdDia,
-            this.TrangThai});
+            this.TrangThaiThue});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
@@ -383,22 +384,6 @@
             this.dataGridViewD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewD.Size = new System.Drawing.Size(278, 427);
             this.dataGridViewD.TabIndex = 57;
-            // 
-            // IdDia
-            // 
-            this.IdDia.DataPropertyName = "IdDia";
-            this.IdDia.HeaderText = "ID Đĩa";
-            this.IdDia.Name = "IdDia";
-            this.IdDia.ReadOnly = true;
-            this.IdDia.Width = 110;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
             // 
             // dataGridViewTD
             // 
@@ -460,6 +445,22 @@
             this.SoLuongDia.HeaderText = "Số Lượng";
             this.SoLuongDia.Name = "SoLuongDia";
             this.SoLuongDia.ReadOnly = true;
+            // 
+            // IdDia
+            // 
+            this.IdDia.DataPropertyName = "IdDia";
+            this.IdDia.HeaderText = "ID Đĩa";
+            this.IdDia.Name = "IdDia";
+            this.IdDia.ReadOnly = true;
+            this.IdDia.Width = 110;
+            // 
+            // TrangThaiThue
+            // 
+            this.TrangThaiThue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TrangThaiThue.DataPropertyName = "TrangThai";
+            this.TrangThaiThue.HeaderText = "Trạng Thái";
+            this.TrangThaiThue.Name = "TrangThaiThue";
+            this.TrangThaiThue.ReadOnly = true;
             // 
             // Form_QuanLyDatDia
             // 
@@ -529,12 +530,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridViewD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdDia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
         private System.Windows.Forms.DataGridView dataGridViewTD;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdTieuDe;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenTieuDe;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDanhMuc;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongDia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdDia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThaiThue;
     }
 }

@@ -33,5 +33,10 @@ namespace UI.Form_ChucNang
         {
 
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

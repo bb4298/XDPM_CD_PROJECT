@@ -12,3 +12,10 @@ C:\Users\Quang\Desktop\XDPM_CD_PROJECT\DAL\obj\Debug\DAL.csprojAssemblyReference
 C:\Users\Quang\Desktop\XDPM_CD_PROJECT\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Quang\Desktop\XDPM_CD_PROJECT\DAL\obj\Debug\DAL.dll
 C:\Users\Quang\Desktop\XDPM_CD_PROJECT\DAL\obj\Debug\DAL.pdb
+G:\HK7\Xây Dựng Phần Mềm\XDPM_CD_PROJECT\DAL\bin\Debug\DAL.dll.config
+G:\HK7\Xây Dựng Phần Mềm\XDPM_CD_PROJECT\DAL\bin\Debug\DAL.dll
+G:\HK7\Xây Dựng Phần Mềm\XDPM_CD_PROJECT\DAL\bin\Debug\DAL.pdb
+G:\HK7\Xây Dựng Phần Mềm\XDPM_CD_PROJECT\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+G:\HK7\Xây Dựng Phần Mềm\XDPM_CD_PROJECT\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+G:\HK7\Xây Dựng Phần Mềm\XDPM_CD_PROJECT\DAL\obj\Debug\DAL.dll
+G:\HK7\Xây Dựng Phần Mềm\XDPM_CD_PROJECT\DAL\obj\Debug\DAL.pdb

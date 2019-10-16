@@ -24,12 +24,12 @@ namespace BLL
                                         select new
                                         {
                                             b.IdDia,
-                                            b.TrangThai
+                                            b.TrangThaiThue
 
                                         });
             foreach (var item in query)
             {
-                eDia etd = new eDia(item.IdDia,Convert.ToBoolean(item.TrangThai));
+                eDia etd = new eDia(item.IdDia,Convert.ToBoolean(item.TrangThaiThue));
                 list.Add(etd);
             }
             return list;
@@ -50,7 +50,7 @@ namespace BLL
                                 join b in db.PhieuThues on a.IdKhachHang equals b.IdKhachHang
                                 join c in db.ChiTietPhieuThues on b.IdPhieuThue equals c.IdPhieuThue
                                 join d in db.Dias on c.IdDia equals d.IdDia
-                                where c.IdDia == idDia && c.TrangThai == true
+                                where c.IdDia == idDia && c.TrangThaiThanhToan == true
                                 select new
                                 {
                                     a.HoTen
@@ -61,6 +61,8 @@ namespace BLL
             }
             return "Chưa được thuê";
         }
+
+      
         //public string layIdDiaBangTenDia(string tenDia)
         //{
         //    string id = (from a in db.Dias
@@ -87,7 +89,7 @@ namespace BLL
         {
             Dia d = new Dia();
             d.IdDia = ed.IdDia;
-            d.TrangThai = ed.TrangThai;
+            d.TrangThaiThue = ed.TrangThaiThue;
             d.TrangThaiXoa = ed.TrangThaiXoa;
             d.IdTieuDe = ed.IdTieuDe;
             if (!db.Dias.Contains(d))
@@ -113,11 +115,13 @@ namespace BLL
             }
             return false;
         }
+
+        // true: đĩa đang được thuê
         public bool kiemTraDiaTaiCuaHang(string idDia)
         {
             foreach (Dia item in db.Dias)
             { 
-                if (item.IdDia == idDia && item.TrangThai == true)
+                if (item.IdDia == idDia && item.TrangThaiThue == true)
                 {
                     return true;
                     

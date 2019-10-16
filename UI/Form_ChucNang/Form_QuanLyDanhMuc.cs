@@ -24,6 +24,7 @@ namespace UI.Form_ChucNang
         {
             InitializeComponent();
             dmbll = new DanhMucBLL();
+            dataGridView1.AutoGenerateColumns = false;
         }
 
         #region Hàm viết riêng
@@ -37,8 +38,8 @@ namespace UI.Form_ChucNang
         {
             tbIdDanhMuc.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim();
             tbTenDanhMuc.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString().Trim();
-            
-
+            tbPhiThue.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString().Trim();
+            tbPhiTreHan.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString().Trim();
 
 
         }
@@ -88,6 +89,7 @@ namespace UI.Form_ChucNang
             //btnXoa.Enabled = false;
             panelQuanLyDM.Enabled = true;
             dataGridView1.Enabled = false;
+            tbTenDanhMuc.Enabled = true;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -107,7 +109,7 @@ namespace UI.Form_ChucNang
         {
             if(KEY == 1)
             {
-                #region Sửa
+                #region Thêm
                 DialogResult dg = new DialogResult();
                 dg = XtraMessageBox.Show("Bạn có muốn thêm danh mục không !", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dg == DialogResult.Yes)
@@ -141,7 +143,8 @@ namespace UI.Form_ChucNang
                                 eDanhMuc edm = new eDanhMuc();
                                 edm.IdDanhMuc =Convert.ToInt32(tbIdDanhMuc.Text);
                                 edm.TenDanhMuc = tbTenDanhMuc.Text;
-                               
+                                edm.PhiThue = Convert.ToDecimal(tbPhiThue.Text);
+                                edm.PhiTreHan = Convert.ToDecimal(tbPhiTreHan.Text);
                                 edm.TrangThaiXoa = false;
 
                                 if (dmbll.ThemDanhMuc(edm))
@@ -211,7 +214,8 @@ namespace UI.Form_ChucNang
                                 eDanhMuc edm = new eDanhMuc();
                                 edm.IdDanhMuc = Convert.ToInt32(tbIdDanhMuc.Text);
                                 edm.TenDanhMuc = tbTenDanhMuc.Text;
-
+                                edm.PhiTreHan = Convert.ToDecimal(tbPhiTreHan.Text);
+                                edm.PhiThue = Convert.ToDecimal(tbPhiThue.Text);
                                 edm.TrangThaiXoa = false;
 
                                 if (dmbll.SuaDanhMuc(edm))
@@ -258,8 +262,22 @@ namespace UI.Form_ChucNang
             btnHuy.Enabled = false;
             btnThem.Enabled = true;
             dataGridView1.Enabled = true;
+            tbTenDanhMuc.Enabled = false;
         }
 
-    
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

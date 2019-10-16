@@ -50,13 +50,12 @@ namespace BLL
                             a.IdTieuDe,
                             a.TenTieuDe,
                             a.SoLuongDia,
-                            b.TenDanhMuc,
-                            a.PhiThue
+                            b.TenDanhMuc,                            
                         }).ToList();
 
             foreach (var item in query)
             {
-                eTieuDe etd = new eTieuDe (item.IdTieuDe, item.TenTieuDe, Convert.ToInt32(item.SoLuongDia), item.TenDanhMuc,Convert.ToDecimal( item.PhiThue));          
+                eTieuDe etd = new eTieuDe (item.IdTieuDe, item.TenTieuDe, Convert.ToInt32(item.SoLuongDia), item.TenDanhMuc);          
                 list.Add(etd);
             }
             return list;
@@ -97,8 +96,7 @@ namespace BLL
             td.IdTieuDe = etd.IdTieuDe;
             td.TenTieuDe = etd.TenTieuDe;
             td.SoLuongDia = etd.SoLuongDia;
-            td.IdDanhMuc = etd.IdDanhMuc;
-            td.PhiThue = etd.PhiThue;
+            td.IdDanhMuc = etd.IdDanhMuc;           
             td.TrangThaiXoa = etd.TrangThaiXoa;
             if (!db.TieuDes.Contains(td))
             {
@@ -116,7 +114,6 @@ namespace BLL
             if (td != null)
             {
                 td.TenTieuDe = etd.TenTieuDe;
-                td.PhiThue = etd.PhiThue;
                 td.IdDanhMuc= etd.IdDanhMuc;
 
                 db.SubmitChanges();
@@ -170,6 +167,23 @@ namespace BLL
                          select a.TenTieuDe
                       ).FirstOrDefault();
             return ten;
+        }
+
+        //lấy tên tiêu đề cho form quản lý thuê đĩa
+        public string LayTenTieuDeBangIdDia(string idDia)
+        {
+
+            string tenTieuDe = (from a in db.Dias
+                             join b in db.TieuDes on a.IdTieuDe equals b.IdTieuDe
+                             where b.TrangThaiXoa == false && a.IdDia == idDia
+                             select b.TenTieuDe).SingleOrDefault();  
+            if(tenTieuDe == null)
+            {
+                return "null";
+            }   
+                return tenTieuDe;
+         
+                   
         }
     }
 }

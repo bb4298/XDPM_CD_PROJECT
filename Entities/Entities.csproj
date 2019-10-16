@@ -50,6 +50,7 @@
     <Compile Include="ePhieuDat.cs" />
     <Compile Include="ePhieuThue.cs" />
     <Compile Include="eTaiKhoan.cs" />
+    <Compile Include="eThongTinPhieuThue.cs" />
     <Compile Include="eTieuDe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

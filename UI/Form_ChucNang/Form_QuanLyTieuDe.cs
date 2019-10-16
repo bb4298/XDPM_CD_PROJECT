@@ -51,7 +51,7 @@ namespace UI.Form_ChucNang
             tbTenTieuDe.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString().Trim();
             cbbDanhMuc.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString().Trim();
             tbSoLuongDia.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString().Trim();
-            tbPhiThue.Text = String.Format(dataGridView1.CurrentRow.Cells[4].Value.ToString().Trim(), "###,##");
+            //tbPhiThue.Text = String.Format(dataGridView1.CurrentRow.Cells[4].Value.ToString().Trim(), "###,##");
          
 
 
@@ -86,7 +86,7 @@ namespace UI.Form_ChucNang
             tbIdTieuDe.Text = "";
             tbTenTieuDe.Text = "";
             tbSoLuongDia.Text = "";
-            tbPhiThue.Text = "";            
+            //tbPhiThue.Text = "";            
         }
         #endregion
 
@@ -158,7 +158,7 @@ namespace UI.Form_ChucNang
                 {
                     try
                     {
-                        if (tbTenTieuDe.Text == "" || tbPhiThue.Text == "")
+                        if (tbTenTieuDe.Text == "" )
                         {
                             XtraMessageBox.Show("Thiếu thông tin, vui lòng nhập đủ !");
                         }
@@ -171,11 +171,8 @@ namespace UI.Form_ChucNang
                             Regex rgGiaTien = new Regex(reGiaTien);
 
                           
-                            if (rgGiaTien.IsMatch(tbPhiThue.Text))
-                            {
-                                XtraMessageBox.Show("Số điện thoại gồm 10 hoặc 11 chữ số, không có kí tự , vui lòng nhập lại !");
-                            }
-                            else if (!tdbll.kiemTraTrungTieuDe(tbTenTieuDe.Text))
+                            
+                            if (!tdbll.kiemTraTrungTieuDe(tbTenTieuDe.Text))
                             {
                                 XtraMessageBox.Show("Đã có một tiêu đề trùng tên trong hệ thống , vui lòng đặt tên khác!");
                             }
@@ -187,7 +184,7 @@ namespace UI.Form_ChucNang
                                 td.TenTieuDe = tbTenTieuDe.Text;
                                 td.SoLuongDia = 0;
                                 td.IdDanhMuc = idDM;
-                                td.PhiThue = Convert.ToDecimal(tbPhiThue.Text);
+                                //td.PhiThue = Convert.ToDecimal(tbPhiThue.Text);
                                 td.TrangThaiXoa = false;
 
                                 if (tdbll.ThemTieuDe(td))
@@ -232,32 +229,19 @@ namespace UI.Form_ChucNang
                     try
                     {
 
-                        if (tbTenTieuDe.Text == "" || tbPhiThue.Text == "")
+                        if (tbTenTieuDe.Text == "" /*|| tbPhiThue.Text == ""*/)
                         {
                             XtraMessageBox.Show("Thiếu thông tin, vui lòng nhập đủ !");
                         }
                         else
                         {
-                            string reTen = @"^[A-ZAÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶEÉÈẺẼẸÊẾỀỂỄỆIÍÌỈĨỊOÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢUÚÙỦŨỤƯỨỪỬỮỰYÝỲỶỸỴ]+[a-zĐaáàảãạâấầẩẫậăắằẳẵặeéèẻẽẹêếềểễệiíìỉĩịoóòỏõọôốồổỗộơớờởỡợuúùủũụưứừửữựyýỳỷỹỵđ]+(\s+[A-ZAÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶEÉÈẺẼẸÊẾỀỂỄỆIÍÌỈĨỊOÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢUÚÙỦŨỤƯỨỪỬỮỰYÝỲỶỸỴĐ]+[a-zaáàảãạâấầẩẫậăắằẳẵặeéèẻẽẹêếềểễệiíìỉĩịoóòỏõọôốồổỗộơớờởỡợuúùủũụưứừửữựyýỳỷỹỵđ]+)+$";
-                            Regex rgTen = new Regex(reTen);
-
-                            string reGiaTien = @"^[0-9]{3,4,5,6,7,8,9,10}$";
-                            Regex rgGiaTien = new Regex(reGiaTien);
-
-
-                            if (rgGiaTien.IsMatch(tbPhiThue.Text))
-                            {
-                                XtraMessageBox.Show("Số điện thoại gồm 10 hoặc 11 chữ số, không có kí tự , vui lòng nhập lại !");
-                            }
-                            else
-                            {
+                           
                                 int idDM = dmbll.layIdDanhMuc(cbbDanhMuc.Text);
                                 eTieuDe td = new eTieuDe();
                                 td.IdTieuDe = tbIdTieuDe.Text;
                                 td.TenTieuDe = tbTenTieuDe.Text;
                                 td.SoLuongDia = 0;
-                                td.IdDanhMuc = idDM;
-                                td.PhiThue = Convert.ToDecimal(tbPhiThue.Text);
+                                td.IdDanhMuc = idDM;                             
                                 td.TrangThaiXoa = false;
 
                                 if (tdbll.SuaTieuDe(td))
@@ -274,7 +258,7 @@ namespace UI.Form_ChucNang
 
                                 }
 
-                            }
+                            
                         }
                     }
                     catch (Exception ex)
