@@ -12,22 +12,25 @@ namespace Entities
         public String TenDia { get; set; }
         public String DanhMuc{ get; set; }
         public decimal PhiThue { get; set; }
-        public DateTime NgayTra { get; set; }
+        public DateTime NgayTraDia { get; set; }
         public decimal PhiTreHan { get; set; }
-
         public string IdKhachHang { get; set; }
-        public DateTime NgayHetHan { get; set; }
+        public DateTime NgayTraDiaThucTe { get; set; }
         public bool TrangThai { get; set; }
         public int IdPhieuThue { get; set; }
 
-        public eThongTinPhieuThue(string idDia, string tenDia, string danhMuc, decimal phiThue, decimal phiTreHan, DateTime ngayTra)
+        public int SoNgayThue { get; set; }
+
+        public eThongTinPhieuThue(string idDia, string tenDia, string danhMuc, decimal phiThue, decimal phiTreHan,int soNgayThue, DateTime ngayTraDia, int idPhieuThue)
         {
             IdDia = idDia;
             TenDia = tenDia;
             DanhMuc = danhMuc;
             PhiThue = phiThue;            
-            PhiTreHan = phiTreHan;
-            NgayTra = ngayTra;
+            PhiTreHan = phiTreHan;          
+            SoNgayThue = soNgayThue;
+            NgayTraDia = ngayTraDia;
+            IdPhieuThue = idPhieuThue;
         }
         public eThongTinPhieuThue()
         {

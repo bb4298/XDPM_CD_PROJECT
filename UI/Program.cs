@@ -24,13 +24,13 @@ namespace UI
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            //Form_About f = new Form_About();
-            //if (f.ShowDialog() == DialogResult.OK)
-            //    Application.Run(new Form_Main());
-
-            Form_QuanLyThueDia f = new Form_QuanLyThueDia();
+            Form_About f = new Form_About();
             if (f.ShowDialog() == DialogResult.OK)
                 Application.Run(new Form_Main());
+
+            //Form_QuanLyThueDia f = new Form_QuanLyThueDia();
+            //if (f.ShowDialog() == DialogResult.OK)
+            //    Application.Run(new Form_Main());
 
         }
     }

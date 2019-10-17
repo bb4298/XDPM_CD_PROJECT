@@ -135,7 +135,7 @@ namespace UI.Form_ChucNang
                             //}
                             if (!dmbll.kiemTraTrungDanhMuc(tbTenDanhMuc.Text))
                             {
-                                XtraMessageBox.Show("Đã có một tiêu đề trùng tên trong hệ thống , vui lòng đặt tên khác!");
+                                XtraMessageBox.Show("Đã có một danh mục trùng tên trong hệ thống , vui lòng đặt tên khác!");
                             }
                             else
                             {

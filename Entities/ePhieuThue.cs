@@ -8,17 +8,17 @@ namespace Entities
 {
     public class ePhieuThue
     {
-        public int IdPhieuMuon { get; set; }
+        public int IdPhieuThue { get; set; }
         public DateTime NgayTao { get; set; }
-        public bool TrangThai { get; set; }
+        public bool TrangThaiThanhToan { get; set; }
         public String IdKhachHang { get; set; }
 
 
-        public ePhieuThue(int idPhieuMuon, DateTime ngayTao, bool trangThai, string idKhachHang)
+        public ePhieuThue(int idPhieuThue, DateTime ngayTao, bool trangThaiThanhToan, string idKhachHang)
         {
-            IdPhieuMuon = idPhieuMuon;
+            IdPhieuThue = idPhieuThue;
             NgayTao = ngayTao;
-            TrangThai = trangThai;
+            TrangThaiThanhToan = trangThaiThanhToan;
             IdKhachHang = idKhachHang;
         }
 

@@ -11,22 +11,27 @@ namespace Entities
         public int IdChiTietPhieuThue { get; set; }
         public String IdDia { get; set; }
         public DateTime NgayHetHan { get; set; }
+        public int SoNgayThue { get; set; }
+        public decimal PhiThuePhaiTra { get; set; }
         public DateTime NgayTra { get; set; }
-        public decimal PhiThue { get; set; }
-        public decimal PhiTreHan { get; set; }
-        public bool TrangThai { get; set; }
+        public int SoNgayTreHan { get; set; }
+        public decimal PhiTreHanQuyDinh { get; set; }
+        public decimal PhiTreHanPhaiTra { get; set; }
+        public bool TrangThaiThanhToan { get; set; }
         public int IdPhieuThue { get; set; }
 
-
-        public eChiTietPhieuThue(int idChiTietPhieuThue, String idDia, DateTime ngayHetHan, DateTime ngayTra, decimal phiThue, decimal phiTreHan, bool trangThai, int idPhieuThue)
+        public eChiTietPhieuThue(int idChiTietPhieuThue, string idDia, DateTime ngayHetHan, int soNgayThue, decimal phiThuePhaiTra, DateTime ngayTra, int soNgayTreHan, decimal phiTreHanQuyDinh, decimal phiTreHanPhaiTra, bool trangThaiThanhToan, int idPhieuThue)
         {
             IdChiTietPhieuThue = idChiTietPhieuThue;
             IdDia = idDia;
             NgayHetHan = ngayHetHan;
+            SoNgayThue = soNgayThue;
+            PhiThuePhaiTra = phiThuePhaiTra;
             NgayTra = ngayTra;
-            PhiThue = phiThue;
-            PhiTreHan = phiTreHan;
-            TrangThai = trangThai;
+            SoNgayTreHan = soNgayTreHan;
+            PhiTreHanQuyDinh = phiTreHanQuyDinh;
+            PhiTreHanPhaiTra = phiTreHanPhaiTra;
+            TrangThaiThanhToan = trangThaiThanhToan;
             IdPhieuThue = idPhieuThue;
         }
 
@@ -35,6 +40,6 @@ namespace Entities
 
         }
 
-
+     
     }
 }

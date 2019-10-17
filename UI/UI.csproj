@@ -105,6 +105,18 @@
     <Compile Include="Form_ChucNang\Form_QuanLyKhoDia.Designer.cs">
       <DependentUpon>Form_QuanLyKhoDia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_ChucNang\Form_ThongBao_ThueDiaToPhiThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ChucNang\Form_ThongBao_ThueDiaToPhiThue.Designer.cs">
+      <DependentUpon>Form_ThongBao_ThueDiaToPhiThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ChucNang\Form_TraDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ChucNang\Form_TraDia.Designer.cs">
+      <DependentUpon>Form_TraDia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +166,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ChucNang\Form_QuanLyKhoDia.resx">
       <DependentUpon>Form_QuanLyKhoDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ChucNang\Form_ThongBao_ThueDiaToPhiThue.resx">
+      <DependentUpon>Form_ThongBao_ThueDiaToPhiThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ChucNang\Form_TraDia.resx">
+      <DependentUpon>Form_TraDia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>

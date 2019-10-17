@@ -333,3 +333,5 @@ G:\HK7\Xây Dựng Phần Mềm\XDPM_CD_PROJECT\UI\bin\Debug\de\DevExpress.Offic
 G:\HK7\Xây Dựng Phần Mềm\XDPM_CD_PROJECT\UI\bin\Debug\es\DevExpress.Office.v17.1.Core.resources.dll
 G:\HK7\Xây Dựng Phần Mềm\XDPM_CD_PROJECT\UI\bin\Debug\ja\DevExpress.Office.v17.1.Core.resources.dll
 G:\HK7\Xây Dựng Phần Mềm\XDPM_CD_PROJECT\UI\bin\Debug\ru\DevExpress.Office.v17.1.Core.resources.dll
+G:\HK7\Xây Dựng Phần Mềm\XDPM_CD_PROJECT\UI\obj\Debug\UI.Form_ChucNang.Form_TraDia.resources
+G:\HK7\Xây Dựng Phần Mềm\XDPM_CD_PROJECT\UI\obj\Debug\UI.Form_ChucNang.Form_ThongBao_ThueDiaToPhiThue.resources

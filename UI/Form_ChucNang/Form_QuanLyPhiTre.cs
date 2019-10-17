@@ -27,5 +27,10 @@ namespace UI.Form_ChucNang
         {
 
         }
+
+        private void btnXacNhanKH_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

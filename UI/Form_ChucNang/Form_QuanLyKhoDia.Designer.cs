@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_QuanLyKhoDia));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.panelQuanLyTD = new System.Windows.Forms.Panel();
@@ -360,14 +358,6 @@
             this.dataGridViewD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdDia,
             this.TrangThai});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewD.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewD.Location = new System.Drawing.Point(947, 115);
             this.dataGridViewD.MultiSelect = false;
             this.dataGridViewD.Name = "dataGridViewD";
@@ -458,14 +448,6 @@
             this.tenTieuDe,
             this.TenDanhMuc,
             this.SoLuongDia});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTD.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTD.Location = new System.Drawing.Point(467, 115);
             this.dataGridViewTD.MultiSelect = false;
             this.dataGridViewTD.Name = "dataGridViewTD";

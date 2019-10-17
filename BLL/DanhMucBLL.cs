@@ -97,7 +97,7 @@ namespace BLL
         public bool ThemDanhMuc(eDanhMuc edm)
         {
             DanhMuc dm = new DanhMuc();
-            dm.IdDanhMuc = edm.IdDanhMuc;
+            //dm.IdDanhMuc = edm.IdDanhMuc;
             dm.TenDanhMuc = edm.TenDanhMuc;
             dm.PhiThue = edm.PhiThue;
             dm.PhiTreHan = edm.PhiTreHan;

@@ -32,8 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_QuanLyDanhMuc));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.panelQuanLyDM = new System.Windows.Forms.Panel();
+            this.tbPhiTreHan = new DevExpress.XtraEditors.TextEdit();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbPhiThue = new DevExpress.XtraEditors.TextEdit();
+            this.label5 = new System.Windows.Forms.Label();
             this.tbIdDanhMuc = new DevExpress.XtraEditors.TextEdit();
             this.tbTenDanhMuc = new DevExpress.XtraEditors.TextEdit();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelThaoTac = new System.Windows.Forms.Panel();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
@@ -41,22 +46,19 @@
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.tbTimKiemNV = new System.Windows.Forms.TextBox();
-            this.cbbTK_NV = new System.Windows.Forms.ComboBox();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.tbPhiThue = new DevExpress.XtraEditors.TextEdit();
-            this.tbPhiTreHan = new DevExpress.XtraEditors.TextEdit();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.IdDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhiThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhiTreHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.tbTimKiemNV = new System.Windows.Forms.TextBox();
+            this.cbbTK_NV = new System.Windows.Forms.ComboBox();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.panelQuanLyDM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbPhiTreHan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbPhiThue.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbIdDanhMuc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTenDanhMuc.Properties)).BeginInit();
             this.panelThaoTac.SuspendLayout();
@@ -65,8 +67,6 @@
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbPhiThue.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbPhiTreHan.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -99,6 +99,44 @@
             this.panelQuanLyDM.Size = new System.Drawing.Size(498, 189);
             this.panelQuanLyDM.TabIndex = 53;
             // 
+            // tbPhiTreHan
+            // 
+            this.tbPhiTreHan.Location = new System.Drawing.Point(194, 143);
+            this.tbPhiTreHan.Name = "tbPhiTreHan";
+            this.tbPhiTreHan.Size = new System.Drawing.Size(292, 22);
+            this.tbPhiTreHan.TabIndex = 1002;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(32, 146);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(156, 17);
+            this.label4.TabIndex = 1003;
+            this.label4.Text = "Phí Trễ Hạn (1 ngày):";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // tbPhiThue
+            // 
+            this.tbPhiThue.Location = new System.Drawing.Point(194, 102);
+            this.tbPhiThue.Name = "tbPhiThue";
+            this.tbPhiThue.Size = new System.Drawing.Size(292, 22);
+            this.tbPhiThue.TabIndex = 1000;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(52, 105);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(136, 17);
+            this.label5.TabIndex = 1001;
+            this.label5.Text = "Phí Thuê (1 ngày):";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
             // tbIdDanhMuc
             // 
             this.tbIdDanhMuc.Enabled = false;
@@ -114,6 +152,18 @@
             this.tbTenDanhMuc.Name = "tbTenDanhMuc";
             this.tbTenDanhMuc.Size = new System.Drawing.Size(292, 22);
             this.tbTenDanhMuc.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(76, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 17);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Tên Danh mục:";
+            this.label1.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -217,6 +267,40 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // IdDanhMuc
+            // 
+            this.IdDanhMuc.DataPropertyName = "IdDanhMuc";
+            this.IdDanhMuc.FillWeight = 189.6907F;
+            this.IdDanhMuc.HeaderText = "ID Danh Mục";
+            this.IdDanhMuc.Name = "IdDanhMuc";
+            this.IdDanhMuc.ReadOnly = true;
+            this.IdDanhMuc.Width = 120;
+            // 
+            // TenDanhMuc
+            // 
+            this.TenDanhMuc.DataPropertyName = "TenDanhMuc";
+            this.TenDanhMuc.FillWeight = 10.30928F;
+            this.TenDanhMuc.HeaderText = "Tên Danh Mục";
+            this.TenDanhMuc.Name = "TenDanhMuc";
+            this.TenDanhMuc.ReadOnly = true;
+            this.TenDanhMuc.Width = 240;
+            // 
+            // PhiThue
+            // 
+            this.PhiThue.DataPropertyName = "PhiThue";
+            this.PhiThue.HeaderText = "Phí Thuê";
+            this.PhiThue.Name = "PhiThue";
+            this.PhiThue.ReadOnly = true;
+            this.PhiThue.Width = 180;
+            // 
+            // PhiTreHan
+            // 
+            this.PhiTreHan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PhiTreHan.DataPropertyName = "PhiTreHan";
+            this.PhiTreHan.HeaderText = "Phí Trễ Hạn";
+            this.PhiTreHan.Name = "PhiTreHan";
+            this.PhiTreHan.ReadOnly = true;
+            // 
             // groupControl3
             // 
             this.groupControl3.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -266,90 +350,6 @@
             this.groupControl2.TabIndex = 54;
             this.groupControl2.Text = "Thao Tác";
             // 
-            // tbPhiThue
-            // 
-            this.tbPhiThue.Location = new System.Drawing.Point(194, 102);
-            this.tbPhiThue.Name = "tbPhiThue";
-            this.tbPhiThue.Size = new System.Drawing.Size(292, 22);
-            this.tbPhiThue.TabIndex = 1000;
-            // 
-            // tbPhiTreHan
-            // 
-            this.tbPhiTreHan.Location = new System.Drawing.Point(194, 143);
-            this.tbPhiTreHan.Name = "tbPhiTreHan";
-            this.tbPhiTreHan.Size = new System.Drawing.Size(292, 22);
-            this.tbPhiTreHan.TabIndex = 1002;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(32, 146);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(156, 17);
-            this.label4.TabIndex = 1003;
-            this.label4.Text = "Phí Trễ Hạn (1 ngày):";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(52, 105);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 17);
-            this.label5.TabIndex = 1001;
-            this.label5.Text = "Phí Thuê (1 ngày):";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(76, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 17);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Tên Danh mục:";
-            this.label1.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // IdDanhMuc
-            // 
-            this.IdDanhMuc.DataPropertyName = "IdDanhMuc";
-            this.IdDanhMuc.FillWeight = 189.6907F;
-            this.IdDanhMuc.HeaderText = "ID Danh Mục";
-            this.IdDanhMuc.Name = "IdDanhMuc";
-            this.IdDanhMuc.ReadOnly = true;
-            this.IdDanhMuc.Width = 120;
-            // 
-            // TenDanhMuc
-            // 
-            this.TenDanhMuc.DataPropertyName = "TenDanhMuc";
-            this.TenDanhMuc.FillWeight = 10.30928F;
-            this.TenDanhMuc.HeaderText = "Tên Danh Mục";
-            this.TenDanhMuc.Name = "TenDanhMuc";
-            this.TenDanhMuc.ReadOnly = true;
-            this.TenDanhMuc.Width = 240;
-            // 
-            // PhiThue
-            // 
-            this.PhiThue.DataPropertyName = "PhiThue";
-            this.PhiThue.HeaderText = "Phí Thuê";
-            this.PhiThue.Name = "PhiThue";
-            this.PhiThue.ReadOnly = true;
-            this.PhiThue.Width = 180;
-            // 
-            // PhiTreHan
-            // 
-            this.PhiTreHan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PhiTreHan.DataPropertyName = "PhiTreHan";
-            this.PhiTreHan.HeaderText = "Phí Trễ Hạn";
-            this.PhiTreHan.Name = "PhiTreHan";
-            this.PhiTreHan.ReadOnly = true;
-            // 
             // Form_QuanLyDanhMuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -368,6 +368,8 @@
             this.groupControl1.ResumeLayout(false);
             this.panelQuanLyDM.ResumeLayout(false);
             this.panelQuanLyDM.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbPhiTreHan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbPhiThue.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbIdDanhMuc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTenDanhMuc.Properties)).EndInit();
             this.panelThaoTac.ResumeLayout(false);
@@ -377,8 +379,6 @@
             this.groupControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tbPhiThue.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbPhiTreHan.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

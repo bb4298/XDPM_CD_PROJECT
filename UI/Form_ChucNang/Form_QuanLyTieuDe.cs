@@ -339,5 +339,10 @@ namespace UI.Form_ChucNang
         {
             Form_Main.f_QuanLyTieuDe = true;
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

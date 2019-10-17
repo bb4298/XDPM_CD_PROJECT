@@ -243,10 +243,11 @@ namespace UI.Form_ChucNang
             {
                 XtraMessageBox.Show("Vui lòng đăng nhập tài khoản quản lý để thực hiện chức năng này !");
             }
-            else if(diabll.kiemTraDiaTaiCuaHang(tbThem_IdDia.Text) != true)
-            {
-                XtraMessageBox.Show("Đĩa này đang được thuê bởi một khách hàng, không thể xóa !");
-            }
+            // Vì khách hàng có thể làm mất đĩa nên vẫn có thể xóa được đĩa trong trạng thái thuê, đoạn code dưới dùng để kiểm tra đĩa còn ở của hàng ko.
+            //else if(diabll.kiemTraDiaTaiCuaHang(tbThem_IdDia.Text) != true)
+            //{
+            //    XtraMessageBox.Show("Đĩa này đang được thuê bởi một khách hàng, không thể xóa !");
+            //}
             else if (Form_Main.trangThaiLogin == true)
             {
                 #region diglog

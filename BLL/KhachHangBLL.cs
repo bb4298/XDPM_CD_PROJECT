@@ -53,6 +53,15 @@ namespace BLL
             return ekh;
         }
 
+        public string LayTenKhachHangBangId(string idKhachHang)
+        {
+            string tenkh = (from a in db.KhachHangs
+                         where a.IdKhachHang == idKhachHang
+                         select a.HoTen
+                           ).Take(1).First().ToString();
+            return tenkh;
+        }
+
         public bool ThemKhachHang(eKhachHang ekh)
         {
             KhachHang kh = new KhachHang();
