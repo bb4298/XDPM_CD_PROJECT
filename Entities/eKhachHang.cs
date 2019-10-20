@@ -14,6 +14,12 @@ namespace Entities
         public String SoDienThoai { get; set; }
         public bool TrangThaiXoa { get; set; }
 
+
+        //Thong tin phụ
+        public decimal PhiTreHanPhaiTra { get; set; }
+
+
+
         public eKhachHang(string idKhachHang, string hoTen, string diaChi, string soDienThoai, bool trangThaiXoa)
         {
             IdKhachHang = idKhachHang;
@@ -21,6 +27,15 @@ namespace Entities
             DiaChi = diaChi;
             SoDienThoai = soDienThoai;
             TrangThaiXoa = trangThaiXoa;
+        }
+
+        public eKhachHang( string hoTen, string diaChi, string soDienThoai, decimal phiTreHanPhaiTra)
+        {        
+            HoTen = hoTen;
+            DiaChi = diaChi;
+            SoDienThoai = soDienThoai;
+            PhiTreHanPhaiTra = phiTreHanPhaiTra;
+            
         }
 
         public eKhachHang()

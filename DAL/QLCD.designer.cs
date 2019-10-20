@@ -189,8 +189,6 @@ namespace DAL
 		
 		private EntityRef<PhieuDat> _PhieuDat;
 		
-		private EntityRef<TieuDe> _TieuDe;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -208,7 +206,6 @@ namespace DAL
 		public ChiTietPhieuDat()
 		{
 			this._PhieuDat = default(EntityRef<PhieuDat>);
-			this._TieuDe = default(EntityRef<TieuDe>);
 			OnCreated();
 		}
 		
@@ -243,10 +240,6 @@ namespace DAL
 			{
 				if ((this._IdTieuDe != value))
 				{
-					if (this._TieuDe.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnIdTieuDeChanging(value);
 					this.SendPropertyChanging();
 					this._IdTieuDe = value;
@@ -334,40 +327,6 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TieuDe_ChiTietPhieuDat", Storage="_TieuDe", ThisKey="IdTieuDe", OtherKey="IdTieuDe", IsForeignKey=true)]
-		public TieuDe TieuDe
-		{
-			get
-			{
-				return this._TieuDe.Entity;
-			}
-			set
-			{
-				TieuDe previousValue = this._TieuDe.Entity;
-				if (((previousValue != value) 
-							|| (this._TieuDe.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TieuDe.Entity = null;
-						previousValue.ChiTietPhieuDats.Remove(this);
-					}
-					this._TieuDe.Entity = value;
-					if ((value != null))
-					{
-						value.ChiTietPhieuDats.Add(this);
-						this._IdTieuDe = value.IdTieuDe;
-					}
-					else
-					{
-						this._IdTieuDe = default(string);
-					}
-					this.SendPropertyChanged("TieuDe");
-				}
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -413,6 +372,8 @@ namespace DAL
 		
 		private System.Nullable<decimal> _PhiTreHanPhaiTra;
 		
+		private System.Nullable<bool> _TrangThaiTraDia;
+		
 		private System.Nullable<bool> _TrangThaiThanhToan;
 		
 		private System.Nullable<int> _IdPhieuThue;
@@ -443,6 +404,8 @@ namespace DAL
     partial void OnPhiTreHanQuyDinhChanged();
     partial void OnPhiTreHanPhaiTraChanging(System.Nullable<decimal> value);
     partial void OnPhiTreHanPhaiTraChanged();
+    partial void OnTrangThaiTraDiaChanging(System.Nullable<bool> value);
+    partial void OnTrangThaiTraDiaChanged();
     partial void OnTrangThaiThanhToanChanging(System.Nullable<bool> value);
     partial void OnTrangThaiThanhToanChanged();
     partial void OnIdPhieuThueChanging(System.Nullable<int> value);
@@ -600,7 +563,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhiTreHanQuyDinh", DbType="Decimal(18,12)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhiTreHanQuyDinh", DbType="Decimal(18,2)")]
 		public System.Nullable<decimal> PhiTreHanQuyDinh
 		{
 			get
@@ -636,6 +599,26 @@ namespace DAL
 					this._PhiTreHanPhaiTra = value;
 					this.SendPropertyChanged("PhiTreHanPhaiTra");
 					this.OnPhiTreHanPhaiTraChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrangThaiTraDia", DbType="Bit")]
+		public System.Nullable<bool> TrangThaiTraDia
+		{
+			get
+			{
+				return this._TrangThaiTraDia;
+			}
+			set
+			{
+				if ((this._TrangThaiTraDia != value))
+				{
+					this.OnTrangThaiTraDiaChanging(value);
+					this.SendPropertyChanging();
+					this._TrangThaiTraDia = value;
+					this.SendPropertyChanged("TrangThaiTraDia");
+					this.OnTrangThaiTraDiaChanged();
 				}
 			}
 		}
@@ -2111,8 +2094,6 @@ namespace DAL
 		
 		private System.Nullable<bool> _TrangThaiXoa;
 		
-		private EntitySet<ChiTietPhieuDat> _ChiTietPhieuDats;
-		
 		private EntitySet<Dia> _Dias;
 		
 		private EntityRef<DanhMuc> _DanhMuc;
@@ -2135,7 +2116,6 @@ namespace DAL
 		
 		public TieuDe()
 		{
-			this._ChiTietPhieuDats = new EntitySet<ChiTietPhieuDat>(new Action<ChiTietPhieuDat>(this.attach_ChiTietPhieuDats), new Action<ChiTietPhieuDat>(this.detach_ChiTietPhieuDats));
 			this._Dias = new EntitySet<Dia>(new Action<Dia>(this.attach_Dias), new Action<Dia>(this.detach_Dias));
 			this._DanhMuc = default(EntityRef<DanhMuc>);
 			OnCreated();
@@ -2245,19 +2225,6 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TieuDe_ChiTietPhieuDat", Storage="_ChiTietPhieuDats", ThisKey="IdTieuDe", OtherKey="IdTieuDe")]
-		public EntitySet<ChiTietPhieuDat> ChiTietPhieuDats
-		{
-			get
-			{
-				return this._ChiTietPhieuDats;
-			}
-			set
-			{
-				this._ChiTietPhieuDats.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TieuDe_Dia", Storage="_Dias", ThisKey="IdTieuDe", OtherKey="IdTieuDe")]
 		public EntitySet<Dia> Dias
 		{
@@ -2323,18 +2290,6 @@ namespace DAL
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_ChiTietPhieuDats(ChiTietPhieuDat entity)
-		{
-			this.SendPropertyChanging();
-			entity.TieuDe = this;
-		}
-		
-		private void detach_ChiTietPhieuDats(ChiTietPhieuDat entity)
-		{
-			this.SendPropertyChanging();
-			entity.TieuDe = null;
 		}
 		
 		private void attach_Dias(Dia entity)

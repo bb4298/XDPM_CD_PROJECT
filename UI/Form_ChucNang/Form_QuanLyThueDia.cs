@@ -35,7 +35,7 @@ namespace UI.Form_ChucNang
             ctptbll = new ChiTietPhieuThueBLL();
 
             listTtPhieuThue = new List<eThongTinPhieuThue>();
-            
+
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.Columns[3].DefaultCellStyle.Format = "###,##";
             dataGridView1.Columns[4].DefaultCellStyle.Format = "###,##";
@@ -67,25 +67,25 @@ namespace UI.Form_ChucNang
         {
             tbNgaythue.Text = "";
             tbTongSoDia.Text = "";
-            tbTongTienThanhToan.Text = "";         
+            tbTongTienThanhToan.Text = "";
         }
         public void ResetThongTinDia()
         {
-            
+
             tbIdDia.Text = "";
             tbSoNgayThue.Text = "";
             tbIdDia.Enabled = false;
             tbSoNgayThue.Enabled = false;
-            btnThemDia.Enabled= false;
+            btnThemDia.Enabled = false;
         }
 
         private void LoadCell()
         {
             tbTTIdDia.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim();
-            tbTTTenDia.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString().Trim();   
+            tbTTTenDia.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString().Trim();
             tbTTSoNgayThue.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString().Trim();
-            tbTTNgayTraDia.Text =Convert.ToDateTime(dataGridView1.CurrentRow.Cells[6].Value).ToString("dd/MM/yyyy");
-          
+            tbTTNgayTraDia.Text = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[6].Value).ToString("dd/MM/yyyy");
+
         }
         #endregion
 
@@ -124,16 +124,20 @@ namespace UI.Form_ChucNang
             {
                 eKhachHang ekh = khbll.LayThongTinKhachHang(tbIdKH.Text);
                 //kiểm tra khách hàng có rỗng ko
-                if (ekh == null)
+                if (tbIdKH.Text == "")
                 {
-                    XtraMessageBox.Show("ID này không có trong hệ thống !");
+                    XtraMessageBox.Show("Thiếu thông tin. Vui lòng nhập ID khách hàng !");
+                }
+                else if (ekh == null)
+                {
+                    XtraMessageBox.Show("ID Khách hàng không có trong hệ thống !");
                 }
                 //kiểm tra khoản nợ của khách hàng trong hệ thống
-                if (ctptbll.CapNhatKhoanNoCuaKhachHang(tbIdKH.Text) == true)
+                else if (ctptbll.CapNhatKhoanNoCuaKhachHang(tbIdKH.Text) == true)
                 {
-    
-                    DialogResult dg = new DialogResult();  
-                    dg = XtraMessageBox.Show("Khách hàng "+khbll.LayTenKhachHangBangId(tbIdKH.Text)+" còn thiếu "+ctptbll.LayKhoanNoCuaKhachHang(tbIdKH.Text)+" $ phí trễ hạn, bạn có muốn cho khách hàng này thuê tiếp hay không !", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    DialogResult dg = new DialogResult();
+                    dg = XtraMessageBox.Show("Khách hàng " + khbll.LayTenKhachHangBangId(tbIdKH.Text) + " còn thiếu " + ctptbll.LayKhoanNoCuaKhachHang(tbIdKH.Text) + " $ phí trễ hạn, bạn có muốn cho khách hàng này thuê tiếp hay không !", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (dg == DialogResult.Yes)
                     {
                         dg = DialogResult.Cancel;
@@ -148,19 +152,19 @@ namespace UI.Form_ChucNang
                         tbIdKH.Enabled = false;
                         tbSoNgayThue.Enabled = true;
 
-                    }              
-                    else 
+                    }
+                    else
                     {
                         tbIdDia.Text = "";
                         dg = DialogResult.Cancel;
-                       
-                      
+
+
                     }
-      
+
                 }
                 else if (ekh != null)
                 {
-                   
+
                     tbTenKhachHang.Text = ekh.HoTen;
                     tbDiaChi.Text = ekh.DiaChi;
                     tbSDT.Text = ekh.SoDienThoai;
@@ -171,10 +175,10 @@ namespace UI.Form_ChucNang
                     btnThemDia.Enabled = true;
                     tbIdKH.Enabled = false;
                     tbSoNgayThue.Enabled = true;
-                   
+
                 }
             }
-            else if(btnXacNhanKH.Text == "Hủy")
+            else if (btnXacNhanKH.Text == "Hủy")
             {
                 DialogResult dg = new DialogResult();
                 dg = XtraMessageBox.Show("Chưa hoàn tất phiếu thuê, bạn có muốn hủy không, thao tác này không thể hoàn tác !", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -198,27 +202,27 @@ namespace UI.Form_ChucNang
 
                     btnXoaKhoiPhieuThue.Enabled = false;
                     btnXacNhanThue.Enabled = false;
-                    
+
                 }
                 else
                 {
                     dg = DialogResult.Cancel;
                 }
-                   
+
             }
-          
-           
+
+
         }
 
-       
+
 
         private void btnThemDia_Click(object sender, EventArgs e)
         {
-            if(tbIdDia.Text =="" || tbSoNgayThue.Text=="")
+            if (tbIdDia.Text == "" || tbSoNgayThue.Text == "")
             {
                 XtraMessageBox.Show("Vui lòng nhập đầy đủ ID đĩa và số ngày thuê !");
             }
-            else if (tdbll.LayTenTieuDeBangIdDia(tbIdDia.Text)=="null")
+            else if (tdbll.LayTenTieuDeBangIdDia(tbIdDia.Text) == "null")
             {
                 XtraMessageBox.Show("Không có Đĩa này trong hệ thống, vui lòng nhập ID khác !");
             }
@@ -226,25 +230,21 @@ namespace UI.Form_ChucNang
             {
                 XtraMessageBox.Show("Đĩa đang được thuê bởi người khác, vui lòng nhập ID khác !");
             }
-            else if("a"=="da")
-            {
-                //regex
-            }
             else
             {
                 //Tạo đối tượng add vào list rồi đẩy ra datagridview
-           
-                DateTime ngayTraDia = DateTime.Now.AddDays(Convert.ToInt32(tbSoNgayThue.Text));  
-               
+
+                DateTime ngayTraDia = DateTime.Now.AddDays(Convert.ToInt32(tbSoNgayThue.Text));
+
                 string tenDia = tdbll.LayTenTieuDeBangIdDia(tbIdDia.Text);
                 string tenDanhMuc = dmbll.LayTenDanhMucBangIdDia(tbIdDia.Text);
-              
+
                 decimal phiThue = dmbll.LayPhiThueBangIdDia(tbIdDia.Text);
                 decimal phiTreHan = dmbll.LayPhiTreHanBangIdDia(tbIdDia.Text);
-                eThongTinPhieuThue ettpt = new eThongTinPhieuThue(tbIdDia.Text, tenDia, tenDanhMuc, Convert.ToDecimal(phiThue)* Convert.ToDecimal(tbSoNgayThue.Text), Convert.ToDecimal(phiTreHan),Convert.ToInt32(tbSoNgayThue.Text), ngayTraDia,_IDPhieuThue);
+                eThongTinPhieuThue ettpt = new eThongTinPhieuThue(tbIdDia.Text, tenDia, tenDanhMuc, Convert.ToDecimal(phiThue) * Convert.ToDecimal(tbSoNgayThue.Text), Convert.ToDecimal(phiTreHan), Convert.ToInt32(tbSoNgayThue.Text), ngayTraDia, _IDPhieuThue);
 
                 //kiểm tra list có rỗng ko
-                if (listTtPhieuThue.Count()==0)
+                if (listTtPhieuThue.Count() == 0)
                 {
                     listTtPhieuThue.Add(ettpt);
                     var bindingList = new BindingList<eThongTinPhieuThue>(listTtPhieuThue);
@@ -263,7 +263,7 @@ namespace UI.Form_ChucNang
                         if (item.IdDia == tbIdDia.Text)
                         {
                             temp = temp + 1;
-                        }                   
+                        }
                     }
                     if (temp == 0)
                     {
@@ -276,18 +276,18 @@ namespace UI.Form_ChucNang
                         btnXoaKhoiPhieuThue.Enabled = true;
                         btnXacNhanThue.Enabled = true;
                     }
-                    else if (temp >0)
+                    else if (temp > 0)
                     {
                         XtraMessageBox.Show("Đĩa này đã có trong phiếu thuê, vui lòng không nhập lại !");
                     }
                 }
-            }          
+            }
         }
         public void thayDoiThongTinPhieuThue(List<eThongTinPhieuThue> listTTPT)
         {
             decimal tongPhiThue = 0;
             int tongSoDia = 0;
-            foreach(eThongTinPhieuThue item in listTTPT)
+            foreach (eThongTinPhieuThue item in listTTPT)
             {
                 tongPhiThue = tongPhiThue + item.PhiThue;
                 tongSoDia++;
@@ -303,9 +303,9 @@ namespace UI.Form_ChucNang
             dg = XtraMessageBox.Show("Bạn có muốn bỏ đĩa này ra khỏi phiếu thuê hay không !", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dg == DialogResult.Yes)
             {
-                foreach(eThongTinPhieuThue item in listTtPhieuThue)
+                foreach (eThongTinPhieuThue item in listTtPhieuThue)
                 {
-                    if(item.IdDia == tbTTIdDia.Text)
+                    if (item.IdDia == tbTTIdDia.Text)
                     {
                         listTtPhieuThue.Remove(item);
                         var bindingList = new BindingList<eThongTinPhieuThue>(listTtPhieuThue);
@@ -335,7 +335,7 @@ namespace UI.Form_ChucNang
                 ept.NgayTao = DateTime.Now;
                 ept.TrangThaiThanhToan = false;
                 ept.IdKhachHang = tbIdKH.Text;
-          
+
                 try
                 {
                     if (ptbll.ThemPhieuThue(ept))
@@ -356,11 +356,11 @@ namespace UI.Form_ChucNang
                             XoaThongTinPhieuThue();
                             ResetThongTinDia();
 
-                            listTtPhieuThue.Clear();                 
+                            listTtPhieuThue.Clear();
                             var bindingList = new BindingList<eThongTinPhieuThue>(listTtPhieuThue);
                             var source = new BindingSource(bindingList, null);
                             dataGridView1.DataSource = source;
-                        }                           
+                        }
                     }
                 }
                 catch (Exception ex)

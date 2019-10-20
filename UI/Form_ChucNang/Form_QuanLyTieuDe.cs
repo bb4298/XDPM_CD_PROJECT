@@ -31,25 +31,14 @@ namespace UI.Form_ChucNang
         #region Hàm tự viết
         public void LoadData()
         {
-            //dataGridView1.DataSource = (from a in db.TieuDes
-            //                            join b in db.DanhMucs on a.IdDanhMuc equals b.IdDanhMuc
-            //                            where a.TrangThaiXoa == false
-            //                            select new
-            //                            {
-            //                                a.IdTieuDe,
-            //                                a.TenTieuDe,                                         
-            //                                a.SoLuongDia,
-            //                                b.TenDanhMuc,
-            //                                a.PhiThue
-            //                            });
-            dataGridView1.DataSource = tdbll.LayDanhSachTieuDe();
+           
+            dataGridView1.DataSource = tdbll.LayDanhSachTieuDeTheoTenDanhMuc(cbbPhanLoaiDanhMuc.Text);
         }
 
         private void LoadCell()
         {
             tbIdTieuDe.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim();
-            tbTenTieuDe.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString().Trim();
-            cbbDanhMuc.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString().Trim();
+            tbTenTieuDe.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString().Trim();          
             tbSoLuongDia.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString().Trim();
             //tbPhiThue.Text = String.Format(dataGridView1.CurrentRow.Cells[4].Value.ToString().Trim(), "###,##");
          
@@ -98,11 +87,17 @@ namespace UI.Form_ChucNang
             //                             );
             //cbbDanhMuc.DataSource = dmbll.LayDanhSachDanhMuc();
 
-            BindingSource binding = new BindingSource();
-            binding.DataSource = dmbll.LayDanhSachDanhMuc();
-            cbbDanhMuc.DataSource = binding.DataSource;
+            BindingSource binding1 = new BindingSource();
+            binding1.DataSource = dmbll.LayDanhSachDanhMuc();
+            cbbDanhMuc.DataSource = binding1.DataSource;
             cbbDanhMuc.DisplayMember = "TenDanhMuc";
             cbbDanhMuc.ValueMember = "TenDanhMuc";
+
+            BindingSource binding2 = new BindingSource();
+            binding2.DataSource = dmbll.LayDanhSachDanhMuc();
+            cbbPhanLoaiDanhMuc.DataSource = binding2.DataSource;
+            cbbPhanLoaiDanhMuc.DisplayMember = "TenDanhMuc";
+            cbbPhanLoaiDanhMuc.ValueMember = "TenDanhMuc";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -144,6 +139,7 @@ namespace UI.Form_ChucNang
             btnSua.Enabled = false;
             btnLuu.Enabled = true;
             btnHuy.Enabled = true;
+            cbbPhanLoaiDanhMuc.Enabled = false;
             dataGridView1.Enabled = false;
         }
 
@@ -285,6 +281,7 @@ namespace UI.Form_ChucNang
             btnLuu.Enabled = false;
             btnHuy.Enabled = false;
             btnThem.Enabled = true;
+            cbbPhanLoaiDanhMuc.Enabled = true;
             dataGridView1.Enabled = true;
         }
 
@@ -343,6 +340,11 @@ namespace UI.Form_ChucNang
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbbPhanLoaiDanhMuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

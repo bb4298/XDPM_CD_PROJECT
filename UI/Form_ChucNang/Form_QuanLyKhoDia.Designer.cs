@@ -54,11 +54,6 @@
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.dataGridViewD = new System.Windows.Forms.DataGridView();
-            this.IdDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbbTK_NV = new System.Windows.Forms.ComboBox();
-            this.tbTimKiemNV = new System.Windows.Forms.TextBox();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.dataGridViewTD = new System.Windows.Forms.DataGridView();
             this.IdTieuDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +63,10 @@
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.cbbPhanLoaiDanhMuc = new System.Windows.Forms.ComboBox();
+            this.IdDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThaiThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.panelQuanLyTD.SuspendLayout();
@@ -81,13 +80,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbIdDia.Properties)).BeginInit();
             this.panelThaoTac.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-            this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
+            this.groupControl5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -180,7 +179,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(7, 105);
+            this.label7.Location = new System.Drawing.Point(16, 105);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 17);
             this.label7.TabIndex = 14;
@@ -357,7 +356,7 @@
             this.dataGridViewD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdDia,
-            this.TrangThai});
+            this.TrangThaiThue});
             this.dataGridViewD.Location = new System.Drawing.Point(947, 115);
             this.dataGridViewD.MultiSelect = false;
             this.dataGridViewD.Name = "dataGridViewD";
@@ -370,57 +369,6 @@
             this.dataGridViewD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewD_CellClick);
             this.dataGridViewD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewD_CellContentClick);
             this.dataGridViewD.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewD_CellFormatting);
-            // 
-            // IdDia
-            // 
-            this.IdDia.DataPropertyName = "IdDia";
-            this.IdDia.HeaderText = "ID Đĩa";
-            this.IdDia.Name = "IdDia";
-            this.IdDia.ReadOnly = true;
-            this.IdDia.Width = 110;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
-            // 
-            // cbbTK_NV
-            // 
-            this.cbbTK_NV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbTK_NV.FormattingEnabled = true;
-            this.cbbTK_NV.Items.AddRange(new object[] {
-            "Theo Tên NV",
-            "Theo Mã NV",
-            "Theo SDT"});
-            this.cbbTK_NV.Location = new System.Drawing.Point(26, 35);
-            this.cbbTK_NV.Name = "cbbTK_NV";
-            this.cbbTK_NV.Size = new System.Drawing.Size(236, 24);
-            this.cbbTK_NV.TabIndex = 39;
-            // 
-            // tbTimKiemNV
-            // 
-            this.tbTimKiemNV.Location = new System.Drawing.Point(26, 65);
-            this.tbTimKiemNV.Name = "tbTimKiemNV";
-            this.tbTimKiemNV.Size = new System.Drawing.Size(236, 23);
-            this.tbTimKiemNV.TabIndex = 38;
-            // 
-            // groupControl2
-            // 
-            this.groupControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.groupControl2.Appearance.Options.UseBackColor = true;
-            this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.groupControl2.Controls.Add(this.tbTimKiemNV);
-            this.groupControl2.Controls.Add(this.cbbTK_NV);
-            this.groupControl2.Location = new System.Drawing.Point(1066, 6);
-            this.groupControl2.LookAndFeel.SkinName = "Office 2010 Blue";
-            this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(287, 103);
-            this.groupControl2.TabIndex = 54;
-            this.groupControl2.Text = "                       Tìm Kiếm Đĩa";
             // 
             // groupControl3
             // 
@@ -498,19 +446,19 @@
             this.groupControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.groupControl4.Controls.Add(this.textBox1);
             this.groupControl4.Controls.Add(this.comboBox3);
-            this.groupControl4.Location = new System.Drawing.Point(467, 6);
+            this.groupControl4.Location = new System.Drawing.Point(947, 6);
             this.groupControl4.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(593, 103);
+            this.groupControl4.Size = new System.Drawing.Size(406, 103);
             this.groupControl4.TabIndex = 55;
-            this.groupControl4.Text = "                       Tìm Kiếm Tiêu Đề";
+            this.groupControl4.Text = "Tìm kiếm đĩa";
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(17, 65);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(550, 23);
+            this.textBox1.Size = new System.Drawing.Size(358, 23);
             this.textBox1.TabIndex = 38;
             // 
             // comboBox3
@@ -523,18 +471,62 @@
             "Theo SDT"});
             this.comboBox3.Location = new System.Drawing.Point(17, 35);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(550, 24);
+            this.comboBox3.Size = new System.Drawing.Size(358, 24);
             this.comboBox3.TabIndex = 39;
+            // 
+            // groupControl5
+            // 
+            this.groupControl5.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.groupControl5.Appearance.Options.UseBackColor = true;
+            this.groupControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.groupControl5.Controls.Add(this.cbbPhanLoaiDanhMuc);
+            this.groupControl5.Location = new System.Drawing.Point(467, 6);
+            this.groupControl5.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.groupControl5.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl5.Name = "groupControl5";
+            this.groupControl5.Size = new System.Drawing.Size(474, 103);
+            this.groupControl5.TabIndex = 55;
+            this.groupControl5.Text = "Phân Loại Danh Mục";
+            // 
+            // cbbPhanLoaiDanhMuc
+            // 
+            this.cbbPhanLoaiDanhMuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbPhanLoaiDanhMuc.FormattingEnabled = true;
+            this.cbbPhanLoaiDanhMuc.Items.AddRange(new object[] {
+            "Theo Tên NV",
+            "Theo Mã NV",
+            "Theo SDT"});
+            this.cbbPhanLoaiDanhMuc.Location = new System.Drawing.Point(26, 51);
+            this.cbbPhanLoaiDanhMuc.Name = "cbbPhanLoaiDanhMuc";
+            this.cbbPhanLoaiDanhMuc.Size = new System.Drawing.Size(410, 24);
+            this.cbbPhanLoaiDanhMuc.TabIndex = 39;
+            this.cbbPhanLoaiDanhMuc.SelectedIndexChanged += new System.EventHandler(this.cbbPhanLoaiDanhMuc_SelectedIndexChanged);
+            // 
+            // IdDia
+            // 
+            this.IdDia.DataPropertyName = "IdDia";
+            this.IdDia.HeaderText = "ID Đĩa";
+            this.IdDia.Name = "IdDia";
+            this.IdDia.ReadOnly = true;
+            this.IdDia.Width = 110;
+            // 
+            // TrangThaiThue
+            // 
+            this.TrangThaiThue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TrangThaiThue.DataPropertyName = "TrangThaiThue";
+            this.TrangThaiThue.HeaderText = "Trạng Thái Thuê";
+            this.TrangThaiThue.Name = "TrangThaiThue";
+            this.TrangThaiThue.ReadOnly = true;
             // 
             // Form_QuanLyKhoDia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1356, 546);
+            this.Controls.Add(this.groupControl5);
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.dataGridViewTD);
             this.Controls.Add(this.groupControl3);
-            this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.dataGridViewD);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -557,15 +549,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbIdDia.Properties)).EndInit();
             this.panelThaoTac.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-            this.groupControl2.ResumeLayout(false);
-            this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
+            this.groupControl5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -587,17 +578,12 @@
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private System.Windows.Forms.DataGridView dataGridViewD;
-        private System.Windows.Forms.ComboBox cbbTK_NV;
-        private System.Windows.Forms.TextBox tbTimKiemNV;
-        private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private System.Windows.Forms.DataGridView dataGridViewTD;
         private DevExpress.XtraEditors.TextEdit tbTrangThai;
         private DevExpress.XtraEditors.GroupControl groupControl4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdDia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
         private DevExpress.XtraEditors.TextEdit tbDanhMuc;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelThemDia;
@@ -611,5 +597,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tenTieuDe;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDanhMuc;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongDia;
+        private DevExpress.XtraEditors.GroupControl groupControl5;
+        private System.Windows.Forms.ComboBox cbbPhanLoaiDanhMuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdDia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThaiThue;
     }
 }

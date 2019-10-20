@@ -21,6 +21,13 @@ namespace Entities
 
         public int SoNgayThue { get; set; }
 
+
+
+        //Thông tin phụ
+        public DateTime NgayThue { get; set; }
+        public int SoNgayTreHan { get; set; }
+        public int IdChiTietPhieuThue { get; set; }
+
         public eThongTinPhieuThue(string idDia, string tenDia, string danhMuc, decimal phiThue, decimal phiTreHan,int soNgayThue, DateTime ngayTraDia, int idPhieuThue)
         {
             IdDia = idDia;
@@ -31,6 +38,14 @@ namespace Entities
             SoNgayThue = soNgayThue;
             NgayTraDia = ngayTraDia;
             IdPhieuThue = idPhieuThue;
+        }
+
+        public eThongTinPhieuThue(DateTime ngayThue, DateTime ngayTraDia,  decimal phiTreHan, int soNgayThue)
+        {
+            NgayThue = ngayThue;
+            NgayTraDia = ngayTraDia;
+            SoNgayThue = soNgayThue;
+            PhiTreHan = phiTreHan;
         }
         public eThongTinPhieuThue()
         {

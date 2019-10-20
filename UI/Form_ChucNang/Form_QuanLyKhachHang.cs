@@ -25,6 +25,7 @@ namespace UI.Form_ChucNang
         {
             InitializeComponent();         
             khbll = new KhachHangBLL();
+            dataGridView1.AutoGenerateColumns = false;
         }
 
 

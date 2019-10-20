@@ -14,6 +14,14 @@ namespace Entities
         public String IdTieuDe { get; set; }
 
 
+
+        //Thông tin phụ
+        public String TenTieuDe { get; set; }
+        public String TenDanhMuc { get; set; }
+        public decimal PhiThue { get; set; }
+        public decimal PhiTreHan { get; set; }
+        
+
         public eDia(String idDia, bool trangThaiThue, bool trangThaiXoa, String idTieuDe)
         {
             IdDia = idDia;
@@ -32,10 +40,21 @@ namespace Entities
 
         }
 
+        public eDia(string idDia, string tenTieuDe, string tenDanhMuc, decimal phiThue, decimal phiTreHan)
+        {
+            IdDia = idDia;
+            TenTieuDe = tenTieuDe;
+            TenDanhMuc = tenDanhMuc;
+            PhiThue = phiThue;
+            PhiTreHan = phiTreHan;
+        }
+
+
         public eDia()
         {
 
         }
 
+     
     }
 }

@@ -72,6 +72,7 @@
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.btn_TraDia = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -108,9 +109,10 @@
             this.btn_QuanLyDatDia,
             this.barButtonItem4,
             this.btn_DangXuat,
-            this.skinRibbonGalleryBarItem2});
+            this.skinRibbonGalleryBarItem2,
+            this.btn_TraDia});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 59;
+            this.ribbonControl1.MaxItemId = 60;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbPage_QuanLy,
@@ -399,6 +401,7 @@
             // ribbonPageGroup8
             // 
             this.ribbonPageGroup8.ItemLinks.Add(this.btn_QuanLyThueDia);
+            this.ribbonPageGroup8.ItemLinks.Add(this.btn_TraDia);
             this.ribbonPageGroup8.ItemLinks.Add(this.btn_QuanLyPhiTre);
             this.ribbonPageGroup8.ItemLinks.Add(this.btn_QuanLyDatDia);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
@@ -461,6 +464,14 @@
             // defaultLookAndFeel1
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Blue";
+            // 
+            // btn_TraDia
+            // 
+            this.btn_TraDia.Caption = "Trả Đĩa";
+            this.btn_TraDia.Id = 59;
+            this.btn_TraDia.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btn_TraDia.Name = "btn_TraDia";
+            this.btn_TraDia.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_TraDia_ItemClick);
             // 
             // Form_Main
             // 
@@ -526,5 +537,6 @@
         private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
+        private DevExpress.XtraBars.BarButtonItem btn_TraDia;
     }
 }

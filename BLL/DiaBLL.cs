@@ -62,6 +62,27 @@ namespace BLL
             return "Chưa được thuê";
         }
 
+        public eDia LayThongTinDiaBangIdDia(string idDia)
+        {
+            eDia ed = new eDia();         
+            var d =(from a in db.Dias join b in db.TieuDes on a.IdTieuDe equals b. IdTieuDe
+                                        join c in db.DanhMucs on b.IdDanhMuc equals c.IdDanhMuc
+                    where a.IdDia == idDia
+                    select new
+                    {
+                        a.IdDia,
+                        b.TenTieuDe,
+                        c.TenDanhMuc,
+                        c.PhiThue,
+                        c.PhiTreHan
+                    }).Single();
+            ed.IdDia = d.IdDia;
+            ed.TenTieuDe = d.TenTieuDe;
+            ed.TenDanhMuc = d.TenDanhMuc;
+            ed.PhiTreHan = Convert.ToDecimal(d.PhiTreHan);
+            ed.PhiThue = Convert.ToDecimal(d.PhiThue);
+            return ed;
+        }
       
         //public string layIdDiaBangTenDia(string tenDia)
         //{
@@ -116,18 +137,38 @@ namespace BLL
             return false;
         }
 
+        public bool SuaDia(string idDia)
+        {
+            Dia dia = new Dia();
+            dia = db.Dias.Where(a => a.IdDia== idDia).SingleOrDefault();
+            if (dia != null)
+            {
+                dia.TrangThaiThue = false;
+
+                db.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
+
         // true: đĩa đang được thuê
         public bool kiemTraDiaTaiCuaHang(string idDia)
         {
-            foreach (Dia item in db.Dias)
-            { 
-                if (item.IdDia == idDia && item.TrangThaiThue == true)
-                {
-                    return true;
-                    
-                }   
-            }
+            Dia d = new Dia();
+            d = db.Dias.Where(a => a.IdDia == idDia && a.TrangThaiThue == true).SingleOrDefault();
+            if (d != null)
+                return true;
             return false;
+
+            //foreach (Dia item in db.Dias)
+            //{ 
+            //    if (item.IdDia == idDia && item.TrangThaiThue == true)
+            //    {
+            //        return true;
+                    
+            //    }   
+            //}
+            //return false;
         }
        
     }

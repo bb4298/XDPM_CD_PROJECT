@@ -20,11 +20,14 @@ namespace UI.Form_ChucNang
         public int KEY = 0;
         TieuDeBLL tdbll;
         DiaBLL diabll;
+        DanhMucBLL dmbll;
         public Form_QuanLyKhoDia()
         {
             InitializeComponent();
             tdbll = new TieuDeBLL();
-            diabll = new DiaBLL(); 
+            diabll = new DiaBLL();
+            dmbll = new DanhMucBLL();
+
             dataGridViewD.AutoGenerateColumns = false;
             dataGridViewTD.AutoGenerateColumns = false;
         }
@@ -34,20 +37,12 @@ namespace UI.Form_ChucNang
         //Load Data Tiêu Đề
         public void LoadDataTieuDe()
         {            
-            dataGridViewTD.DataSource = tdbll.LayDanhSachTieuDe_QuanLyKhoDia();
+            dataGridViewTD.DataSource = tdbll.LayDanhSachTieuDe_QuanLyKhoDia(cbbPhanLoaiDanhMuc.Text);
         }
 
         public void LoadDataDia(string IdTieuDe)
         {
-            //dataGridViewD.DataSource = (from a in db.TieuDes
-            //                            join b in db.Dias on a.IdTieuDe equals b.IdTieuDe
-            //                            where b.TrangThaiXoa == false && a.IdTieuDe == IdTieuDe
-            //                            select new
-            //                            {
-            //                                b.IdDia,
-            //                                b.TrangThai
-
-            //                            });
+            
             dataGridViewD.DataSource = diabll.LayDanhSachDia(IdTieuDe);
         }
         private void LoadCell()
@@ -101,6 +96,11 @@ namespace UI.Form_ChucNang
 
         private void Form_QuanLyKhoDia_Load(object sender, EventArgs e)
         {
+            BindingSource binding = new BindingSource();
+            binding.DataSource = dmbll.LayDanhSachDanhMuc();
+            cbbPhanLoaiDanhMuc.DataSource = binding.DataSource;
+            cbbPhanLoaiDanhMuc.DisplayMember = "TenDanhMuc";
+            cbbPhanLoaiDanhMuc.ValueMember = "TenDanhMuc";
             LoadDataTieuDe();
             panelThemDia.Visible = false;
         }
@@ -365,6 +365,11 @@ namespace UI.Form_ChucNang
         private void tbThem_IdTieuDe_EditValueChanged(object sender, EventArgs e)
         {
             cbbThem_TenTieuDe.Text = tdbll.layTenTieuDeBangIdTieuDe(tbThem_IdTieuDe.Text);
+        }
+
+        private void cbbPhanLoaiDanhMuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadDataTieuDe();
         }
     }
 }

@@ -16,12 +16,12 @@ namespace BLL
         {
             db = new QLCDDataContext();
         }
-        public List<eTieuDe> LayDanhSachTieuDe_QuanLyKhoDia()
+        public List<eTieuDe> LayDanhSachTieuDe_QuanLyKhoDia(string tenDanhMuc)
         {
             List<eTieuDe> list = new List<eTieuDe>();
             var query = (from a in db.TieuDes
                          join b in db.DanhMucs on a.IdDanhMuc equals b.IdDanhMuc
-                         where a.TrangThaiXoa == false
+                         where a.TrangThaiXoa == false && b.TenDanhMuc == tenDanhMuc
                          select new
                          {
                              a.IdTieuDe,
@@ -39,28 +39,53 @@ namespace BLL
 
         }
 
-        public List<eTieuDe> LayDanhSachTieuDe()
+        public List<eTieuDe> LayDanhSachTieuDeTheoTenDanhMuc(string tenDanhMuc)
         {
             List<eTieuDe> list = new List<eTieuDe>();
             var query = (from a in db.TieuDes
-                        join b in db.DanhMucs on a.IdDanhMuc equals b.IdDanhMuc
-                        where a.TrangThaiXoa == false
-                        select new
-                        {
-                            a.IdTieuDe,
-                            a.TenTieuDe,
-                            a.SoLuongDia,
-                            b.TenDanhMuc,                            
-                        }).ToList();
+                         join b in db.DanhMucs on a.IdDanhMuc equals b.IdDanhMuc
+                         where a.TrangThaiXoa == false && b.TenDanhMuc == tenDanhMuc
+                         select new
+                         {
+                             a.IdTieuDe,
+                             a.TenTieuDe,
+                             a.SoLuongDia,
+                             b.TenDanhMuc,
+                         }).ToList();
 
             foreach (var item in query)
             {
-                eTieuDe etd = new eTieuDe (item.IdTieuDe, item.TenTieuDe, Convert.ToInt32(item.SoLuongDia), item.TenDanhMuc);          
+                eTieuDe etd = new eTieuDe(item.IdTieuDe, item.TenTieuDe, Convert.ToInt32(item.SoLuongDia));
                 list.Add(etd);
             }
             return list;
 
         }
+
+
+        //Khi cần thì xài lại, ko nên xóa
+        //public List<eTieuDe> LayDanhSachTieuDe()
+        //{
+        //    List<eTieuDe> list = new List<eTieuDe>();
+        //    var query = (from a in db.TieuDes
+        //                join b in db.DanhMucs on a.IdDanhMuc equals b.IdDanhMuc
+        //                where a.TrangThaiXoa == false
+        //                select new
+        //                {
+        //                    a.IdTieuDe,
+        //                    a.TenTieuDe,
+        //                    a.SoLuongDia,
+        //                    b.TenDanhMuc,                            
+        //                }).ToList();
+
+        //    foreach (var item in query)
+        //    {
+        //        eTieuDe etd = new eTieuDe (item.IdTieuDe, item.TenTieuDe, Convert.ToInt32(item.SoLuongDia), item.TenDanhMuc);          
+        //        list.Add(etd);
+        //    }
+        //    return list;
+
+        //}
 
         public List<eTieuDe> LayDanhSachTenTieuDe()
         {

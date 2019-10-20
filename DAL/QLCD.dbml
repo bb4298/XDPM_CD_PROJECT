@@ -7,7 +7,6 @@
       <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="IdPhieuDat" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="PhieuDat_ChiTietPhieuDat" Member="PhieuDat" ThisKey="IdPhieuDat" OtherKey="IdPhieuDat" Type="PhieuDat" IsForeignKey="true" />
-      <Association Name="TieuDe_ChiTietPhieuDat" Member="TieuDe" ThisKey="IdTieuDe" OtherKey="IdTieuDe" Type="TieuDe" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.ChiTietPhieuThue" Member="ChiTietPhieuThues">
@@ -19,8 +18,9 @@
       <Column Name="PhiThuePhaiTra" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
       <Column Name="NgayTraDiaThucTe" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="SoNgayTreHan" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="PhiTreHanQuyDinh" Type="System.Decimal" DbType="Decimal(18,12)" CanBeNull="true" />
+      <Column Name="PhiTreHanQuyDinh" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
       <Column Name="PhiTreHanPhaiTra" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TrangThaiTraDia" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="TrangThaiThanhToan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="IdPhieuThue" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Dia_ChiTietPhieuThue" Member="Dia" ThisKey="IdDia" OtherKey="IdDia" Type="Dia" IsForeignKey="true" />
@@ -102,7 +102,6 @@
       <Column Name="SoLuongDia" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="IdDanhMuc" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TrangThaiXoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Association Name="TieuDe_ChiTietPhieuDat" Member="ChiTietPhieuDats" ThisKey="IdTieuDe" OtherKey="IdTieuDe" Type="ChiTietPhieuDat" />
       <Association Name="TieuDe_Dia" Member="Dias" ThisKey="IdTieuDe" OtherKey="IdTieuDe" Type="Dia" />
       <Association Name="DanhMuc_TieuDe" Member="DanhMuc" ThisKey="IdDanhMuc" OtherKey="IdDanhMuc" Type="DanhMuc" IsForeignKey="true" />
     </Type>

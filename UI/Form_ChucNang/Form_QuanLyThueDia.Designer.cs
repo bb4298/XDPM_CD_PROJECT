@@ -34,6 +34,8 @@
             this.btnXacNhanThue = new DevExpress.XtraEditors.SimpleButton();
             this.panelKH = new DevExpress.XtraEditors.GroupControl();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tbTienNo = new DevExpress.XtraEditors.TextEdit();
+            this.Nợ = new System.Windows.Forms.Label();
             this.tbDiaChi = new DevExpress.XtraEditors.TextEdit();
             this.tbTenKhachHang = new DevExpress.XtraEditors.TextEdit();
             this.tbSDT = new DevExpress.XtraEditors.TextEdit();
@@ -73,19 +75,18 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tbTongTienThanhToan = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbNgaythue = new DevExpress.XtraEditors.TextEdit();
             this.label10 = new System.Windows.Forms.Label();
             this.tbTongSoDia = new DevExpress.XtraEditors.TextEdit();
-            this.tbTienNo = new DevExpress.XtraEditors.TextEdit();
-            this.Nợ = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             this.panelThaoTac.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelKH)).BeginInit();
             this.panelKH.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbTienNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTenKhachHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbSDT.Properties)).BeginInit();
@@ -108,11 +109,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbTongTienThanhToan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbNgaythue.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTongSoDia.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbTienNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl3
@@ -177,6 +177,25 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(306, 187);
             this.panel2.TabIndex = 86;
+            // 
+            // tbTienNo
+            // 
+            this.tbTienNo.Enabled = false;
+            this.tbTienNo.Location = new System.Drawing.Point(78, 131);
+            this.tbTienNo.Name = "tbTienNo";
+            this.tbTienNo.Size = new System.Drawing.Size(203, 22);
+            this.tbTienNo.TabIndex = 83;
+            // 
+            // Nợ
+            // 
+            this.Nợ.AutoSize = true;
+            this.Nợ.BackColor = System.Drawing.Color.Transparent;
+            this.Nợ.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.Nợ.Location = new System.Drawing.Point(37, 134);
+            this.Nợ.Name = "Nợ";
+            this.Nợ.Size = new System.Drawing.Size(33, 17);
+            this.Nợ.TabIndex = 84;
+            this.Nợ.Text = "Nợ:";
             // 
             // tbDiaChi
             // 
@@ -602,6 +621,14 @@
             this.groupControl2.TabIndex = 78;
             this.groupControl2.Text = "Thông Tin Phiếu Thuê:";
             // 
+            // textEdit1
+            // 
+            this.textEdit1.Enabled = false;
+            this.textEdit1.Location = new System.Drawing.Point(486, 57);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(203, 22);
+            this.textEdit1.TabIndex = 85;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.tbTongTienThanhToan);
@@ -642,33 +669,6 @@
             this.tbTongSoDia.Size = new System.Drawing.Size(216, 22);
             this.tbTongSoDia.TabIndex = 82;
             // 
-            // tbTienNo
-            // 
-            this.tbTienNo.Enabled = false;
-            this.tbTienNo.Location = new System.Drawing.Point(78, 131);
-            this.tbTienNo.Name = "tbTienNo";
-            this.tbTienNo.Size = new System.Drawing.Size(203, 22);
-            this.tbTienNo.TabIndex = 83;
-            // 
-            // Nợ
-            // 
-            this.Nợ.AutoSize = true;
-            this.Nợ.BackColor = System.Drawing.Color.Transparent;
-            this.Nợ.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.Nợ.Location = new System.Drawing.Point(37, 134);
-            this.Nợ.Name = "Nợ";
-            this.Nợ.Size = new System.Drawing.Size(33, 17);
-            this.Nợ.TabIndex = 84;
-            this.Nợ.Text = "Nợ:";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Enabled = false;
-            this.textEdit1.Location = new System.Drawing.Point(486, 57);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(203, 22);
-            this.textEdit1.TabIndex = 85;
-            // 
             // Form_QuanLyThueDia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -693,6 +693,7 @@
             this.panelKH.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbTienNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTenKhachHang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbSDT.Properties)).EndInit();
@@ -718,12 +719,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbTongTienThanhToan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbNgaythue.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTongSoDia.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbTienNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

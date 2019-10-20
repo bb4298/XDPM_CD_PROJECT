@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_QuanLyTieuDe));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.panelQuanLyTD = new System.Windows.Forms.Panel();
@@ -41,10 +40,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.IdTieuDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenTieuDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.panelThaoTac = new System.Windows.Forms.Panel();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
@@ -55,6 +50,11 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.tbTimKiemNV = new System.Windows.Forms.TextBox();
             this.cbbTK_NV = new System.Windows.Forms.ComboBox();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.cbbPhanLoaiDanhMuc = new System.Windows.Forms.ComboBox();
+            this.IdTieuDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenTieuDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.panelQuanLyTD.SuspendLayout();
@@ -67,6 +67,8 @@
             this.panelThaoTac.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            this.groupControl4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -75,11 +77,11 @@
             this.groupControl1.Appearance.Options.UseBackColor = true;
             this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.groupControl1.Controls.Add(this.panelQuanLyTD);
-            this.groupControl1.Location = new System.Drawing.Point(12, 12);
+            this.groupControl1.Location = new System.Drawing.Point(6, 6);
             this.groupControl1.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(541, 263);
+            this.groupControl1.Size = new System.Drawing.Size(547, 269);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Thông Tin Tiêu Đề";
             // 
@@ -186,16 +188,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdTieuDe,
             this.tenTieuDe,
-            this.SoLuongDia,
-            this.TenDanhMuc});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.SoLuongDia});
             this.dataGridView1.Location = new System.Drawing.Point(559, 133);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -203,45 +196,10 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(785, 410);
+            this.dataGridView1.Size = new System.Drawing.Size(793, 410);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // IdTieuDe
-            // 
-            this.IdTieuDe.DataPropertyName = "IdTieuDe";
-            this.IdTieuDe.FillWeight = 253.6585F;
-            this.IdTieuDe.HeaderText = "Mã Tiêu Đề";
-            this.IdTieuDe.Name = "IdTieuDe";
-            this.IdTieuDe.ReadOnly = true;
-            this.IdTieuDe.Width = 118;
-            // 
-            // tenTieuDe
-            // 
-            this.tenTieuDe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tenTieuDe.DataPropertyName = "tenTieuDe";
-            this.tenTieuDe.FillWeight = 48.78049F;
-            this.tenTieuDe.HeaderText = "Tên Tiêu Đề";
-            this.tenTieuDe.Name = "tenTieuDe";
-            this.tenTieuDe.ReadOnly = true;
-            // 
-            // SoLuongDia
-            // 
-            this.SoLuongDia.DataPropertyName = "SoLuongDia";
-            this.SoLuongDia.HeaderText = "Số Lượng";
-            this.SoLuongDia.Name = "SoLuongDia";
-            this.SoLuongDia.ReadOnly = true;
-            this.SoLuongDia.Width = 110;
-            // 
-            // TenDanhMuc
-            // 
-            this.TenDanhMuc.DataPropertyName = "TenDanhMuc";
-            this.TenDanhMuc.FillWeight = 48.78049F;
-            this.TenDanhMuc.HeaderText = "Danh Mục";
-            this.TenDanhMuc.Name = "TenDanhMuc";
-            this.TenDanhMuc.ReadOnly = true;
-            this.TenDanhMuc.Width = 140;
             // 
             // groupControl3
             // 
@@ -249,11 +207,11 @@
             this.groupControl3.Appearance.Options.UseBackColor = true;
             this.groupControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.groupControl3.Controls.Add(this.panelThaoTac);
-            this.groupControl3.Location = new System.Drawing.Point(12, 281);
+            this.groupControl3.Location = new System.Drawing.Point(6, 281);
             this.groupControl3.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(541, 262);
+            this.groupControl3.Size = new System.Drawing.Size(547, 262);
             this.groupControl3.TabIndex = 55;
             this.groupControl3.Text = "Thao Tác";
             // 
@@ -335,11 +293,11 @@
             this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.groupControl2.Controls.Add(this.tbTimKiemNV);
             this.groupControl2.Controls.Add(this.cbbTK_NV);
-            this.groupControl2.Location = new System.Drawing.Point(559, 12);
+            this.groupControl2.Location = new System.Drawing.Point(816, 6);
             this.groupControl2.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(782, 115);
+            this.groupControl2.Size = new System.Drawing.Size(536, 121);
             this.groupControl2.TabIndex = 56;
             this.groupControl2.Text = "                       Tìm Kiếm";
             // 
@@ -347,7 +305,7 @@
             // 
             this.tbTimKiemNV.Location = new System.Drawing.Point(26, 74);
             this.tbTimKiemNV.Name = "tbTimKiemNV";
-            this.tbTimKiemNV.Size = new System.Drawing.Size(723, 23);
+            this.tbTimKiemNV.Size = new System.Drawing.Size(479, 23);
             this.tbTimKiemNV.TabIndex = 38;
             // 
             // cbbTK_NV
@@ -360,14 +318,69 @@
             "Theo SDT"});
             this.cbbTK_NV.Location = new System.Drawing.Point(26, 44);
             this.cbbTK_NV.Name = "cbbTK_NV";
-            this.cbbTK_NV.Size = new System.Drawing.Size(723, 24);
+            this.cbbTK_NV.Size = new System.Drawing.Size(479, 24);
             this.cbbTK_NV.TabIndex = 39;
+            // 
+            // groupControl4
+            // 
+            this.groupControl4.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.groupControl4.Appearance.Options.UseBackColor = true;
+            this.groupControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.groupControl4.Controls.Add(this.cbbPhanLoaiDanhMuc);
+            this.groupControl4.Location = new System.Drawing.Point(559, 6);
+            this.groupControl4.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.Size = new System.Drawing.Size(251, 121);
+            this.groupControl4.TabIndex = 57;
+            this.groupControl4.Text = "Phân Nhóm";
+            // 
+            // cbbPhanLoaiDanhMuc
+            // 
+            this.cbbPhanLoaiDanhMuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbPhanLoaiDanhMuc.FormattingEnabled = true;
+            this.cbbPhanLoaiDanhMuc.Items.AddRange(new object[] {
+            "Theo Tên NV",
+            "Theo Mã NV",
+            "Theo SDT"});
+            this.cbbPhanLoaiDanhMuc.Location = new System.Drawing.Point(24, 54);
+            this.cbbPhanLoaiDanhMuc.Name = "cbbPhanLoaiDanhMuc";
+            this.cbbPhanLoaiDanhMuc.Size = new System.Drawing.Size(191, 24);
+            this.cbbPhanLoaiDanhMuc.TabIndex = 39;
+            this.cbbPhanLoaiDanhMuc.SelectedIndexChanged += new System.EventHandler(this.cbbPhanLoaiDanhMuc_SelectedIndexChanged);
+            // 
+            // IdTieuDe
+            // 
+            this.IdTieuDe.DataPropertyName = "IdTieuDe";
+            this.IdTieuDe.FillWeight = 253.6585F;
+            this.IdTieuDe.HeaderText = "Mã Tiêu Đề";
+            this.IdTieuDe.Name = "IdTieuDe";
+            this.IdTieuDe.ReadOnly = true;
+            this.IdTieuDe.Width = 118;
+            // 
+            // tenTieuDe
+            // 
+            this.tenTieuDe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenTieuDe.DataPropertyName = "tenTieuDe";
+            this.tenTieuDe.FillWeight = 48.78049F;
+            this.tenTieuDe.HeaderText = "Tên Tiêu Đề";
+            this.tenTieuDe.Name = "tenTieuDe";
+            this.tenTieuDe.ReadOnly = true;
+            // 
+            // SoLuongDia
+            // 
+            this.SoLuongDia.DataPropertyName = "SoLuongDia";
+            this.SoLuongDia.HeaderText = "Số Lượng";
+            this.SoLuongDia.Name = "SoLuongDia";
+            this.SoLuongDia.ReadOnly = true;
+            this.SoLuongDia.Width = 110;
             // 
             // Form_QuanLyTieuDe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1356, 546);
+            this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl1);
@@ -391,6 +404,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            this.groupControl4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -418,9 +433,10 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private System.Windows.Forms.TextBox tbTimKiemNV;
         private System.Windows.Forms.ComboBox cbbTK_NV;
+        private DevExpress.XtraEditors.GroupControl groupControl4;
+        private System.Windows.Forms.ComboBox cbbPhanLoaiDanhMuc;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdTieuDe;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenTieuDe;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongDia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenDanhMuc;
     }
 }

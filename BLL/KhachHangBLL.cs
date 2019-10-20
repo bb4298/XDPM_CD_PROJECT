@@ -62,6 +62,31 @@ namespace BLL
             return tenkh;
         }
 
+
+        public eKhachHang LayThongTinKhachHangBangIdDia(string idDia)
+        {
+            eKhachHang ekh = new eKhachHang();
+            var kh = (from a in db.KhachHangs
+                       join b in db.PhieuThues on a.IdKhachHang equals b.IdKhachHang
+                       join c in db.ChiTietPhieuThues on b.IdPhieuThue equals c.IdPhieuThue
+                       where c.IdDia == idDia && c.TrangThaiThanhToan == false && c.TrangThaiTraDia == false
+                       select new
+                       {
+                         a.IdKhachHang,
+                         a.HoTen,
+                         a.DiaChi,
+                         a.SoDienThoai,
+                         c.PhiTreHanPhaiTra
+                       }).Single();
+            ekh.IdKhachHang = kh.IdKhachHang;
+            ekh.HoTen = kh.HoTen;
+            ekh.DiaChi = kh.DiaChi;
+            ekh.SoDienThoai = kh.SoDienThoai;
+            ekh.PhiTreHanPhaiTra = Convert.ToDecimal(kh.PhiTreHanPhaiTra);
+
+            return ekh;
+        }
+
         public bool ThemKhachHang(eKhachHang ekh)
         {
             KhachHang kh = new KhachHang();

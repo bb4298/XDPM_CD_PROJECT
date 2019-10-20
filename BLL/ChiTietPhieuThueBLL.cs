@@ -25,6 +25,32 @@ namespace BLL
             return Convert.ToInt32(idctpt);
         }
 
+        public eThongTinPhieuThue LayThongTinPhieuThue(string idDia,string idKhachHang)
+        {
+            eThongTinPhieuThue ettpt = new eThongTinPhieuThue();
+            var ttpt = (from a in db.KhachHangs
+                     join b in db.PhieuThues on a.IdKhachHang equals b.IdKhachHang
+                     join c in db.ChiTietPhieuThues on b.IdPhieuThue equals c.IdPhieuThue
+                     where a.IdKhachHang == idKhachHang && c.IdDia == idDia && c.TrangThaiThanhToan == false && c.TrangThaiTraDia == false
+                     select new
+                     {
+                         c.IdChiTietPhieuThue,
+                         b.NgayTao,
+                         c.NgayTraDia,
+                         c.SoNgayThue,
+                         c.SoNgayTreHan,
+                         c.PhiTreHanPhaiTra,
+                         
+                     }).Single();
+            ettpt.IdChiTietPhieuThue = Convert.ToInt32(ttpt.IdChiTietPhieuThue);
+            ettpt.NgayThue = Convert.ToDateTime( ttpt.NgayTao);
+            ettpt.NgayTraDia = Convert.ToDateTime( ttpt.NgayTraDia);
+            ettpt.SoNgayThue =Convert.ToInt32( ttpt.SoNgayThue);
+            ettpt.SoNgayTreHan = Convert.ToInt32(ttpt.SoNgayTreHan);
+            ettpt.PhiTreHan = Convert.ToDecimal(ttpt.PhiTreHanPhaiTra);
+            return ettpt;
+        }
+
         public bool ThemChiTietPhieuThue(List<eThongTinPhieuThue> listTtPT, int idPhieuThue)
         {
             foreach (eThongTinPhieuThue item in listTtPT)
@@ -36,9 +62,10 @@ namespace BLL
                 ctpt.SoNgayThue = item.SoNgayThue;
                 ctpt.PhiThuePhaiTra = item.PhiThue;
                 ctpt.NgayTraDiaThucTe = null;
-                ctpt.SoNgayTreHan = null;
+                ctpt.SoNgayTreHan = 0;
                 ctpt.PhiTreHanQuyDinh = item.PhiTreHan;
-                ctpt.PhiTreHanPhaiTra = null;
+                ctpt.PhiTreHanPhaiTra = 0;
+                ctpt.TrangThaiTraDia = false;
                 ctpt.TrangThaiThanhToan = false;
                 ctpt.IdPhieuThue = idPhieuThue;
               
@@ -56,14 +83,30 @@ namespace BLL
 
         }
 
+        public bool XacNhanTraDia(eChiTietPhieuThue ectpt)
+        {
+            ChiTietPhieuThue ctpt = new ChiTietPhieuThue();
+            ctpt = db.ChiTietPhieuThues.Where(a => a.IdChiTietPhieuThue== ectpt.IdChiTietPhieuThue).SingleOrDefault();
+            if (ctpt != null)
+            {
+                ctpt.NgayTraDiaThucTe = ectpt.NgayTraDiaThucTe;
+                ctpt.TrangThaiTraDia = ectpt.TrangThaiTraDia;
+                ctpt.TrangThaiThanhToan = ectpt.TrangThaiThanhToan;
+
+                db.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
+      
         public bool CapNhatKhoanNoCuaKhachHang(string idKhachHang)
         {
             int count = 0;
             var khs = (from a in db.KhachHangs
                                    join b in db.PhieuThues on a.IdKhachHang equals b.IdKhachHang
                                    join c in db.ChiTietPhieuThues on b.IdPhieuThue equals c.IdPhieuThue
-                                   where a.IdKhachHang == idKhachHang && c.TrangThaiThanhToan == false
-                                   select new {
+                                   where a.IdKhachHang == idKhachHang && c.TrangThaiThanhToan == false && c.TrangThaiTraDia == false
+                       select new {
                                        b.NgayTao,
                                        c.NgayTraDia,
                                        c.NgayTraDiaThucTe,

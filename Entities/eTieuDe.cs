@@ -25,13 +25,13 @@ namespace Entities
            
         }
 
-        //Dùng để hiển thị dtgv form quản lý danh mục
-        public eTieuDe(string idTieuDe, string tenTieuDe, int soLuongDia, string tenDanhMuc)
+        //Dùng để hiển thị dtgv form quản lý tiêu đề
+        public eTieuDe(string idTieuDe, string tenTieuDe, int soLuongDia)
         {
             IdTieuDe = idTieuDe;
             TenTieuDe = tenTieuDe;
             SoLuongDia = soLuongDia;
-            TenDanhMuc = tenDanhMuc;
+           
    
         }
         //Dùng để hiển thị dtgv form quản lý kho đĩa

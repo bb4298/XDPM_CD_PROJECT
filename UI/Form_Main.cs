@@ -35,6 +35,8 @@ namespace UI
         public static bool f_QuanLyTieuDe = true;
         public static bool f_QuanLyPhiTre = true;
         public static bool f_QuanLyDatDia = true;
+        public static bool f_TraDia = true;
+
 
         //Thông tin tài khoản admin
         public static string TENTAIKHOAN_ADMIN;
@@ -284,9 +286,32 @@ namespace UI
             {
                 dg = DialogResult.Cancel;
             }
-
-
                
+        }
+
+        private void btn_TraDia_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form_TraDia form = new Form_TraDia();
+            if (f_TraDia == true)
+            {
+
+                form.MdiParent = this;
+                form.Show();
+
+                f_TraDia = false;
+            }
+            else if (f_TraDia == false)
+            {
+                foreach (XtraForm item in this.MdiChildren)
+                {
+
+
+                    if (item is Form_QuanLyPhiTre)
+                    {
+                        item.Activate();
+                    }
+                }
+            }
         }
     }
 }

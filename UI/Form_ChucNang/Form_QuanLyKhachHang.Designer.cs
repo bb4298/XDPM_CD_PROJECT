@@ -75,11 +75,11 @@
             this.groupControl3.Appearance.Options.UseBackColor = true;
             this.groupControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.groupControl3.Controls.Add(this.panelThaoTac);
-            this.groupControl3.Location = new System.Drawing.Point(18, 239);
+            this.groupControl3.Location = new System.Drawing.Point(18, 261);
             this.groupControl3.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(541, 295);
+            this.groupControl3.Size = new System.Drawing.Size(541, 273);
             this.groupControl3.TabIndex = 57;
             this.groupControl3.Text = "Thao Tác";
             // 
@@ -92,14 +92,14 @@
             this.panelThaoTac.Controls.Add(this.btnLuu);
             this.panelThaoTac.Location = new System.Drawing.Point(19, 29);
             this.panelThaoTac.Name = "panelThaoTac";
-            this.panelThaoTac.Size = new System.Drawing.Size(512, 252);
+            this.panelThaoTac.Size = new System.Drawing.Size(512, 226);
             this.panelThaoTac.TabIndex = 3;
             // 
             // btnThem
             // 
             this.btnThem.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnThem.Appearance.Options.UseFont = true;
-            this.btnThem.Location = new System.Drawing.Point(57, 23);
+            this.btnThem.Location = new System.Drawing.Point(54, 13);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(168, 48);
             this.btnThem.TabIndex = 7;
@@ -111,7 +111,7 @@
             this.btnHuy.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnHuy.Appearance.Options.UseFont = true;
             this.btnHuy.Enabled = false;
-            this.btnHuy.Location = new System.Drawing.Point(57, 186);
+            this.btnHuy.Location = new System.Drawing.Point(54, 161);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(168, 48);
             this.btnHuy.TabIndex = 6;
@@ -123,7 +123,7 @@
             this.btnXoa.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnXoa.Appearance.Options.UseFont = true;
             this.btnXoa.Enabled = false;
-            this.btnXoa.Location = new System.Drawing.Point(57, 105);
+            this.btnXoa.Location = new System.Drawing.Point(54, 89);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(168, 48);
             this.btnXoa.TabIndex = 9;
@@ -135,7 +135,7 @@
             this.btnSua.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnSua.Appearance.Options.UseFont = true;
             this.btnSua.Enabled = false;
-            this.btnSua.Location = new System.Drawing.Point(293, 23);
+            this.btnSua.Location = new System.Drawing.Point(290, 13);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(168, 48);
             this.btnSua.TabIndex = 8;
@@ -147,7 +147,7 @@
             this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnLuu.Appearance.Options.UseFont = true;
             this.btnLuu.Enabled = false;
-            this.btnLuu.Location = new System.Drawing.Point(293, 105);
+            this.btnLuu.Location = new System.Drawing.Point(290, 89);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(168, 48);
             this.btnLuu.TabIndex = 5;
@@ -199,7 +199,7 @@
             this.groupControl1.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(541, 221);
+            this.groupControl1.Size = new System.Drawing.Size(541, 243);
             this.groupControl1.TabIndex = 55;
             this.groupControl1.Text = "Thông Tin Khách Hàng";
             // 
