@@ -33,5 +33,38 @@ namespace DAL.Properties {
                 return ((string)(this["QLCDConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-5FCB2HT\\SQLEXPRESS;Initial Catalog=QLCD;Integrated Security=T" +
+            "rue")]
+        public string QLCDConnectionString1 {
+            get {
+                return ((string)(this["QLCDConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-5FCB2HT\\SQLEXPRESS;Initial Catalog=QLCD2;Integrated Security=" +
+            "True")]
+        public string QLCD2ConnectionString {
+            get {
+                return ((string)(this["QLCD2ConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-5FCB2HT\\SQLEXPRESS;Initial Catalog=QLCD3;Integrated Security=" +
+            "True")]
+        public string QLCD3ConnectionString {
+            get {
+                return ((string)(this["QLCD3ConnectionString"]));
+            }
+        }
     }
 }

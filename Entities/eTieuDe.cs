@@ -11,19 +11,23 @@ namespace Entities
         public String IdTieuDe { get; set; }
         public String TenTieuDe { get; set; }
         public int SoLuongDia { get; set; }
+        public int SoLuongDiaCoSan { get; set; }
         public bool TrangThaiXoa { get; set; }
         public int IdDanhMuc { get; set; }
         public string TenDanhMuc{ get; set; }
 
-        public eTieuDe(string idTieuDe, string tenTieuDe, int soLuongDia, bool trangThaiXoa, int idDanhMuc)
+        public eTieuDe(string idTieuDe, string tenTieuDe, int soLuongDia,int soLuongDiaCoSan, bool trangThaiXoa, int idDanhMuc)
         {
             IdTieuDe = idTieuDe;
             TenTieuDe = tenTieuDe;         
             SoLuongDia = soLuongDia;
+            SoLuongDiaCoSan = soLuongDiaCoSan;
             TrangThaiXoa = trangThaiXoa;
             IdDanhMuc = idDanhMuc;
            
         }
+
+        
 
         //Dùng để hiển thị dtgv form quản lý tiêu đề
         public eTieuDe(string idTieuDe, string tenTieuDe, int soLuongDia)

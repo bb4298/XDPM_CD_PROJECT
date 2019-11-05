@@ -96,12 +96,14 @@ namespace UI.Form_ChucNang
 
         private void Form_QuanLyKhoDia_Load(object sender, EventArgs e)
         {
+
             BindingSource binding = new BindingSource();
             binding.DataSource = dmbll.LayDanhSachDanhMuc();
             cbbPhanLoaiDanhMuc.DataSource = binding.DataSource;
             cbbPhanLoaiDanhMuc.DisplayMember = "TenDanhMuc";
             cbbPhanLoaiDanhMuc.ValueMember = "TenDanhMuc";
             LoadDataTieuDe();
+            LoadDataDia(dataGridViewTD.CurrentRow.Cells[0].Value.ToString().Trim());
             panelThemDia.Visible = false;
         }
 
@@ -114,35 +116,49 @@ namespace UI.Form_ChucNang
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            KEY = 1;            
-            
-            panelThemDia.Visible = true;
 
-            //Code cũ
-            //cbbThem_TenTieuDe.DataSource = (from a in db.TieuDes
-            //                                where a.TrangThaiXoa == false
-            //                                select a.TenTieuDe
-            //);
-            
-            // Binding dữ liệu từ List danh mục vào combobox
-            BindingSource binding = new BindingSource();
-            binding.DataSource = tdbll.LayDanhSachTenTieuDe();
-            cbbThem_TenTieuDe.DataSource = binding.DataSource;
-            cbbThem_TenTieuDe.DisplayMember = "TenTieuDe";
-            cbbThem_TenTieuDe.ValueMember = "TenTieuDe";
+            if (Form_Main.trangThaiLogin != true)
+            {
+                XtraMessageBox.Show("Vui lòng đăng nhập tài khoản quản lý để thực hiện chức năng này !");
+                formDN = new Form_QuanLy.Form_DangNhap();
+                formDN.ShowDialog();
 
-            cbbThem_TenTieuDe.Text = dataGridViewTD.CurrentRow.Cells[1].Value.ToString().Trim();
-            XoaPanel();
-            tbThem_IdDia.Text = NextID(diabll.LayMaDiaCaoNhat(), "CD");
+            }
+            else
+            {
+                KEY = 1;
 
-            btnThem.Enabled = false;
-            btnLuu.Enabled = true;
-            btnHuy.Enabled = true;
-            //btnSua.Enabled = false;
-            btnXoa.Enabled = false;
-            panelQuanLyTD.Enabled = true;
-            dataGridViewD.Enabled = false;
-            dataGridViewTD.Enabled = false;
+                panelThemDia.Visible = true;
+
+                //Code cũ
+                //cbbThem_TenTieuDe.DataSource = (from a in db.TieuDes
+                //                                where a.TrangThaiXoa == false
+                //                                select a.TenTieuDe
+                //);
+
+                // Binding dữ liệu từ List danh mục vào combobox
+                BindingSource binding = new BindingSource();
+                binding.DataSource = tdbll.LayDanhSachTenTieuDe();
+                cbbThem_TenTieuDe.DataSource = binding.DataSource;
+                cbbThem_TenTieuDe.DisplayMember = "TenTieuDe";
+                cbbThem_TenTieuDe.ValueMember = "TenTieuDe";
+
+                cbbThem_TenTieuDe.Text = dataGridViewTD.CurrentRow.Cells[1].Value.ToString().Trim();
+                XoaPanel();
+                tbThem_IdDia.Text = NextID(diabll.LayMaDiaCaoNhat(), "CD");
+                tbThem_IdDia.Enabled = tbThem_IdTieuDe.Enabled = false;
+
+
+                btnThem.Enabled = false;
+                btnLuu.Enabled = true;
+                btnHuy.Enabled = true;
+                //btnSua.Enabled = false;
+                btnXoa.Enabled = false;
+                panelQuanLyTD.Enabled = true;
+                dataGridViewD.Enabled = false;
+                dataGridViewTD.Enabled = false;
+            }
+           
         }
 
   
@@ -181,7 +197,7 @@ namespace UI.Form_ChucNang
                                
                                 eDia dia = new eDia();
                                 dia.IdDia = tbThem_IdDia.Text;
-                                dia.TrangThaiThue = false;
+                                dia.TrangThaiThue = "cosan";
                                 dia.TrangThaiXoa = false;                      
                                 dia.IdTieuDe = tbThem_IdTieuDe.Text;
 
@@ -189,9 +205,16 @@ namespace UI.Form_ChucNang
                                 {
                                     XtraMessageBox.Show("Thêm đĩa thành công !");
                                     LoadDataDia(tbThem_IdTieuDe.Text);
+
+                                     dataGridViewTD.DataSource = null;
+                                    tdbll.capnhatSoLuong(tbThem_IdTieuDe.Text);
+                                    dataGridViewTD.DataSource = tdbll.LayDanhSachTieuDeTheoTenDanhMuc(cbbPhanLoaiDanhMuc.SelectedValue.ToString());
+
                                     XoaPanel();
-                                    panelQuanLyTD.Enabled = false;
                                     
+                                    panelThemDia.Visible = false;
+                                    panelQuanLyTD.Enabled = false;
+
                                     btnLuu.Enabled = false;
                                     btnHuy.Enabled = false;
                                     btnThem.Enabled = true;
@@ -236,12 +259,19 @@ namespace UI.Form_ChucNang
             dataGridViewD.Enabled = true;
             dataGridViewTD.Enabled = true;
         }
+
+        private Form_QuanLy.Form_DangNhap formDN;
+
+        
         private void btnXoa_Click(object sender, EventArgs e)
         {
             #region Xóa
             if (Form_Main.trangThaiLogin != true)
             {
                 XtraMessageBox.Show("Vui lòng đăng nhập tài khoản quản lý để thực hiện chức năng này !");
+                formDN = new Form_QuanLy.Form_DangNhap();
+                formDN.ShowDialog();
+
             }
             // Vì khách hàng có thể làm mất đĩa nên vẫn có thể xóa được đĩa trong trạng thái thuê, đoạn code dưới dùng để kiểm tra đĩa còn ở của hàng ko.
             //else if(diabll.kiemTraDiaTaiCuaHang(tbThem_IdDia.Text) != true)
@@ -258,13 +288,18 @@ namespace UI.Form_ChucNang
                     try
                     {
                         eDia dia = new eDia();
-                        dia.IdDia = tbThem_IdDia.Text;
+                        dia.IdDia = tbIdDia.Text;
                         dia.TrangThaiXoa = true;
 
                         if (diabll.XoaDia(dia))
                         {
                             XtraMessageBox.Show("Xóa đĩa thành công !");
-                            LoadDataDia(tbThem_IdTieuDe.Text);
+                            dataGridViewD.DataSource = null;
+                            LoadDataDia(dataGridViewTD.CurrentRow.Cells[0].Value.ToString());
+                            tdbll.capnhatSoLuong(dataGridViewTD.CurrentRow.Cells[0].Value.ToString());
+                            dataGridViewTD.DataSource = null;
+                            dataGridViewTD.DataSource = tdbll.LayDanhSachTieuDeTheoTenDanhMuc(cbbPhanLoaiDanhMuc.SelectedValue.ToString());
+
                             XoaPanel();
                             panelQuanLyTD.Enabled = false;
                             btnLuu.Enabled = false;
@@ -293,17 +328,21 @@ namespace UI.Form_ChucNang
         private void dataGridViewD_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             btnXoa.Enabled = true;
-            tbDanhMuc.Text = dataGridViewTD.CurrentRow.Cells[2].Value.ToString().Trim();
+            tbDanhMuc.Text = cbbPhanLoaiDanhMuc.SelectedValue.ToString();
             tbIdDia.Text = dataGridViewD.CurrentRow.Cells[0].Value.ToString().Trim();
             tbTenTieuDe.Text = dataGridViewTD.CurrentRow.Cells[1].Value.ToString().Trim();
             tbTrangThai.Text = dataGridViewD.CurrentRow.Cells[1].Value.ToString().Trim();
-            if (tbTrangThai.Text == "True")
+            if (tbTrangThai.Text == "duocthue")
             {
                 tbTrangThai.Text = "Đang được thuê";
             }
-            else if (tbTrangThai.Text == "False")
+            else if (tbTrangThai.Text == "cosan")
             {
                 tbTrangThai.Text = "Có sẵn";
+            }
+            else
+            {
+                tbTrangThai.Text = "Được đặt";
             }
             string tenNguoiMuon = diabll.LayTenNguoiThue((dataGridViewD.CurrentRow.Cells[0].Value.ToString()));
             tenNguoiMuon = tenNguoiMuon.Replace("{ HoTen = ", "");
@@ -348,11 +387,24 @@ namespace UI.Form_ChucNang
         {
             if (e.ColumnIndex == 1)
             {
-                if (e.Value is bool)
+                if (e.Value is String)
                 {
-                    bool value = (bool)e.Value;
-                    e.Value = (value) ? "Đang được thuê" : "Có sẵn";
-                    e.FormattingApplied = true;
+                    String value = (String)e.Value;
+                    if(value == "cosan")
+                    {
+                        e.Value = "Có Sẵn";
+                        e.FormattingApplied = true;
+                    }
+                    if (value == "duocthue")
+                    {
+                        e.Value = "Được Thuê";
+                        e.FormattingApplied = true;
+                    }
+                    if (value == "duocdat")
+                    {
+                        e.Value = "Được Đặt";
+                        e.FormattingApplied = true;
+                    }
                 }
             }
         }
@@ -370,6 +422,17 @@ namespace UI.Form_ChucNang
         private void cbbPhanLoaiDanhMuc_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadDataTieuDe();
+        }
+
+        private void Form_QuanLyKhoDia_Shown(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Form_QuanLyKhoDia_Activated(object sender, EventArgs e)
+        {
+            LoadDataTieuDe();
+            LoadDataDia(dataGridViewTD.CurrentRow.Cells[0].Value.ToString());
         }
     }
 }

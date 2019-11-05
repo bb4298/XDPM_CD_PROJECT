@@ -15,6 +15,7 @@ using DevExpress.XtraBars.Ribbon;
 using BLL;
 using Entities;
 using static DevExpress.Utils.MVVM.Services.DocumentManagerService;
+using UI.Form_BaoCao;
 
 namespace UI
 {
@@ -22,9 +23,9 @@ namespace UI
     {
         //Biến kiểm tra đang nhập. True là đang đăng nhập, False là chưa đăng nhập.
         public static bool trangThaiLogin = false;
-
+        
         #region Biến dùng để ngăn form mở nhiều lần
-      
+        //Form Thường
         public static bool f_DoiMatKhau = true;
         public static bool f_ThongTinCaNhan = true;
         public static bool f_ = true;
@@ -37,6 +38,8 @@ namespace UI
         public static bool f_QuanLyDatDia = true;
         public static bool f_TraDia = true;
 
+        //Form Báo cáo
+        public static bool f_BCKH_TatCaKhachHang = true;
 
         //Thông tin tài khoản admin
         public static string TENTAIKHOAN_ADMIN;
@@ -48,6 +51,7 @@ namespace UI
         {
             InitializeComponent();
             
+
         }
 
         private void Form_Main_Load(object sender, EventArgs e)
@@ -89,6 +93,11 @@ namespace UI
                 rbPage_QuanLy.Visible = true;
                 
             }
+        }
+
+        public void kichHoatMenuQuanLy()
+        {
+            rbPage_QuanLy.Visible = true;
         }
 
         private void btn_QuanLyThueDia_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -306,12 +315,62 @@ namespace UI
                 {
 
 
-                    if (item is Form_QuanLyPhiTre)
+                    if (item is Form_TraDia)
                     {
                         item.Activate();
                     }
                 }
             }
+        }
+
+        private void btn_BC_TatCa_KH_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form_BCKH_TatCaKhachHang form = new Form_BCKH_TatCaKhachHang();
+            if (f_BCKH_TatCaKhachHang == true)
+            {
+
+                form.MdiParent = this;
+                form.Show();
+
+                f_TraDia = false;
+            }
+            else if (f_TraDia == false)
+            {
+                foreach (XtraForm item in this.MdiChildren)
+                {
+
+
+                    if (item is Form_TraDia)
+                    {
+                        item.Activate();
+                    }
+                }
+            }
+        }
+
+        private void btn_BC_KH_MuonQuaHan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btn_BC_KH_NoPhi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btn_BC_SoDiaDangDuocThue_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btn_BC_SoDiaDangDuocDat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btn_BC_SoDiaConTrongKho_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
         }
     }
 }

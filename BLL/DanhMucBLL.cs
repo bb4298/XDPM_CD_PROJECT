@@ -28,6 +28,76 @@ namespace BLL
             return maTD;
         }
 
+        public decimal PhiTreMin()
+        {
+            DanhMuc dm1 = db.DanhMucs.SingleOrDefault(p => p.TenDanhMuc == "DVD");
+            DanhMuc dm2 = db.DanhMucs.SingleOrDefault(p => p.TenDanhMuc == "Game");
+
+            decimal min = (decimal)dm1.PhiTreHan;
+
+            if(min > (decimal)dm2.PhiTreHan)
+            {
+                min = (decimal)dm2.PhiTreHan;
+                return min;
+            }
+            return min;
+        }
+
+        public eDanhMuc LayDanhMucTheoIDDanhMuc(int idDanhMuc)
+        {
+            eDanhMuc dm = new eDanhMuc();
+            DanhMuc dmm = db.DanhMucs.SingleOrDefault(p => p.IdDanhMuc == idDanhMuc);
+            if(dmm != null)
+            {
+                dm.IdDanhMuc = dmm.IdDanhMuc;
+                dm.TenDanhMuc = dmm.TenDanhMuc;
+                dm.PhiThue = (decimal) dmm.PhiThue;
+                dm.PhiTreHan = (decimal)dmm.PhiTreHan;
+                dm.SoNgayThue = (int)dmm.SoNgayThue;
+                return dm;
+            }
+            return null;
+        }
+
+        public bool CapNhatPhiThue(int idDanhMuc,decimal phithuemoi)
+        {
+            DanhMuc dm = db.DanhMucs.SingleOrDefault(p => p.IdDanhMuc == idDanhMuc);
+            if(dm != null)
+            {
+                dm.PhiThue = phithuemoi;
+                db.SubmitChanges();
+                return true;
+            }
+
+            return false;
+
+        }
+
+        public bool CapNhatPhiTreHan(int idDanhMuc, decimal phitrehanmoi)
+        {
+            DanhMuc dm = db.DanhMucs.SingleOrDefault(p => p.IdDanhMuc == idDanhMuc);
+            if (dm != null)
+            {
+                dm.PhiTreHan = phitrehanmoi;
+                db.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool CapNhatSoNgayThue(int idDanhMuc, int songaythuemoi)
+        {
+            DanhMuc dm = db.DanhMucs.SingleOrDefault(p => p.IdDanhMuc == idDanhMuc);
+            if (dm != null)
+            {
+                dm.SoNgayThue = songaythuemoi;
+                db.SubmitChanges();
+                return true;
+            }
+            return false;
+
+        }
+
         public int LayIdDanhMucCaoNhat()
         {
             string td = (from a in db.DanhMucs
@@ -76,7 +146,7 @@ namespace BLL
             decimal phiThue = (from a in db.Dias
                               join b in db.TieuDes on a.IdTieuDe equals b.IdTieuDe
                               join c in db.DanhMucs on b.IdDanhMuc equals c.IdDanhMuc
-                              where b.TrangThaiXoa == false && a.IdDia == idDia
+                              where a.IdDia == idDia
                               select (decimal)c.PhiThue).Single();
             return phiThue;
 
@@ -88,9 +158,20 @@ namespace BLL
             decimal phiThue = (from a in db.Dias
                            join b in db.TieuDes on a.IdTieuDe equals b.IdTieuDe
                            join c in db.DanhMucs on b.IdDanhMuc equals c.IdDanhMuc
-                           where b.TrangThaiXoa == false && a.IdDia == idDia
+                           where a.IdDia == idDia
                            select (decimal)c.PhiTreHan).Single();
             return phiThue;
+
+        }
+
+        public int LaySoNgayThueTheoIDDia(string idDia)
+        {
+            int songaythue = (from a in db.Dias
+                              join b in db.TieuDes on a.IdTieuDe equals b.IdTieuDe
+                              join c in db.DanhMucs on b.IdDanhMuc equals c.IdDanhMuc
+                              where a.IdDia == idDia
+                              select (int)c.SoNgayThue).Single();
+            return songaythue;
 
         }
 

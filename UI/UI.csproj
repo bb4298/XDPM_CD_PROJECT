@@ -63,6 +63,12 @@
     <Compile Include="Form_About.Designer.cs">
       <DependentUpon>Form_About.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_BaoCao\Form_BCKH_TatCaKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_BaoCao\Form_BCKH_TatCaKhachHang.Designer.cs">
+      <DependentUpon>Form_BCKH_TatCaKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_ChucNang\Form_QuanLyDatDia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     <EmbeddedResource Include="Form_About.resx">
       <DependentUpon>Form_About.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_BaoCao\Form_BCKH_TatCaKhachHang.resx">
+      <DependentUpon>Form_BCKH_TatCaKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_ChucNang\Form_QuanLyDatDia.resx">
       <DependentUpon>Form_QuanLyDatDia.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,9 +228,7 @@
       <Name>Entities</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Form_BaoCao\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

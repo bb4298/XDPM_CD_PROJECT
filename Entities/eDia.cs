@@ -9,7 +9,7 @@ namespace Entities
     public class eDia
     {
         public String IdDia { get; set; }
-        public bool TrangThaiThue { get; set; }
+        public String TrangThaiThue { get; set; }
         public bool TrangThaiXoa { get; set; }
         public String IdTieuDe { get; set; }
 
@@ -22,7 +22,7 @@ namespace Entities
         public decimal PhiTreHan { get; set; }
         
 
-        public eDia(String idDia, bool trangThaiThue, bool trangThaiXoa, String idTieuDe)
+        public eDia(String idDia, String trangThaiThue, bool trangThaiXoa, String idTieuDe)
         {
             IdDia = idDia;
             TrangThaiThue = trangThaiThue;
@@ -33,7 +33,7 @@ namespace Entities
 
 
         //Dùng cho dtgv đĩa bên form quản lý kho đĩa
-        public eDia(String idDia, bool trangThaiThue)
+        public eDia(String idDia, String trangThaiThue)
         {
             IdDia = idDia;
             TrangThaiThue = trangThaiThue;           

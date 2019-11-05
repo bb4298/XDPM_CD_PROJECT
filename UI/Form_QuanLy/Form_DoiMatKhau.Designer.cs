@@ -106,7 +106,7 @@
             // 
             this.tbMatKhauCu.Location = new System.Drawing.Point(288, 144);
             this.tbMatKhauCu.Name = "tbMatKhauCu";
-            this.tbMatKhauCu.Size = new System.Drawing.Size(242, 23);
+            this.tbMatKhauCu.Size = new System.Drawing.Size(242, 22);
             this.tbMatKhauCu.TabIndex = 10;
             // 
             // label2
@@ -124,7 +124,7 @@
             this.tbMatKhauMoi.Location = new System.Drawing.Point(288, 191);
             this.tbMatKhauMoi.Name = "tbMatKhauMoi";
             this.tbMatKhauMoi.Properties.UseSystemPasswordChar = true;
-            this.tbMatKhauMoi.Size = new System.Drawing.Size(242, 23);
+            this.tbMatKhauMoi.Size = new System.Drawing.Size(242, 22);
             this.tbMatKhauMoi.TabIndex = 11;
             // 
             // tbNhapLaiMK
@@ -132,12 +132,12 @@
             this.tbNhapLaiMK.Location = new System.Drawing.Point(288, 242);
             this.tbNhapLaiMK.Name = "tbNhapLaiMK";
             this.tbNhapLaiMK.Properties.UseSystemPasswordChar = true;
-            this.tbNhapLaiMK.Size = new System.Drawing.Size(242, 23);
+            this.tbNhapLaiMK.Size = new System.Drawing.Size(242, 22);
             this.tbNhapLaiMK.TabIndex = 12;
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Blue";
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2010 Blue";
             // 
             // Form_DoiMatKhau
             // 

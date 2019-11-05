@@ -48,6 +48,7 @@
             this.btnThoat.Appearance.Options.UseFont = true;
             this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Location = new System.Drawing.Point(385, 306);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(168, 79);
             this.btnThoat.TabIndex = 30;
@@ -58,6 +59,7 @@
             this.btnDangNhap.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnDangNhap.Appearance.Options.UseFont = true;
             this.btnDangNhap.Location = new System.Drawing.Point(128, 306);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(168, 79);
             this.btnDangNhap.TabIndex = 29;
@@ -66,25 +68,27 @@
             // 
             // tbMatKhau
             // 
-            this.tbMatKhau.EditValue = "quang_123";
+            this.tbMatKhau.EditValue = "123";
             this.tbMatKhau.Location = new System.Drawing.Point(239, 224);
+            this.tbMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbMatKhau.Name = "tbMatKhau";
-            this.tbMatKhau.Size = new System.Drawing.Size(305, 23);
+            this.tbMatKhau.Size = new System.Drawing.Size(304, 22);
             this.tbMatKhau.TabIndex = 28;
             // 
             // tbTaiKhoan
             // 
-            this.tbTaiKhoan.EditValue = "quang_123";
+            this.tbTaiKhoan.EditValue = "NV000001";
             this.tbTaiKhoan.Location = new System.Drawing.Point(239, 167);
+            this.tbTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTaiKhoan.Name = "tbTaiKhoan";
-            this.tbTaiKhoan.Size = new System.Drawing.Size(305, 23);
+            this.tbTaiKhoan.Size = new System.Drawing.Size(304, 22);
             this.tbTaiKhoan.TabIndex = 27;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(153, 227);
+            this.label3.Location = new System.Drawing.Point(153, 226);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 17);
             this.label3.TabIndex = 26;
@@ -112,13 +116,13 @@
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Blue";
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2010 Blue";
             // 
             // Form_DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 445);
+            this.ClientSize = new System.Drawing.Size(680, 446);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.tbMatKhau);
@@ -127,6 +131,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form_DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";

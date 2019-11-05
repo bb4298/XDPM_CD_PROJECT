@@ -13,16 +13,18 @@ namespace Entities
         public bool TrangThaiXoa { get; set; }
         public decimal PhiThue { get; set; }
         public decimal PhiTreHan { get; set; }
+        public int SoNgayThue { get; set; }
 
 
 
-        public eDanhMuc(int idDanhMuc, string tenDanhMuc, decimal phiThue, decimal phiTreHan, bool trangThaiXoa)
+        public eDanhMuc(int idDanhMuc, string tenDanhMuc,bool trangThaiXoa,decimal phiThue, decimal phiTreHan, int soNgayThue)
         {
             IdDanhMuc = idDanhMuc;
             TenDanhMuc = tenDanhMuc;
             TrangThaiXoa = trangThaiXoa;
             PhiThue = phiThue;
             PhiTreHan = PhiTreHan;
+            SoNgayThue = soNgayThue;
         }
 
         public eDanhMuc(string tenDanhMuc)

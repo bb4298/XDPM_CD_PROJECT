@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupControl7 = new DevExpress.XtraEditors.GroupControl();
-            this.tbTongPhiTreHan = new DevExpress.XtraEditors.TextEdit();
-            this.Nợ = new System.Windows.Forms.Label();
+            this.tbIDKhachHang = new DevExpress.XtraEditors.TextEdit();
+            this.label14 = new System.Windows.Forms.Label();
             this.tbDiaChi = new DevExpress.XtraEditors.TextEdit();
             this.tbTenKhachHang = new DevExpress.XtraEditors.TextEdit();
             this.tbSDT = new DevExpress.XtraEditors.TextEdit();
@@ -71,9 +72,10 @@
             this.btnNhapDia = new DevExpress.XtraEditors.SimpleButton();
             this.label2 = new System.Windows.Forms.Label();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).BeginInit();
             this.groupControl7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbTongPhiTreHan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbIDKhachHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTenKhachHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbSDT.Properties)).BeginInit();
@@ -106,8 +108,8 @@
             this.groupControl7.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.groupControl7.Appearance.Options.UseBackColor = true;
             this.groupControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.groupControl7.Controls.Add(this.tbTongPhiTreHan);
-            this.groupControl7.Controls.Add(this.Nợ);
+            this.groupControl7.Controls.Add(this.tbIDKhachHang);
+            this.groupControl7.Controls.Add(this.label14);
             this.groupControl7.Controls.Add(this.tbDiaChi);
             this.groupControl7.Controls.Add(this.tbTenKhachHang);
             this.groupControl7.Controls.Add(this.tbSDT);
@@ -115,36 +117,37 @@
             this.groupControl7.Controls.Add(this.label6);
             this.groupControl7.Controls.Add(this.label5);
             this.groupControl7.Location = new System.Drawing.Point(367, 6);
-            this.groupControl7.LookAndFeel.SkinName = "Office 2010 Blue";
-            this.groupControl7.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl7.Name = "groupControl7";
-            this.groupControl7.Size = new System.Drawing.Size(614, 241);
+            this.groupControl7.Size = new System.Drawing.Size(614, 212);
             this.groupControl7.TabIndex = 88;
-            this.groupControl7.Text = "Thông Tin Khách Hang:";
+            this.groupControl7.Text = "Thông Tin Khách Hàng:";
             // 
-            // tbTongPhiTreHan
+            // tbIDKhachHang
             // 
-            this.tbTongPhiTreHan.Enabled = false;
-            this.tbTongPhiTreHan.Location = new System.Drawing.Point(194, 189);
-            this.tbTongPhiTreHan.Name = "tbTongPhiTreHan";
-            this.tbTongPhiTreHan.Size = new System.Drawing.Size(363, 22);
-            this.tbTongPhiTreHan.TabIndex = 83;
+            this.tbIDKhachHang.Enabled = false;
+            this.tbIDKhachHang.Location = new System.Drawing.Point(152, 36);
+            this.tbIDKhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbIDKhachHang.Name = "tbIDKhachHang";
+            this.tbIDKhachHang.Size = new System.Drawing.Size(363, 22);
+            this.tbIDKhachHang.TabIndex = 84;
             // 
-            // Nợ
+            // label14
             // 
-            this.Nợ.AutoSize = true;
-            this.Nợ.BackColor = System.Drawing.Color.Transparent;
-            this.Nợ.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.Nợ.Location = new System.Drawing.Point(55, 192);
-            this.Nợ.Name = "Nợ";
-            this.Nợ.Size = new System.Drawing.Size(133, 17);
-            this.Nợ.TabIndex = 84;
-            this.Nợ.Text = "Tổng Phí Trễ Hạn:";
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.label14.Location = new System.Drawing.Point(34, 41);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(118, 17);
+            this.label14.TabIndex = 83;
+            this.label14.Text = "ID Khách Hàng:";
             // 
             // tbDiaChi
             // 
             this.tbDiaChi.Enabled = false;
-            this.tbDiaChi.Location = new System.Drawing.Point(194, 107);
+            this.tbDiaChi.Location = new System.Drawing.Point(152, 123);
+            this.tbDiaChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbDiaChi.Name = "tbDiaChi";
             this.tbDiaChi.Size = new System.Drawing.Size(363, 22);
             this.tbDiaChi.TabIndex = 78;
@@ -152,7 +155,8 @@
             // tbTenKhachHang
             // 
             this.tbTenKhachHang.Enabled = false;
-            this.tbTenKhachHang.Location = new System.Drawing.Point(194, 61);
+            this.tbTenKhachHang.Location = new System.Drawing.Point(152, 78);
+            this.tbTenKhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTenKhachHang.Name = "tbTenKhachHang";
             this.tbTenKhachHang.Size = new System.Drawing.Size(363, 22);
             this.tbTenKhachHang.TabIndex = 77;
@@ -160,7 +164,8 @@
             // tbSDT
             // 
             this.tbSDT.Enabled = false;
-            this.tbSDT.Location = new System.Drawing.Point(194, 148);
+            this.tbSDT.Location = new System.Drawing.Point(152, 164);
+            this.tbSDT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbSDT.Name = "tbSDT";
             this.tbSDT.Size = new System.Drawing.Size(363, 22);
             this.tbSDT.TabIndex = 79;
@@ -170,7 +175,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(144, 151);
+            this.label8.Location = new System.Drawing.Point(101, 167);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 17);
             this.label8.TabIndex = 82;
@@ -181,7 +186,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(125, 66);
+            this.label6.Location = new System.Drawing.Point(83, 82);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 17);
             this.label6.TabIndex = 80;
@@ -192,7 +197,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(127, 110);
+            this.label5.Location = new System.Drawing.Point(85, 126);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 17);
             this.label5.TabIndex = 81;
@@ -202,6 +207,7 @@
             // 
             this.tbTTPhiThueDia.Enabled = false;
             this.tbTTPhiThueDia.Location = new System.Drawing.Point(114, 158);
+            this.tbTTPhiThueDia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTTPhiThueDia.Name = "tbTTPhiThueDia";
             this.tbTTPhiThueDia.Size = new System.Drawing.Size(218, 22);
             this.tbTTPhiThueDia.TabIndex = 91;
@@ -215,12 +221,13 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 17);
             this.label3.TabIndex = 90;
-            this.label3.Text = "Tên Đĩa:";
+            this.label3.Text = "Tiêu Đề:";
             // 
             // tbTTIdDia
             // 
             this.tbTTIdDia.Enabled = false;
             this.tbTTIdDia.Location = new System.Drawing.Point(114, 32);
+            this.tbTTIdDia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTTIdDia.Name = "tbTTIdDia";
             this.tbTTIdDia.Size = new System.Drawing.Size(218, 22);
             this.tbTTIdDia.TabIndex = 89;
@@ -240,6 +247,7 @@
             // 
             this.tbTTDanhMuc.Enabled = false;
             this.tbTTDanhMuc.Location = new System.Drawing.Point(114, 114);
+            this.tbTTDanhMuc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTTDanhMuc.Name = "tbTTDanhMuc";
             this.tbTTDanhMuc.Size = new System.Drawing.Size(218, 22);
             this.tbTTDanhMuc.TabIndex = 87;
@@ -249,18 +257,18 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(11, 163);
+            this.label11.Location = new System.Drawing.Point(10, 162);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(97, 17);
+            this.label11.Size = new System.Drawing.Size(99, 17);
             this.label11.TabIndex = 82;
-            this.label11.Text = "Phí Thuê đĩa:";
+            this.label11.Text = "Phí Thuê Đĩa:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(52, 35);
+            this.label9.Location = new System.Drawing.Point(52, 34);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 17);
             this.label9.TabIndex = 79;
@@ -269,7 +277,8 @@
             // tbTTTenDia
             // 
             this.tbTTTenDia.Enabled = false;
-            this.tbTTTenDia.Location = new System.Drawing.Point(114, 72);
+            this.tbTTTenDia.Location = new System.Drawing.Point(114, 71);
+            this.tbTTTenDia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTTTenDia.Name = "tbTTTenDia";
             this.tbTTTenDia.Size = new System.Drawing.Size(218, 22);
             this.tbTTTenDia.TabIndex = 78;
@@ -279,7 +288,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(85, 39);
+            this.label10.Location = new System.Drawing.Point(91, 37);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(88, 17);
             this.label10.TabIndex = 83;
@@ -289,6 +298,7 @@
             // 
             this.tbSoNgayThue.Enabled = false;
             this.tbSoNgayThue.Location = new System.Drawing.Point(189, 116);
+            this.tbSoNgayThue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbSoNgayThue.Name = "tbSoNgayThue";
             this.tbSoNgayThue.Size = new System.Drawing.Size(363, 22);
             this.tbSoNgayThue.TabIndex = 80;
@@ -298,11 +308,11 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(42, 77);
+            this.label7.Location = new System.Drawing.Point(51, 78);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(136, 17);
+            this.label7.Size = new System.Drawing.Size(134, 17);
             this.label7.TabIndex = 81;
-            this.label7.Text = "Hạn  Chót Trả Đĩa:";
+            this.label7.Text = "Ngày Trả Dự Kiến:";
             // 
             // label4
             // 
@@ -311,9 +321,9 @@
             this.label4.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(73, 119);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 17);
+            this.label4.Size = new System.Drawing.Size(110, 17);
             this.label4.TabIndex = 79;
-            this.label4.Text = "Số ngày thuê:";
+            this.label4.Text = "Số Ngày Thuê:";
             // 
             // panel1
             // 
@@ -327,15 +337,17 @@
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.tbHanChotTraDia);
-            this.panel1.Location = new System.Drawing.Point(5, 29);
+            this.panel1.Location = new System.Drawing.Point(6, 48);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(596, 239);
+            this.panel1.Size = new System.Drawing.Size(596, 260);
             this.panel1.TabIndex = 85;
             // 
             // tbSoNgayTreHan
             // 
             this.tbSoNgayTreHan.Enabled = false;
             this.tbSoNgayTreHan.Location = new System.Drawing.Point(189, 159);
+            this.tbSoNgayTreHan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbSoNgayTreHan.Name = "tbSoNgayTreHan";
             this.tbSoNgayTreHan.Size = new System.Drawing.Size(363, 22);
             this.tbSoNgayTreHan.TabIndex = 95;
@@ -347,14 +359,15 @@
             this.label13.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.label13.Location = new System.Drawing.Point(85, 162);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 17);
+            this.label13.Size = new System.Drawing.Size(98, 17);
             this.label13.TabIndex = 94;
-            this.label13.Text = "Số ngày trễ:";
+            this.label13.Text = "Số Ngày Trễ:";
             // 
             // tbPhiTreHan
             // 
             this.tbPhiTreHan.Enabled = false;
             this.tbPhiTreHan.Location = new System.Drawing.Point(189, 198);
+            this.tbPhiTreHan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbPhiTreHan.Name = "tbPhiTreHan";
             this.tbPhiTreHan.Size = new System.Drawing.Size(363, 22);
             this.tbPhiTreHan.TabIndex = 93;
@@ -374,6 +387,7 @@
             // 
             this.tbNgaythue.Enabled = false;
             this.tbNgaythue.Location = new System.Drawing.Point(189, 32);
+            this.tbNgaythue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbNgaythue.Name = "tbNgaythue";
             this.tbNgaythue.Size = new System.Drawing.Size(363, 22);
             this.tbNgaythue.TabIndex = 84;
@@ -382,6 +396,7 @@
             // 
             this.tbHanChotTraDia.Enabled = false;
             this.tbHanChotTraDia.Location = new System.Drawing.Point(189, 74);
+            this.tbHanChotTraDia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbHanChotTraDia.Name = "tbHanChotTraDia";
             this.tbHanChotTraDia.Size = new System.Drawing.Size(363, 22);
             this.tbHanChotTraDia.TabIndex = 82;
@@ -393,8 +408,7 @@
             this.groupControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.groupControl3.Controls.Add(this.panelThaoTac);
             this.groupControl3.Location = new System.Drawing.Point(987, 6);
-            this.groupControl3.LookAndFeel.SkinName = "Office 2010 Blue";
-            this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(364, 537);
             this.groupControl3.TabIndex = 85;
@@ -406,7 +420,8 @@
             this.panelThaoTac.Controls.Add(this.btnXNTD_ChuaTraPhi);
             this.panelThaoTac.Controls.Add(this.btnXNTD_TraPhi);
             this.panelThaoTac.Controls.Add(this.btnXNTD_BT);
-            this.panelThaoTac.Location = new System.Drawing.Point(5, 29);
+            this.panelThaoTac.Location = new System.Drawing.Point(5, 30);
+            this.panelThaoTac.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelThaoTac.Name = "panelThaoTac";
             this.panelThaoTac.Size = new System.Drawing.Size(352, 503);
             this.panelThaoTac.TabIndex = 3;
@@ -416,7 +431,8 @@
             this.btnHuy.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnHuy.Appearance.Options.UseFont = true;
             this.btnHuy.Enabled = false;
-            this.btnHuy.Location = new System.Drawing.Point(38, 397);
+            this.btnHuy.Location = new System.Drawing.Point(38, 398);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(266, 85);
             this.btnHuy.TabIndex = 85;
@@ -429,6 +445,7 @@
             this.btnXNTD_ChuaTraPhi.Appearance.Options.UseFont = true;
             this.btnXNTD_ChuaTraPhi.Enabled = false;
             this.btnXNTD_ChuaTraPhi.Location = new System.Drawing.Point(38, 273);
+            this.btnXNTD_ChuaTraPhi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXNTD_ChuaTraPhi.Name = "btnXNTD_ChuaTraPhi";
             this.btnXNTD_ChuaTraPhi.Size = new System.Drawing.Size(266, 85);
             this.btnXNTD_ChuaTraPhi.TabIndex = 86;
@@ -441,6 +458,7 @@
             this.btnXNTD_TraPhi.Appearance.Options.UseFont = true;
             this.btnXNTD_TraPhi.Enabled = false;
             this.btnXNTD_TraPhi.Location = new System.Drawing.Point(38, 148);
+            this.btnXNTD_TraPhi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXNTD_TraPhi.Name = "btnXNTD_TraPhi";
             this.btnXNTD_TraPhi.Size = new System.Drawing.Size(266, 85);
             this.btnXNTD_TraPhi.TabIndex = 85;
@@ -453,6 +471,7 @@
             this.btnXNTD_BT.Appearance.Options.UseFont = true;
             this.btnXNTD_BT.Enabled = false;
             this.btnXNTD_BT.Location = new System.Drawing.Point(38, 23);
+            this.btnXNTD_BT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXNTD_BT.Name = "btnXNTD_BT";
             this.btnXNTD_BT.Size = new System.Drawing.Size(266, 85);
             this.btnXNTD_BT.TabIndex = 11;
@@ -465,11 +484,10 @@
             this.panelKH.Appearance.Options.UseBackColor = true;
             this.panelKH.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.panelKH.Controls.Add(this.panel2);
-            this.panelKH.Location = new System.Drawing.Point(7, 253);
-            this.panelKH.LookAndFeel.SkinName = "Office 2010 Blue";
-            this.panelKH.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.panelKH.Location = new System.Drawing.Point(6, 231);
+            this.panelKH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelKH.Name = "panelKH";
-            this.panelKH.Size = new System.Drawing.Size(355, 290);
+            this.panelKH.Size = new System.Drawing.Size(355, 313);
             this.panelKH.TabIndex = 86;
             this.panelKH.Text = "Thông Tin Đĩa:";
             // 
@@ -485,15 +503,17 @@
             this.panel2.Controls.Add(this.tbTTDanhMuc);
             this.panel2.Controls.Add(this.tbTTIdDia);
             this.panel2.Controls.Add(this.label15);
-            this.panel2.Location = new System.Drawing.Point(1, 29);
+            this.panel2.Location = new System.Drawing.Point(1, 30);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(349, 239);
+            this.panel2.Size = new System.Drawing.Size(349, 278);
             this.panel2.TabIndex = 86;
             // 
             // tbTTPhiTreHan
             // 
             this.tbTTPhiTreHan.Enabled = false;
             this.tbTTPhiTreHan.Location = new System.Drawing.Point(114, 198);
+            this.tbTTPhiTreHan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTTPhiTreHan.Name = "tbTTPhiTreHan";
             this.tbTTPhiTreHan.Size = new System.Drawing.Size(218, 22);
             this.tbTTPhiTreHan.TabIndex = 93;
@@ -503,7 +523,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(11, 203);
+            this.label12.Location = new System.Drawing.Point(15, 202);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(93, 17);
             this.label12.TabIndex = 92;
@@ -518,10 +538,9 @@
             this.panelNhapDia.Controls.Add(this.btnNhapDia);
             this.panelNhapDia.Controls.Add(this.label2);
             this.panelNhapDia.Location = new System.Drawing.Point(7, 6);
-            this.panelNhapDia.LookAndFeel.SkinName = "Office 2010 Blue";
-            this.panelNhapDia.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.panelNhapDia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelNhapDia.Name = "panelNhapDia";
-            this.panelNhapDia.Size = new System.Drawing.Size(354, 241);
+            this.panelNhapDia.Size = new System.Drawing.Size(353, 212);
             this.panelNhapDia.TabIndex = 87;
             this.panelNhapDia.Text = "Nhập Thông Tin Đĩa:";
             // 
@@ -529,6 +548,7 @@
             // 
             this.tbIdDia.EditValue = "CD00000006";
             this.tbIdDia.Location = new System.Drawing.Point(146, 49);
+            this.tbIdDia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbIdDia.Name = "tbIdDia";
             this.tbIdDia.Size = new System.Drawing.Size(156, 22);
             this.tbIdDia.TabIndex = 85;
@@ -537,7 +557,8 @@
             // 
             this.btnNhapDia.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnNhapDia.Appearance.Options.UseFont = true;
-            this.btnNhapDia.Location = new System.Drawing.Point(23, 116);
+            this.btnNhapDia.Location = new System.Drawing.Point(22, 97);
+            this.btnNhapDia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNhapDia.Name = "btnNhapDia";
             this.btnNhapDia.Size = new System.Drawing.Size(310, 86);
             this.btnNhapDia.TabIndex = 60;
@@ -561,13 +582,16 @@
             this.groupControl2.Appearance.Options.UseBackColor = true;
             this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.groupControl2.Controls.Add(this.panel1);
-            this.groupControl2.Location = new System.Drawing.Point(367, 253);
-            this.groupControl2.LookAndFeel.SkinName = "Office 2010 Blue";
-            this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl2.Location = new System.Drawing.Point(367, 231);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(614, 290);
+            this.groupControl2.Size = new System.Drawing.Size(614, 313);
             this.groupControl2.TabIndex = 89;
             this.groupControl2.Text = "Thông Tin Thuê Đĩa:";
+            // 
+            // defaultLookAndFeel1
+            // 
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2010 Blue";
             // 
             // Form_TraDia
             // 
@@ -579,6 +603,7 @@
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.panelKH);
             this.Controls.Add(this.panelNhapDia);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form_TraDia";
             this.Text = "Trả Đĩa";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_TraDia_FormClosed);
@@ -586,7 +611,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).EndInit();
             this.groupControl7.ResumeLayout(false);
             this.groupControl7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbTongPhiTreHan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbIDKhachHang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTenKhachHang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbSDT.Properties)).EndInit();
@@ -653,8 +678,6 @@
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.TextEdit tbTongPhiTreHan;
-        private System.Windows.Forms.Label Nợ;
         private DevExpress.XtraEditors.TextEdit tbPhiTreHan;
         private DevExpress.XtraEditors.SimpleButton btnHuy;
         private DevExpress.XtraEditors.SimpleButton btnXNTD_ChuaTraPhi;
@@ -663,5 +686,8 @@
         private System.Windows.Forms.Label label13;
         private DevExpress.XtraEditors.TextEdit tbTTPhiTreHan;
         private System.Windows.Forms.Label label12;
+        private DevExpress.XtraEditors.TextEdit tbIDKhachHang;
+        private System.Windows.Forms.Label label14;
+        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
     }
 }

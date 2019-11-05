@@ -29,7 +29,7 @@ namespace BLL
                                         });
             foreach (var item in query)
             {
-                eDia etd = new eDia(item.IdDia,Convert.ToBoolean(item.TrangThaiThue));
+                eDia etd = new eDia(item.IdDia,item.TrangThaiThue);
                 list.Add(etd);
             }
             return list;
@@ -42,6 +42,14 @@ namespace BLL
                             ).Take(1).First().ToString();
             return td;
         }
+
+        public string TrangThaiDia(string idDia)
+        {
+            Dia dia = db.Dias.SingleOrDefault(p => p.IdDia == idDia);
+            if (dia == null)
+                return "null";
+            return dia.TrangThaiThue;
+        }
        
         public string LayTenNguoiThue(string idDia)
         {
@@ -50,7 +58,7 @@ namespace BLL
                                 join b in db.PhieuThues on a.IdKhachHang equals b.IdKhachHang
                                 join c in db.ChiTietPhieuThues on b.IdPhieuThue equals c.IdPhieuThue
                                 join d in db.Dias on c.IdDia equals d.IdDia
-                                where c.IdDia == idDia && c.TrangThaiThanhToan == true
+                                where c.IdDia == idDia
                                 select new
                                 {
                                     a.HoTen
@@ -127,9 +135,25 @@ namespace BLL
         {
             Dia d = new Dia();
             d = db.Dias.Where(a => a.IdDia == ed.IdDia).SingleOrDefault();
-            if (d != null)
+            if (d != null && d.TrangThaiThue =="cosan")
             {
                 d.TrangThaiXoa = ed.TrangThaiXoa;
+                db.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool SuaTrangThaiThueDia(string idDia)
+        {
+            Dia dia = new Dia();
+            dia = db.Dias.Where(a => a.IdDia== idDia).SingleOrDefault();
+            TieuDe td = new TieuDe();
+            td = db.TieuDes.SingleOrDefault(p => p.IdTieuDe == dia.IdTieuDe);
+            if (dia != null && td != null)
+            {
+                dia.TrangThaiThue = "cosan";
+                td.SoLuongDiaCoSan = td.SoLuongDiaCoSan + 1;
 
                 db.SubmitChanges();
                 return true;
@@ -137,25 +161,19 @@ namespace BLL
             return false;
         }
 
-        public bool SuaDia(string idDia)
+        public bool kiemtraIDDiaCoTonTai(string idDia)
         {
-            Dia dia = new Dia();
-            dia = db.Dias.Where(a => a.IdDia== idDia).SingleOrDefault();
-            if (dia != null)
-            {
-                dia.TrangThaiThue = false;
-
-                db.SubmitChanges();
-                return true;
-            }
-            return false;
+            Dia d = db.Dias.SingleOrDefault(p => p.IdDia == idDia);
+            if (d == null)
+                return false;
+            return true;
         }
 
         // true: đĩa đang được thuê
         public bool kiemTraDiaTaiCuaHang(string idDia)
         {
             Dia d = new Dia();
-            d = db.Dias.Where(a => a.IdDia == idDia && a.TrangThaiThue == true).SingleOrDefault();
+            d = db.Dias.Where(a => a.IdDia == idDia && a.TrangThaiThue == "duocthue").SingleOrDefault();
             if (d != null)
                 return true;
             return false;
@@ -170,6 +188,15 @@ namespace BLL
             //}
             //return false;
         }
-       
+
+        public bool kiemTraTinhTrangDiaCoSan(string idDia)
+        {
+            Dia d = new Dia();
+            d = db.Dias.Where(a => a.IdDia == idDia && a.TrangThaiThue == "cosan").SingleOrDefault();
+            if (d != null)
+                return true; // Đĩa đó có sẵn
+            return false; // Đĩa đó không có sẵn
+        }
+
     }
 }

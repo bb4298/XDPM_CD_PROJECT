@@ -10,15 +10,15 @@ namespace Entities
     {
         public int IdPhieuThue { get; set; }
         public DateTime NgayTao { get; set; }
-        public bool TrangThaiThanhToan { get; set; }
+        public decimal TongPhiThue { get; set; }
         public String IdKhachHang { get; set; }
 
 
-        public ePhieuThue(int idPhieuThue, DateTime ngayTao, bool trangThaiThanhToan, string idKhachHang)
+        public ePhieuThue(int idPhieuThue, DateTime ngayTao, decimal tongPhiThue, string idKhachHang)
         {
             IdPhieuThue = idPhieuThue;
             NgayTao = ngayTao;
-            TrangThaiThanhToan = trangThaiThanhToan;
+            TongPhiThue = tongPhiThue;
             IdKhachHang = idKhachHang;
         }
 

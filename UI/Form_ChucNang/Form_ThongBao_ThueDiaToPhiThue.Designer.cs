@@ -51,7 +51,8 @@
             this.btnSua.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnSua.Appearance.Options.UseFont = true;
             this.btnSua.Enabled = false;
-            this.btnSua.Location = new System.Drawing.Point(38, 184);
+            this.btnSua.Location = new System.Drawing.Point(38, 185);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(168, 48);
             this.btnSua.TabIndex = 61;
@@ -62,7 +63,8 @@
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.Enabled = false;
-            this.simpleButton1.Location = new System.Drawing.Point(277, 184);
+            this.simpleButton1.Location = new System.Drawing.Point(276, 185);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(168, 48);
             this.simpleButton1.TabIndex = 63;
@@ -73,7 +75,8 @@
             this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.Enabled = false;
-            this.simpleButton2.Location = new System.Drawing.Point(512, 184);
+            this.simpleButton2.Location = new System.Drawing.Point(512, 185);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(168, 48);
             this.simpleButton2.TabIndex = 64;
@@ -88,6 +91,7 @@
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSua);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form_ThongBao_ThueDiaToPhiThue";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông báo !";

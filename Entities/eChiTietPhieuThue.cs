@@ -10,30 +10,24 @@ namespace Entities
     {
         public int IdChiTietPhieuThue { get; set; }
         public String IdDia { get; set; }
-        public DateTime NgayHetHan { get; set; }
-        public int SoNgayThue { get; set; }
-        public decimal PhiThuePhaiTra { get; set; }
+        public DateTime NgayTraDiaDuKien { get; set; }
+        public decimal PhiThue{ get; set; }
         public DateTime NgayTraDiaThucTe { get; set; }
-        public int SoNgayTreHan { get; set; }
-        public decimal PhiTreHanQuyDinh { get; set; }
-        public decimal PhiTreHanPhaiTra { get; set; }
-        public bool TrangThaiTraDia { get; set; }
-        public bool TrangThaiThanhToan { get; set; }
+        public decimal PhiTre { get; set; }
+        public bool TrangThaiNoPhiTre { get; set; }
+        public bool TrangThaiTraPhiTre { get; set; }
         public int IdPhieuThue { get; set; }
 
-        public eChiTietPhieuThue(int idChiTietPhieuThue, string idDia, DateTime ngayHetHan, int soNgayThue, decimal phiThuePhaiTra, DateTime ngayTraDiaThucTe, int soNgayTreHan, decimal phiTreHanQuyDinh, decimal phiTreHanPhaiTra, bool trangThaiTraDia, bool trangThaiThanhToan, int idPhieuThue)
+        public eChiTietPhieuThue(int idChiTietPhieuThue, string idDia, DateTime ngayTraDiaDuKien,decimal phiThue, DateTime ngayTraDiaThucTe, decimal phiTre, bool trangThaiNoPhiTre, bool trangThaiTraPhiTre, int idPhieuThue)
         {
             IdChiTietPhieuThue = idChiTietPhieuThue;
             IdDia = idDia;
-            NgayHetHan = ngayHetHan;
-            SoNgayThue = soNgayThue;
-            PhiThuePhaiTra = phiThuePhaiTra;
+            NgayTraDiaDuKien = ngayTraDiaDuKien;
+            PhiThue = phiThue;
             NgayTraDiaThucTe = ngayTraDiaThucTe;
-            SoNgayTreHan = soNgayTreHan;
-            PhiTreHanQuyDinh = phiTreHanQuyDinh;
-            PhiTreHanPhaiTra = phiTreHanPhaiTra;
-            TrangThaiTraDia = trangThaiTraDia;
-            TrangThaiThanhToan = trangThaiThanhToan;
+            PhiTre = phiTre;
+            TrangThaiNoPhiTre = trangThaiNoPhiTre;
+            TrangThaiTraPhiTre = trangThaiTraPhiTre;
             IdPhieuThue = idPhieuThue;
         }
 

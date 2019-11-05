@@ -28,9 +28,9 @@ namespace UI
             if (f.ShowDialog() == DialogResult.OK)
                 Application.Run(new Form_Main());
 
-            //Form_QuanLyThueDia f = new Form_QuanLyThueDia();
+            //Form_Main f = new Form_Main();
             //if (f.ShowDialog() == DialogResult.OK)
-            //    Application.Run(new Form_Main());
+            //Application.Run(new Form_Main());
 
         }
     }
